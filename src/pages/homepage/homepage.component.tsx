@@ -2,7 +2,7 @@ import React from 'react';
 
 import './homepage.styles.scss';
 
-const Homepage = () => (
+const Homepage: React.FC = () => (
     <h1>Home Page</h1>
 );
 
