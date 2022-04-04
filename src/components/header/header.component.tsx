@@ -2,13 +2,15 @@ import React from 'react';
 import './header.styles.scss';
 
 import LogoContainer from '../logo-container/logo-container.component';
+import NavbarContainer from '../navbar-container/navbar-container.component';
+import CartButtonContainer from '../CartButtonContainer/cart-button-container.component';
 
 const Header: React.FC = () => {
     return (
         <header>
             <LogoContainer />
-            {/* <NavbarContainer />
-            <CartButtonContainer /> */}
+            <NavbarContainer />
+            <CartButtonContainer />
         </header>
     )
 }
