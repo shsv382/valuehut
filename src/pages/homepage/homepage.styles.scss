@@ -3,4 +3,33 @@
 .homepage {
     animation: appearance 0.35s ease-in;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main__article__aside__image {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    border-top-left-radius: 50%;
+}
+
+.main__article {
+    padding: 30px 7vw;
+    margin: 0 auto; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    section, aside {
+        width: 45%;
+
+    }
+}
+
+.main__article__description {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 400;
 }
