@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 import { Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './components/error-boundary/error-boundary.component';
 
 import Header from './components/header/header.component';
 import Footer from './components/footer/footer.component';
@@ -14,11 +15,14 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <ErrorBoundary>
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='/contact' element={<ContactPage />} />
-          <Route path='/what-we-do' element={<WhatWeDoPage />} />
+          <Route path='/training' element={<WhatWeDoPage />} />
+          <Route path='*' element={<ErrorBoundary hasError={true} />} />
         </Routes>
+      </ErrorBoundary>
       <Footer />
     </div>
   );

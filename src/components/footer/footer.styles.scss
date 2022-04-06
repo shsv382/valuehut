@@ -1,4 +1,20 @@
+@import '../../color-scheme.scss';
+
 footer {
-    background-color: grey;
+    padding: 20px 7vw;
+    background-color: $primaryColorDark;
     height: 100px;
+    color: $light;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer__link {
+    color: $light;
+    font-weight: 500;
+    &hover {
+        color: $primaryColorLight
+    }
 }

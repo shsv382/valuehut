@@ -12,15 +12,9 @@
 }
 
 .navbar__link {
-    text-decoration: none;
-    color: $primaryColorDark;
-    font-weight: 500;
-    &:visited {
-        color: $primaryColorDark;
-    }
-    &:hover {
-        cursor: pointer;
-        color: $primaryColorLight;
-        transition: color .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
+    height: 50px;
+    min-width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
