@@ -11,13 +11,13 @@ interface MainArticleProps {
 
 const MainArticle = ({imageURL, header, description, otherProps}: MainArticleProps) => (
     <article className="main__article">
-            <section>
-                <h2 className="main__article__header">{header}</h2>
+            <section className="main__article__section">
+                <h1 className="main__article__header">{header}</h1>
                 <p className="main__article__description">
                     {description}
                 </p>
             </section>
-            <aside>
+            <aside className="main__article__aside">
                 <img className="main__article__aside__image" src={imageURL} />
             </aside>
         </article>

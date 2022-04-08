@@ -1,5 +1,9 @@
 @import './color-scheme.scss';
 
+body {
+  color: $neutral800;
+}
+
 .page {
   min-height: calc(100vh - 120px);
 }
@@ -8,12 +12,13 @@
   text-decoration: none;
   color: $primaryColorDark;
   font-weight: 500;
+  transition: color .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   &:visited {
       color: $primaryColorDark;
   }
   &:hover {
       cursor: pointer;
-      color: $primaryColorLight;
+      color: $secondaryColor;
       transition: color .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 }
@@ -40,4 +45,60 @@ h5 {
 
 h6 {
   font-size: 16px;
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button-primary {
+  background-color: $primaryColor;
+  border-color: $primaryColor;
+  color: $neutral100;
+}
+
+.button-secondary {
+  background-color: $neutral100;
+  border-color: $neutral800;
+  color: $neutral800;
+  transition: all 0.25s ease 0s;
+  &:hover {
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+    color: $neutral100;
+    transition: all 0.25s ease 0s;
+  }
+}
+
+.button-primary-small, .button-secondary-small {
+  max-height: 50px;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 1.28px;
+  line-height: 18px;
+}
+
+.button-primary-default, .button-secondary-default {
+  max-height: 90px;
+  padding: 32px 38px;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  line-height: 22px;
+}
+
+.button-primary-large, .button-secondary-large {
+  max-height: 66px;
+  padding: 20px 68px;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 1.76px;
+  line-height: 24px;
 }
