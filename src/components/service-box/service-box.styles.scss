@@ -1,0 +1,12 @@
+@import '../../color-scheme.scss';
+
+.service-box-container {
+    width: 30%;
+    height: 320px;
+    border: 1px solid $primaryColorDark;
+}
+
+.service-box {
+    width: 100%;
+    height: 100%;
+}

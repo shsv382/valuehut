@@ -6,10 +6,12 @@ import { useAppSelector } from '../../redux/hooks';
 
 import MainArticle from '../../components/main-article/main-article.component';
 import HeaderWithButton from '../../components/header-with-button/header-with-button.component';
+import TripleBox from '../../components/triple-box/triple-box.component';
+import ServiceBox from '../../components/service-box/service-box.component';
 
 const Homepage: React.FC = () => {
-    const headerArticle = useAppSelector((state) => (state.pages.home.headerArticle));
-    console.log(headerArticle);
+    const { headerArticle, servicesArticle } = { ...useAppSelector((state) => (state.pages.home)) };
+    const trainings = useAppSelector((state) => (state.pages.whatWeDo.training))
     return (
         <div className='page homepage'>
             <MainArticle 
@@ -18,17 +20,19 @@ const Homepage: React.FC = () => {
                 description={headerArticle.description}
             />
             <HeaderWithButton
-                header="Services"
+                header={servicesArticle.header}
                 link="View all"
                 href="training"    
             />
-            <div className="triple-box">
-                <div className="triple-box__boxes">
-                    <div className="triple-box__box1"></div>
-                    <div className="triple-box__box1"></div>
-                    <div className="triple-box__box1"></div>
-                </div>
-            </div>
+            <TripleBox>
+                {
+                    Object.values(trainings).map((training:any, i:number) => {
+                        return i < 3 && (
+                            <ServiceBox {...training} />
+                        )
+                    })
+                }
+            </TripleBox>
         </div>
     )
 };
