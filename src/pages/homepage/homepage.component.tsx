@@ -1,13 +1,15 @@
 import React from 'react';
 import './homepage.styles.scss';
 
-import { data } from '../../data';
+import { useAppSelector } from '../../redux/hooks';
+// import { data } from '../../data';
 
 import MainArticle from '../../components/main-article/main-article.component';
 import HeaderWithButton from '../../components/header-with-button/header-with-button.component';
 
 const Homepage: React.FC = () => {
-    const headerArticle = {...data.pages.home.headerArticle};
+    const headerArticle = useAppSelector((state) => (state.pages.home.headerArticle));
+    console.log(headerArticle);
     return (
         <div className='page homepage'>
             <MainArticle 
