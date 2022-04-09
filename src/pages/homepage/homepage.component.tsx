@@ -2,7 +2,6 @@ import React from 'react';
 import './homepage.styles.scss';
 
 import { useAppSelector } from '../../redux/hooks';
-// import { data } from '../../data';
 
 import MainArticle from '../../components/main-article/main-article.component';
 import HeaderWithButton from '../../components/header-with-button/header-with-button.component';

@@ -15,7 +15,7 @@ export const data = {
             training: {
                 professional_scrum_master:{
                     title: "Professional Scrum Master",
-                    short: "PSM",
+                    acronym: "PSM",
                     description: "",
                     imageURL: "",
                     iconURL: "https://static.scrum.org/web/logos/psm.svg",
@@ -23,7 +23,7 @@ export const data = {
                 },
                 professional_agile_leadership: {
                     title: "Professional Agile Leadership",
-                    short: "PAL-E",
+                    acronym: "PAL-E",
                     description: "",
                     imageURL: "",
                     iconURL: "https://static.scrum.org/web/logos/pal-e.svg",
@@ -31,7 +31,7 @@ export const data = {
                 },
                 applying_professional_scrum: {
                     title: "Applying Professional Scrum",
-                    short: "APS",
+                    acronym: "APS",
                     description: "",
                     imageURL: "",
                     iconURL: "",
