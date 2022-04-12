@@ -22,6 +22,7 @@ const WhatWeDoPage: React.FC = () => {
                             header={coaching.title}
                             description={coaching.description}
                             price={coaching.price}
+                            key={`coaching-${i}`}
                         />
                     )
                 })
@@ -34,6 +35,7 @@ const WhatWeDoPage: React.FC = () => {
                             header={training.title}
                             description={training.description}
                             price={training.price}
+                            key={`training-${i}`}
                         />
                     )
                 })
