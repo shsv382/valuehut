@@ -23,7 +23,9 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
                 </p>
                 {
                     price &&
-                    <button className="button button-primary button-primary-default">Buy Now</button>
+                    <button onClick={handleClick} className="button button-primary button-primary-default">
+                        Buy Now
+                    </button>
                 }
             </section>
             <aside className="main__article__aside">
