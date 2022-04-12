@@ -9,7 +9,7 @@ import TripleBox from '../../components/triple-box/triple-box.component';
 import ServiceBox from '../../components/service-box/service-box.component';
 
 const Homepage: React.FC = () => {
-    const { headerArticle, servicesArticle } = { ...useAppSelector((state) => (state.pages.home)) };
+    const { headerArticle, servicesArticle, aboutCoachArticle } = { ...useAppSelector((state) => (state.pages.home)) };
     const trainings = useAppSelector((state) => (state.pages.whatWeDo.training))
     return (
         <div className='page homepage'>
@@ -32,6 +32,11 @@ const Homepage: React.FC = () => {
                     })
                 }
             </TripleBox>
+            <MainArticle 
+                imageURL={aboutCoachArticle.imageURL}
+                header={aboutCoachArticle.header}
+                description={aboutCoachArticle.description}
+            />
         </div>
     )
 };

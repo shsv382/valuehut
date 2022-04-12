@@ -1,7 +1,7 @@
 import React from "react";
 import './header-with-button.styles.scss';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 interface HeaderWithButtonProps {
     header: string,
@@ -11,10 +11,15 @@ interface HeaderWithButtonProps {
 }
 
 const HeaderWithButton = ({ header, link, href, otherProps }: HeaderWithButtonProps) => {
+    const navigate = useNavigate(); 
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+        navigate(`../${href}`)
+    }
     return (
         <div className="header-with-button">
             <h2 className="header-with-button__header">{header}</h2>
-            <Link to={href} className="button button-secondary button-secondary-large">{link}</Link>
+            <button onClick={handleClick} className="button button-secondary button-secondary-large">{link}</button>
         </div>
     )
 }

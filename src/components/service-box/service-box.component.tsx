@@ -9,6 +9,7 @@ type ServiceBoxTypes = {
     iconURL?: string,
     iconBorder?: string,
     backgroundImageURL?: string,
+    price?: number,
     children?: any
 }
 
