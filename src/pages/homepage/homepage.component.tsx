@@ -8,6 +8,8 @@ import HeaderWithButton from '../../components/header-with-button/header-with-bu
 import TripleBox from '../../components/triple-box/triple-box.component';
 import ServiceBox from '../../components/service-box/service-box.component';
 
+import AnimateOnScroll from '../../components/animate-on-scroll/animate-on-scroll.component';
+
 const Homepage: React.FC = () => {
     const { headerArticle, servicesArticle, aboutCoachArticle } = { ...useAppSelector((state) => (state.pages.home)) };
     const trainings = useAppSelector((state) => (state.pages.whatWeDo.training))
