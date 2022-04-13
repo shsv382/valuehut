@@ -12,7 +12,7 @@ const Homepage: React.FC = () => {
     const { headerArticle, servicesArticle, aboutCoachArticle } = { ...useAppSelector((state) => (state.pages.home)) };
     const trainings = useAppSelector((state) => (state.pages.whatWeDo.training))
     return (
-        <div className='page homepage'>
+        <div className='page homepage appearancable'>
             <MainArticle 
                 imageURL={headerArticle.imageURL}
                 header={headerArticle.header}

@@ -8,3 +8,8 @@
         top: 0;
     }
 }
+
+.appearancable {
+    animation: appearance 0.35s ease-in;
+    position: relative;
+}

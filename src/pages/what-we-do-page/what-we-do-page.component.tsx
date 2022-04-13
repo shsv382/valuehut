@@ -10,7 +10,7 @@ const WhatWeDoPage: React.FC = () => {
     const coachings = useAppSelector((state) => (state.pages.whatWeDo.coaching));
     const trainings = useAppSelector((state) => (state.pages.whatWeDo.training))
     return (
-        <div className='page what-we-do-page'>
+        <div className='page what-we-do-page appearancable'>
             <MainArticle 
                 { ...introdutionArticle }
             />
