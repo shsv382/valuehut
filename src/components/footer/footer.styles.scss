@@ -1,14 +1,18 @@
 @import '../../color-scheme.scss';
 
 footer {
-    padding: 20px 7vw;
+    width: 100%;
+    height: 120px;
+    padding: 20px 0;
     background-color: $primaryColorDark;
-    height: 100px;
     color: $light;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    p {
+        font-size: 18px;
+    }
 }
 
 .footer__link {
@@ -17,4 +21,14 @@ footer {
     &hover {
         color: $primaryColorLight
     }
+}
+
+.footer-container {
+    height: 100%;
+    width: 1024px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
 }

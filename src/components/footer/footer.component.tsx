@@ -1,13 +1,16 @@
 import React from 'react';
-import { data } from '../../data';
 import './footer.styles.scss';
+import { useAppSelector } from '../../redux/hooks';
 
 const Footer: React.FC = () => {
+    const { email, phone, address, howto } = { ...useAppSelector((state) => (state.pages.contact)) };
     return (
         <footer>
-            <h3>Contact Us Now:</h3>
-            <p>Mail to <a className='link footer__link' href={`mailto:${data.pages.contact.email}`}>{data.pages.contact.email}</a></p>
-            <p>Call <a className='link footer__link' href={`tel:${data.pages.contact.phone}`}>{data.pages.contact.phone}</a></p>
+            <div className='footer-container'>
+                <h3>Contact Us Now:</h3>
+                <p>Mail to <a className='link footer__link' href={`mailto:${email}`}>{email}</a></p>
+                <p>Call <a className='link footer__link' href={`tel:${phone}`}>{phone}</a></p>
+            </div>
         </footer>
     )
 }

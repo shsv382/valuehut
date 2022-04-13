@@ -35,8 +35,8 @@ export const data = {
                             Frameworks being adopted and the underlying Agile 
                             Principles.`
             },
-            coaching: {
-                enterpriseCoaching: {
+            coaching: [
+                {
                     title: "Enterprise Coaching",
                     acronym: "",
                     description: `Value Hut transforms organisations using a Top – Down 
@@ -53,9 +53,9 @@ export const data = {
                     iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
                     price: 1000
                 }
-            },
-            training: {
-                professional_scrum_master:{
+            ],
+            training: [
+                {
                     title: "Professional Scrum Master",
                     acronym: "PSM",
                     description: `The PSM is an interactive, activity-based course where 
@@ -76,7 +76,7 @@ export const data = {
                     iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
                     price: 1000
                 },
-                professional_agile_leadership: {
+                {
                     title: "Professional Agile Leadership",
                     acronym: "PAL-E",
                     description: `Leaders at all levels play a vital role in the Agile 
@@ -94,7 +94,7 @@ export const data = {
                     iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
                     price: 1000
                 },
-                applying_professional_scrum: {
+                {
                     title: "Applying Professional Scrum",
                     acronym: "APS",
                     description: `The APS is a hands-on, activity-based course in which 
@@ -113,11 +113,13 @@ export const data = {
                     iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
                     price: 1000
                 }
-            }
+            ]
         },
         contact: {
+            howto: 'If you’re considering using the services provided by Adventures with Agile, please phone or email us your query with as much detail as possible. Upon receiving your email, we will either call or email you – within 24 hours of your email being sent – to discuss the services further and initiate the next step.',
             email: 'email@example.com',
-            phone: '(0)000-00-00'
+            phone: '(0)000-00-00',
+            address: 'Amelia House, Crescent Rd, Worthing, BN11 1QR'
         }
     }
 }

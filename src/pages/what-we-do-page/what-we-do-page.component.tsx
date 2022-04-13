@@ -15,7 +15,7 @@ const WhatWeDoPage: React.FC = () => {
                 { ...introdutionArticle }
             />
             {
-                Object.values(coachings).map((coaching:any, i:number) => {
+                coachings.map((coaching:any, i:number) => {
                     return i < 3 && (
                         <MainArticle 
                             imageURL={coaching.imageURL}
@@ -28,7 +28,7 @@ const WhatWeDoPage: React.FC = () => {
                 })
             }
             {
-                Object.values(trainings).map((training:any, i:number) => {
+                trainings.map((training:any, i:number) => {
                     return i < 3 && (
                         <MainArticle 
                             imageURL={training.imageURL}

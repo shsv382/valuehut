@@ -27,7 +27,7 @@ const Homepage: React.FC = () => {
             />
             <TripleBox>
                 {
-                    Object.values(trainings).map((training:any, i:number) => {
+                    trainings.map((training:any, i:number) => {
                         return i < 3 && (
                             <ServiceBox {...training} key={`service-${i}`} />
                         )

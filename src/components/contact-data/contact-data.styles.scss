@@ -1,0 +1,29 @@
+@import '../../color-scheme.scss';
+
+.contact-data-block {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.contact-data {
+    width: 100%;
+    border-bottom: 1px solid $primaryColorLight;
+    margin-bottom: 30px;
+    li {
+        list-style-type: none;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 12px;
+        .contact-data__list__slash {
+            color: $primaryColor;
+            font-weight: 800;
+        }
+        .contact-data__link {
+            font-size: 24px;
+        }
+    }
+}

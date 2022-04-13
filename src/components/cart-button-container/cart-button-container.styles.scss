@@ -1,6 +1,9 @@
+@import '../../color-scheme.scss';
+
 .cart-button-container {
-    width: 47px;
-    height: 47px;
+    width: 27px;
+    height: 27px;
+    color: $primaryColorDark;
     &:hover {
         cursor: pointer;
     }

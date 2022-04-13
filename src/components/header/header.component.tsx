@@ -8,9 +8,11 @@ import CartButtonContainer from '../cart-button-container/cart-button-container.
 const Header: React.FC = () => {
     return (
         <header>
-            <LogoContainer />
-            <NavbarContainer />
-            <CartButtonContainer />
+            <div className="header-container">
+                <LogoContainer />
+                <NavbarContainer />
+                <CartButtonContainer />
+            </div>
         </header>
     )
 }

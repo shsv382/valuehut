@@ -2,11 +2,23 @@
 
 header {
     height: 120px;
+    width: 100%;
     background-color: white;
-    padding: 20px 7vw;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid $primaryColorLight;
+}
+
+.header-container {
+    height: 100%;
+    width: 1024px;
+    background-color: white;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    border-bottom: 1px solid $primaryColorLight;
 }
