@@ -1,3 +1,4 @@
+import { url } from 'inspector';
 import React from 'react';
 
 import './main-article.styles.scss';
@@ -28,8 +29,8 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
                     </button>
                 }
             </section>
-            <aside className="main__article__aside">
-                <img className="main__article__aside__image" src={imageURL} />
+            <aside className="main__article__aside main__article__aside__image" 
+                    style={{backgroundImage: `url(${imageURL})`}} >
             </aside>
         </article>
     )
