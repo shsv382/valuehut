@@ -15,6 +15,7 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
     }
+
     return (
         <article className="main__article">
             <section className="main__article__section">

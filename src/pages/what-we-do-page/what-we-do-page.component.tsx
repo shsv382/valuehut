@@ -6,9 +6,9 @@ import { useAppSelector } from '../../redux/hooks';
 import MainArticle from '../../components/main-article/main-article.component';
 
 const WhatWeDoPage: React.FC = () => {
-    const introdutionArticle = useAppSelector((state) => (state.pages.whatWeDo.introdutionArticle));
-    const coachings = useAppSelector((state) => (state.pages.whatWeDo.coaching));
-    const trainings = useAppSelector((state) => (state.pages.whatWeDo.training))
+    const introdutionArticle = useAppSelector((state) => (state.data.pages.whatWeDo.introdutionArticle));
+    const coachings = useAppSelector((state) => (state.data.pages.whatWeDo.coaching));
+    const trainings = useAppSelector((state) => (state.data.pages.whatWeDo.training))
     return (
         <div className='page what-we-do-page appearancable'>
             <MainArticle 
@@ -22,7 +22,7 @@ const WhatWeDoPage: React.FC = () => {
                             header={coaching.title}
                             description={coaching.description}
                             price={coaching.price}
-                            key={`coaching-${i}`}
+                            key={`coaching-${coaching.id}`}
                         />
                     )
                 })
@@ -35,7 +35,7 @@ const WhatWeDoPage: React.FC = () => {
                             header={training.title}
                             description={training.description}
                             price={training.price}
-                            key={`training-${i}`}
+                            key={`training-${training.id}`}
                         />
                     )
                 })

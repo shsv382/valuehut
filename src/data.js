@@ -37,6 +37,7 @@ export const data = {
             },
             coaching: [
                 {
+                    id: 1,
                     title: "Enterprise Coaching",
                     acronym: "",
                     description: `Value Hut transforms organisations using a Top – Down 
@@ -56,6 +57,7 @@ export const data = {
             ],
             training: [
                 {
+                    id: 2,
                     title: "Professional Scrum Master",
                     acronym: "PSM",
                     description: `The PSM is an interactive, activity-based course where 
@@ -77,6 +79,7 @@ export const data = {
                     price: 1000
                 },
                 {
+                    id: 3,
                     title: "Professional Agile Leadership",
                     acronym: "PAL-E",
                     description: `Leaders at all levels play a vital role in the Agile 
@@ -95,6 +98,7 @@ export const data = {
                     price: 1000
                 },
                 {
+                    id: 4,
                     title: "Applying Professional Scrum",
                     acronym: "APS",
                     description: `The APS is a hands-on, activity-based course in which 

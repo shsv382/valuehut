@@ -1,5 +1,7 @@
+@import '../../keyframes.scss';
+
 .main__article__aside {
-    max-width: 100%;
+    max-width: 45%;
     height: 100%;
     display: block;
     background-size: cover;
@@ -19,7 +21,7 @@
         text-align: left;
         .main__article__aside__image {
             border-radius: 0;
-            border-top-left-radius: 50%;
+            border-top-left-radius: 200px;
             background-position: right;
         }
     }
@@ -28,7 +30,7 @@
         text-align: right;
         .main__article__aside__image {
             border-radius: 0;
-            border-top-right-radius: 50%;
+            border-top-right-radius: 200px;
             background-position: left;
         }
     }

@@ -6,7 +6,7 @@ import { useAppSelector } from '../../redux/hooks';
 import ContactData from '../../components/contact-data/contact-data.component';
 
 const ContactPage: React.FC = () => {
-    const { email, phone, address, howto } = { ...useAppSelector((state) => (state.pages.contact)) };
+    const { email, phone, address, howto } = { ...useAppSelector((state) => (state.data.pages.contact)) };
     return (
         <div className='page contact-page appearancable'>
             <div className='how-to-contact'>

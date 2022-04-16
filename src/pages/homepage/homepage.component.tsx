@@ -11,25 +11,25 @@ import ServiceBox from '../../components/service-box/service-box.component';
 import AnimateOnScroll from '../../components/animate-on-scroll/animate-on-scroll.component';
 
 const Homepage: React.FC = () => {
-    const { headerArticle, servicesArticle, aboutCoachArticle } = { ...useAppSelector((state) => (state.pages.home)) };
-    const trainings = useAppSelector((state) => (state.pages.whatWeDo.training))
+    const { headerArticle, servicesArticle, aboutCoachArticle } = { ...useAppSelector((state) => (state.data.pages.home)) };
+    const trainings = useAppSelector((state) => (state.data.pages.whatWeDo.training))
     return (
         <div className='page homepage appearancable'>
             <MainArticle 
                 imageURL={headerArticle.imageURL}
                 header={headerArticle.header}
                 description={headerArticle.description}
-            />
+                />
             <HeaderWithButton
                 header={servicesArticle.header}
                 link="View all"
                 href="training"    
-            />
+                />
             <TripleBox>
                 {
                     trainings.map((training:any, i:number) => {
                         return i < 3 && (
-                            <ServiceBox {...training} key={`service-${i}`} />
+                            <ServiceBox {...training} key={`service-${training.id}`} />
                         )
                     })
                 }

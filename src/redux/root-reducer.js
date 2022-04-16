@@ -1,10 +1,11 @@
-import { data } from "../data";
+import { combineReducers } from 'redux';
 
-const initialState = { ...data };
+import dataReducer from './data/data.reducers';
+import cartReducer from './cart/cart.reducer';
 
-export const rootReducer = (state=initialState, action={}) => {
-    switch(action.type) {
-        default:
-            return state;
-    }
-}
+const rootReducer = combineReducers({
+    data: dataReducer,
+    cart: cartReducer,
+})
+
+export default rootReducer;
