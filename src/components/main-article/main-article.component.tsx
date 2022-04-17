@@ -1,5 +1,6 @@
 import { url } from 'inspector';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './main-article.styles.scss';
 
@@ -32,9 +33,9 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
                 }
                 {
                     price &&
-                    <button onClick={handleClick} className="button button-secondary button-secondary-default">
+                    <Link to={"/" + header.toLowerCase().split(" ").join("-")} className="button button-secondary button-secondary-default">
                         Check Out
-                    </button>
+                    </Link>
                 }
                 </div>
             </section>
