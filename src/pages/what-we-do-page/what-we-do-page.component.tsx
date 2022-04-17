@@ -6,9 +6,9 @@ import { useAppSelector } from '../../redux/hooks';
 import MainArticle from '../../components/main-article/main-article.component';
 
 const WhatWeDoPage: React.FC = () => {
-    const introdutionArticle = useAppSelector((state) => (state.data.pages.whatWeDo.introdutionArticle));
-    const coachings = useAppSelector((state) => (state.data.pages.whatWeDo.coaching));
-    const trainings = useAppSelector((state) => (state.data.pages.whatWeDo.training))
+    const introdutionArticle = useAppSelector((state) => (state.content.pages.whatWeDo.introdutionArticle));
+    const coachings = useAppSelector((state) => (state.training.coaching));
+    const trainings = useAppSelector((state) => (state.training.training))
     return (
         <div className='page what-we-do-page appearancable'>
             <MainArticle 

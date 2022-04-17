@@ -3,7 +3,7 @@ import './footer.styles.scss';
 import { useAppSelector } from '../../redux/hooks';
 
 const Footer: React.FC = () => {
-    const { email, phone, address, howto } = { ...useAppSelector((state) => (state.data.pages.contact)) };
+    const { email, phone, address, howto } = { ...useAppSelector((state) => (state.content.pages.contact)) };
     return (
         <footer>
             <div className='footer-container'>

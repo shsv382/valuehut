@@ -11,8 +11,8 @@ import ServiceBox from '../../components/service-box/service-box.component';
 import AnimateOnScroll from '../../components/animate-on-scroll/animate-on-scroll.component';
 
 const Homepage: React.FC = () => {
-    const { headerArticle, servicesArticle, aboutCoachArticle } = { ...useAppSelector((state) => (state.data.pages.home)) };
-    const trainings = useAppSelector((state) => (state.data.pages.whatWeDo.training))
+    const { headerArticle, servicesArticle, aboutCoachArticle } = { ...useAppSelector((state) => (state.content.pages.home)) };
+    const trainings = useAppSelector((state) => (state.training.training))
     return (
         <div className='page homepage appearancable'>
             <MainArticle 

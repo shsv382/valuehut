@@ -1,10 +1,15 @@
 import React from 'react';
 import './service.styles.scss';
+import { TrainingTypes } from '../../training';
 
-const Service: React.FC = () => {
+interface ServiceTypes extends TrainingTypes {
+    children?: any
+}
+
+const Service: React.FC<ServiceTypes> = ({ title }) => {
     return (
-        <div className='page service-page'>
-
+        <div className='page service-page appearancable'>
+            <h1>{title}</h1>
         </div>
     )
 }

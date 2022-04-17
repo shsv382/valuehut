@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
 
-import dataReducer from './data/data.reducers';
+import contentReducer from './content/content.reducers';
 import cartReducer from './cart/cart.reducer';
+import trainingReducer from './training/training.reducer';
 
 const rootReducer = combineReducers({
-    data: dataReducer,
+    content: contentReducer,
     cart: cartReducer,
+    training: trainingReducer
 })
 
 export default rootReducer;

@@ -23,12 +23,20 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
                 <p className="main__article__description">
                     {description}
                 </p>
+                <div className='main__article__buttons__block'>
                 {
                     price &&
                     <button onClick={handleClick} className="button button-primary button-primary-default">
                         Buy Now
                     </button>
                 }
+                {
+                    price &&
+                    <button onClick={handleClick} className="button button-secondary button-secondary-default">
+                        Check Out
+                    </button>
+                }
+                </div>
             </section>
             <aside className="main__article__aside main__article__aside__image" 
                     style={{backgroundImage: `url(${imageURL})`}} >
