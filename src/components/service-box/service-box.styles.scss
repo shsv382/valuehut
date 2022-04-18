@@ -4,10 +4,10 @@
     width: 30%;
     max-width: 320px;
     height: 320px;
-    border: 2px solid $primaryColorDark;
+    border: 2px solid $primaryColor;
     transition: border .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     &:hover {
-        border: 2px solid $primaryColor;
+        border: 2px solid $neutral800;
         transition: border .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 }
