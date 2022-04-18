@@ -1,5 +1,12 @@
 @import '../../color-scheme.scss';
 
 .logo-container {
-    background-color: $primaryColor;
+    a {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    img {
+        max-width: 50%;
+        max-height: 50%;
+    }
 }

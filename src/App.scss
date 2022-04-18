@@ -3,6 +3,8 @@
 body {
   color: $neutral800;
   scroll-behavior: smooth;
+  font-size: 20px;
+  font-weight: light;
 }
 
 .page {
@@ -13,8 +15,7 @@ body {
 .link {
   text-decoration: none;
   color: $primaryColorDark;
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: light;
   transition: color .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   &:visited {
       color: $primaryColorDark;
@@ -27,27 +28,23 @@ body {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 24px;
+  font-weight: medium;
 }
 
-h3 {
-  font-size: 28px;
-}
-
-h4 {
+h3, h4, h5, h6 {
   font-size: 22px;
+  font-weight: regular;
 }
 
-h5 {
-  font-size: 18px;
-}
-
-h6 {
-  font-size: 16px;
+p {
+  font-size: 20px;
+  font-weight: light;
 }
 
 .button {

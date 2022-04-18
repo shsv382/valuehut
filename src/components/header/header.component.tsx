@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     return (
         <header>
             <div className="header-container">
-                <LogoContainer />
+                <LogoContainer imageURL='./logo/logo-primary.png' />
                 <NavbarContainer />
                 <CartButtonContainer />
             </div>

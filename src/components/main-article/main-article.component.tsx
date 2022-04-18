@@ -40,7 +40,7 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
                 </div>
             </section>
             <aside className="main__article__aside main__article__aside__image" 
-                    style={{backgroundImage: `url(${imageURL})`}} >
+                    style={{backgroundImage: `url("/images/${imageURL}")`}} >
             </aside>
         </article>
     )
