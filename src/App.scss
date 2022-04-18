@@ -4,7 +4,7 @@ body {
   color: $neutral800;
   scroll-behavior: smooth;
   font-size: 20px;
-  font-weight: light;
+  font-weight: 300;
 }
 
 .page {
@@ -15,7 +15,7 @@ body {
 .link {
   text-decoration: none;
   color: $primaryColorDark;
-  font-weight: light;
+  font-weight: 400;
   transition: color .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   h1, h2, h3 {
     transition: color .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -45,12 +45,12 @@ h2 {
 
 h3, h4, h5, h6 {
   font-size: 22px;
-  font-weight: regular;
+  font-weight: 400;
 }
 
 p {
   font-size: 20px;
-  font-weight: light;
+  font-weight: 300;
 }
 
 .button {
@@ -89,7 +89,7 @@ p {
   max-height: 50px;
   padding: 14px 32px;
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 1.28px;
   line-height: 18px;
 }
@@ -98,7 +98,7 @@ p {
   max-height: 90px;
   padding: 32px 38px;
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 1.6px;
   line-height: 22px;
 }
@@ -107,7 +107,7 @@ p {
   max-height: 66px;
   padding: 20px 68px;
   font-size: 22px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 1.76px;
   line-height: 24px;
 }
