@@ -17,6 +17,7 @@ function App() {
   const ServicePage = lazy(() => import('./pages/service/service.component'));
   const coachings = useAppSelector((state) => (state.training.coaching));
   const trainings = useAppSelector((state) => (state.training.training));
+  const contactData = { ...useAppSelector((state) => (state.content.pages.contact)) };
 
   return (
     <div className="App">
@@ -47,7 +48,7 @@ function App() {
           </Routes>
         </Suspense>
       </ErrorBoundary>
-      <Footer />
+      <Footer {...contactData} />
     </div>
   );
 }

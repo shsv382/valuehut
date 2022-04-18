@@ -4,7 +4,7 @@ import './contact-data.styles.scss';
 interface ContactDataTypes {
     address: string,
     email: string,
-    phone: string
+    phone: string | number
 }
 
 const ContactData: React.FC<ContactDataTypes> = ({ address, email, phone }) => {
