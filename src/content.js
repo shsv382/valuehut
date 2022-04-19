@@ -36,6 +36,9 @@ export const content = {
                             Principles.`
             }
         },
+        about: {
+            
+        },
         contact: {
             howto: 'If you’re considering using the services provided by Adventures with Agile, please phone or email us your query with as much detail as possible. Upon receiving your email, we will either call or email you – within 24 hours of your email being sent – to discuss the services further and initiate the next step.',
             email: 'email@example.com',
