@@ -5,7 +5,7 @@ interface TripleBoxTypes {
     children?: any
 }
 
-const TripleBox: React.FC = ({ children }: TripleBoxTypes) => {
+const TripleBox: React.FC<TripleBoxTypes> = ({ children }) => {
     return (
         <div className="triple-box">
             {children}

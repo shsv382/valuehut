@@ -16,13 +16,10 @@ export interface TrainingTypes {
     price?: number,
     whatWillILearn?: string,
     whoShouldAttend?: string,
-    dates?: object[]    // Please Note!
+    dates?: any[]    // Please Note!
     /*
-        Dates should be created at JavaScript format
-        new Date(yyyy, mm, dd, hh, mm)
-
-        mm - month-1:
-        00 - Jan, 01 - Feb, 02 - March... 11 - Dec
+        Dates should be created by JavaScript method in UTC format
+        new Date("2023-03-11T11:30:00+09:00")
     */
 }
 
@@ -59,9 +56,9 @@ export const training:TrainingObject = {
             
             Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`,
             dates: [
-                new Date(2022, 0, 13, 17, 0),
-                new Date(2022, 4, 15, 15, 0),
-                new Date(2022, 7, 15, 17, 0)
+                new Date("2023-06-11T11:30:00+07:00"),
+                new Date("2023-07-11T11:30:00+09:00"),
+                new Date("2023-08-11T11:30:00+11:00")
             ]
         }
     ],
@@ -96,9 +93,9 @@ export const training:TrainingObject = {
             
             Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`,
             dates: [
-                new Date(2022, 0, 13, 17, 0),
-                new Date(2022, 4, 15, 15, 0),
-                new Date(2022, 7, 15, 17, 0)
+                new Date("2023-06-11T11:30:00+07:00"),
+                new Date("2023-07-11T11:30:00+09:00"),
+                new Date("2023-08-11T11:30:00+11:00")
             ]
         },
         {
@@ -128,9 +125,9 @@ export const training:TrainingObject = {
             
             Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`,
             dates: [
-                new Date(2022, 0, 13, 17, 0),
-                new Date(2022, 4, 15, 15, 0),
-                new Date(2022, 7, 15, 17, 0)
+                new Date("2023-06-11T11:30:00+07:00"),
+                new Date("2023-07-11T11:30:00+09:00"),
+                new Date("2023-08-11T11:30:00+11:00")
             ]
         },
         {
@@ -161,9 +158,9 @@ export const training:TrainingObject = {
             
             Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`,
             dates: [
-                new Date(2022, 0, 13, 17, 0),
-                new Date(2022, 4, 15, 15, 0),
-                new Date(2022, 7, 15, 17, 0)
+                new Date("2023-06-11T11:30:00+07:00"),
+                new Date("2023-07-11T11:30:00+09:00"),
+                new Date("2023-08-11T11:30:00+11:00")
             ]
         }
     ]
