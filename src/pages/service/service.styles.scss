@@ -2,10 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
     width: 1024px;
     margin: auto;
 }
 
 .service__header {
     height: 80px;
+    width: 100%;
+    text-align: center;
 }
