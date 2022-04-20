@@ -43,7 +43,7 @@ export const training:TrainingObject = {
                         working with Leaders to co-creates experiments that 
                         would help develop the required mindset to alleviate 
                         these pain points.`,
-            imageURL: "./landscape-large.jpg",
+            imageURL: "./images/landscape-large.jpg",
             iconURL: "",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             price: 1000,
@@ -80,7 +80,7 @@ export const training:TrainingObject = {
                         anyone working within a Product Team or anyone who 
                         intends to become a Scrum Master. The class is delivered 
                         over a two days (8hrs per day).`,
-            imageURL: "./business.jpg",
+            imageURL: "./images/business.jpg",
             iconURL: "https://static.scrum.org/web/logos/psm.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             price: 1000,
@@ -112,7 +112,7 @@ export const training:TrainingObject = {
                         Management, Agile Team Leaders, and Human Resource 
                         Leaders. The class can be delivered over a two days (8hrs 
                         per day) class or a four days (4hrs per day) class.`,
-            imageURL: "./business.jpg",
+            imageURL: "./images/business.jpg",
             iconURL: "https://static.scrum.org/web/logos/pal-e.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             price: 1000,
@@ -145,7 +145,7 @@ export const training:TrainingObject = {
                         that already work together in an organisation to improve 
                         their ways of working using Scrum. The class is delivered 
                         over a two days (8hrs per day).`,
-            imageURL: "./business.jpg",
+            imageURL: "./images/business.jpg",
             iconURL: "",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             price: 1000,
