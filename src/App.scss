@@ -122,3 +122,16 @@ p.details {
   border-color: $primaryColor !important;
   outline-color: $primaryColor !important;
 }
+
+table {
+  * {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
+    font-size: 20px !important;
+    @media screen and (max-width: 768px) {
+      font-size: 16px !important;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 12px !important;
+    }
+  }
+}

@@ -26,7 +26,9 @@ const DatesTable: React.FC<DatesTableTypes> = ({ dates, price, training }) => {
     const dispatch = useAppDispatch();
     return (
         <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 320 }} aria-label="simple table">
+            <Table sx={{ 
+                minWidth: 320
+            }} aria-label="simple table">
                 <TableHead>
                 <TableRow>
                     <TableCell>Dates</TableCell>
@@ -47,7 +49,11 @@ const DatesTable: React.FC<DatesTableTypes> = ({ dates, price, training }) => {
                         </TableCell>
                         <TableCell align="right">{`${date.getUTCHours()}:${date.getUTCMinutes()}`}</TableCell>
                         <TableCell align="right">$ {price}</TableCell>
-                        <TableCell align="right" onClick={() => dispatch(addItem({...training, dates: date}))}>Book now</TableCell>
+                        <TableCell align="right" onClick={() => dispatch(addItem({...training, dates: date}))}>
+                            <span className='link'>
+                                BOOK
+                            </span>
+                        </TableCell>
                     </TableRow>
                 ))
                 }

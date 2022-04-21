@@ -24,4 +24,9 @@
     text-align: center;
     line-height: 80px;
     color: $primaryColorDark;
+    @media screen and (max-width: 767px) {
+        line-height: 48px;
+        height: 96px;
+        margin-bottom: 24px;
+    }
 }
