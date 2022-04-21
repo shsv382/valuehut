@@ -14,6 +14,10 @@
             transition: height .4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
     }
+    @media screen and (max-width: 767px) {
+        width: 300px;
+        margin-bottom: 20px;
+    }
 }
 
 .service-box__content {
@@ -25,7 +29,7 @@
     vertical-align: top;
     align-items: flex-start;
     flex-direction: column;
-    box-shadow: 0 0 1px 1px $neutral100;
+    box-shadow: 0 0 1px 1px $neutral300;
     transition: box-shadow .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     &:hover {
         box-shadow: 0 0 3px 1px $primaryColorLight;
@@ -67,7 +71,7 @@
 .service-box__actions {
     position: absolute;
     bottom: 0;
-    z-index: 9999;
+    z-index: 9990;
     width: 100%;
     background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.95) 10% , rgba(255,255,255,1) 100% );
 }

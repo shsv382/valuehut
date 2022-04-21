@@ -9,14 +9,14 @@ interface ServiceArticleProps {
 
 const ServiceArticle: React.FC<ServiceArticleProps> = ({ title, description }) => {
     return (
-        <article className="service__article">
-            <section>
+        <section className="service__article">
+            <article>
                 <h2 className="service__article__section__header">{ title }</h2>
                 <p>
                     { description }
                 </p>
-            </section>
-        </article>
+            </article>
+        </section>
     )
 }
 

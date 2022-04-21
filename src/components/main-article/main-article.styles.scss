@@ -1,12 +1,5 @@
 @import '../../keyframes.scss';
 
-.main__article__aside {
-    max-width: 45%;
-    height: 100%;
-    display: block;
-    background-size: cover;
-}
-
 .main__article {
     width: 100%;
     padding: 30px 10px;
@@ -16,13 +9,20 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 767px) {
+        justify-content: center;
+    }
     &:nth-child(odd) {
         flex-direction: row;
         text-align: left;
         .main__article__aside__image {
             border-radius: 0;
-            border-top-left-radius: 200px;
             background-position: right;
+            border-top-left-radius: 200px;
+            @media screen and (max-width: 767px) {
+                border-radius: 0;
+                background-size: cover;
+            }
         }
     }
     &:nth-child(even) {
@@ -30,13 +30,40 @@
         text-align: right;
         .main__article__aside__image {
             border-radius: 0;
-            border-top-right-radius: 200px;
             background-position: left;
+            border-top-right-radius: 200px;
+            @media screen and (max-width: 767px) {
+                border-radius: 0;
+                background-size: cover;
+            }
         }
     }
-    section, aside {
+    article, aside {
         width: 45%;
+    }
+    @media screen and (max-width: 767px) {
+        article, aside {
+            width: 90%;
+        }
+        article {
+            height: fit-content;
+            margin-bottom: 30px;
+        }
+        aside {
+            min-height: 100px;
+            height: 240px;
+            overflow: hidden;
+        }
+    }
+}
 
+.main__article__aside {
+    max-width: 45%;
+    height: 100%;
+    display: block;
+    background-size: cover;
+    @media screen and (max-width: 767px) {
+        max-width: 100%;
     }
 }
 

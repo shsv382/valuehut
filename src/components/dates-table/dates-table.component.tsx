@@ -1,5 +1,9 @@
 import React from 'react';
 
+import { TrainingTypes } from '../../training';
+import { useAppDispatch } from '../../redux/hooks';
+import { addItem } from '../../redux/cart/cart.actions';
+
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -10,17 +14,19 @@ import Paper from '@mui/material/Paper';
 
 interface DatesTableTypes {
     dates: any[],
-    price: number
+    price: number,
+    training: TrainingTypes
 }
 
-const DatesTable: React.FC<DatesTableTypes> = ({ dates, price }) => {
+const DatesTable: React.FC<DatesTableTypes> = ({ dates, price, training }) => {
     function getDateInWords(date: object): string  {
         let newDate = date.toString().split(" ").slice(1,4);
         return `${newDate[2]} ${newDate[1]} ${newDate[0]}`
     }
+    const dispatch = useAppDispatch();
     return (
         <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <Table sx={{ minWidth: 320 }} aria-label="simple table">
                 <TableHead>
                 <TableRow>
                     <TableCell>Dates</TableCell>
@@ -41,7 +47,7 @@ const DatesTable: React.FC<DatesTableTypes> = ({ dates, price }) => {
                         </TableCell>
                         <TableCell align="right">{`${date.getUTCHours()}:${date.getUTCMinutes()}`}</TableCell>
                         <TableCell align="right">$ {price}</TableCell>
-                        <TableCell align="right">Book now</TableCell>
+                        <TableCell align="right" onClick={() => dispatch(addItem({...training, dates: date}))}>Book now</TableCell>
                     </TableRow>
                 ))
                 }

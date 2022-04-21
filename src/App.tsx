@@ -1,5 +1,4 @@
 import React, { Suspense, lazy } from 'react';
-import logo from './logo.svg';
 import './App.scss';
 
 import { Routes, Route } from 'react-router-dom';
@@ -9,6 +8,7 @@ import { useAppSelector } from './redux/hooks';
 
 import Header from './components/header/header.component';
 import Footer from './components/footer/footer.component';
+import BottomNav from './components/bottom-nav/bottom-nav.component';
 
 function App() {
   const Homepage = lazy(() => import('./pages/homepage/homepage.component'));
@@ -35,7 +35,7 @@ function App() {
               coachings.map(coaching => (
                 <Route 
                   path={coaching.title.toLowerCase().split(" ").join("-")} 
-                  element={<ServicePage {...coaching} />}
+                  element={<ServicePage training={ coaching } />}
                 />
               ))
             }
@@ -43,7 +43,7 @@ function App() {
               trainings.map(training => (
                 <Route 
                   path={training.title.toLowerCase().split(" ").join("-")} 
-                  element={<ServicePage {...training} />}
+                  element={<ServicePage training={ training } />}
                 />
               ))
             }
@@ -52,6 +52,7 @@ function App() {
         </Suspense>
       </ErrorBoundary>
       <Footer {...contactData} />
+      <BottomNav />
     </div>
   );
 }

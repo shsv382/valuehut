@@ -24,9 +24,9 @@ const ServiceBox: React.FC<ServiceBoxTypes> = ({title, acronym, description, ico
                 <CardMedia
                     className="service-box__image-content"
                     component="img"
-                    alt="green iguana"
+                    alt={`${title}`}
                     height="140"
-                    image={imageURL}
+                    image={`images/${imageURL}`}
                 />
                 <CardContent className="service-box__text-content">
                     <Typography gutterBottom variant="h5" component="div">

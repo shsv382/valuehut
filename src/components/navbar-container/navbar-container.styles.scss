@@ -9,6 +9,9 @@
     flex-wrap: nowrap;
     padding: 10px;
     margin: 10px;
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 }
 
 .navbar__link {
@@ -17,4 +20,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.navbar__home-link {
+    display: none;
+    @media screen and (min-width: 1023px) {
+        display: flex;
+    }
 }

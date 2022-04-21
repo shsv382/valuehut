@@ -18,8 +18,8 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
     }
 
     return (
-        <article className="main__article">
-            <section className="main__article__section">
+        <section className="main__article">
+            <article className="main__article__section">
                 <h1 className="main__article__header">{header}</h1>
                 <p className="main__article__description">
                     {description}
@@ -38,11 +38,11 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
                     </Link>
                 }
                 </div>
-            </section>
-            <aside className="main__article__aside main__article__aside__image" 
+            </article>
+            <aside className="main__article__aside main__article__aside__image"
                     style={{backgroundImage: `url("/images/${imageURL}")`}} >
             </aside>
-        </article>
+        </section>
     )
 }
 

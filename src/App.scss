@@ -116,3 +116,9 @@ p.details {
   letter-spacing: 1.76px;
   line-height: 24px;
 }
+
+.Mui-selected {
+  color: $primaryColor !important;
+  border-color: $primaryColor !important;
+  outline-color: $primaryColor !important;
+}
