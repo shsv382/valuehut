@@ -15,7 +15,7 @@ interface ServiceTypes {
 const Service: React.FC<ServiceTypes> = ({ training }) => {
     const { title, description, whatWillILearn, whoShouldAttend, dates, price } = { ...training };
     return (
-        <div className='page service-page appearancable'>
+        <div className='page service-page'>
             <h1 className="service__header">{title}</h1>
             {    description &&
                 <ServiceArticle 

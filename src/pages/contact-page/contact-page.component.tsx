@@ -8,7 +8,7 @@ import ContactData from '../../components/contact-data/contact-data.component';
 const ContactPage: React.FC = () => {
     const { email, phone, address, howto } = { ...useAppSelector((state) => (state.content.pages.contact)) };
     return (
-        <div className='page contact-page appearancable'>
+        <div className='page contact-page'>
             <div className='how-to-contact'>
                 <h1>How to contact us</h1>
                 <p>{ howto }</p>

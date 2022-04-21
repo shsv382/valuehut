@@ -4,7 +4,7 @@ import { useAppSelector } from '../../redux/hooks';
 
 const AboutPage:React.FC = () => {
     return (
-        <div className="page about-page appearancable">
+        <div className="page about-page">
             <h1>About Us</h1>
         </div>
     )
