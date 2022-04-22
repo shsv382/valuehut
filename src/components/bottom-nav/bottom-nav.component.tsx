@@ -31,10 +31,10 @@ export default function BottomNav() {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction label="Home" icon={<HomeIcon />} component={Link} to={links[value]} />
-        <BottomNavigationAction label="Training" icon={<PeopleIcon />} component={Link} to={links[value]} />
-        <BottomNavigationAction label="About" icon={<QuestionMarkIcon />} component={Link} to={links[value]} />
-        <BottomNavigationAction label="Contact" icon={<ContactPageIcon />} component={Link} to={links[value]} />
+        <BottomNavigationAction label="Home" icon={<HomeIcon />} component={Link} to={links[0]} />
+        <BottomNavigationAction label="Training" icon={<PeopleIcon />} component={Link} to={links[1]} />
+        <BottomNavigationAction label="About" icon={<QuestionMarkIcon />} component={Link} to={links[2]} />
+        <BottomNavigationAction label="Contact" icon={<ContactPageIcon />} component={Link} to={links[3]} />
       </BottomNavigation>
     </Box>
   );

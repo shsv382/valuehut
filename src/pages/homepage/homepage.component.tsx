@@ -11,7 +11,7 @@ import ServiceBox from '../../components/service-box/service-box.component';
 import AnimateOnScroll from '../../components/animate-on-scroll/animate-on-scroll.component';
 
 const Homepage: React.FC = () => {
-    const { headerArticle, servicesArticle, aboutCoachArticle } = { ...useAppSelector((state) => (state.content.pages.home)) };
+    const { headerArticle, servicesArticle, whatCustomersWant } = { ...useAppSelector((state) => (state.content.pages.home)) };
     const trainings = useAppSelector((state) => (state.training.training))
     return (
         <div className='page homepage'>
@@ -35,9 +35,9 @@ const Homepage: React.FC = () => {
                 }
             </TripleBox>
             <MainArticle 
-                imageURL={aboutCoachArticle.imageURL}
-                header={aboutCoachArticle.header}
-                description={aboutCoachArticle.description}
+                imageURL={whatCustomersWant.imageURL}
+                header={whatCustomersWant.header}
+                descriptionList={whatCustomersWant.descriptionList}
             />
         </div>
     )

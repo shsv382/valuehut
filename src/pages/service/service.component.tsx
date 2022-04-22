@@ -35,6 +35,7 @@ const Service: React.FC<ServiceTypes> = ({ training }) => {
                     description={ whoShouldAttend }
                 />
             }
+            <div id="book-now">
             {
                 (dates && price) &&
                 <DatesTable
@@ -43,6 +44,7 @@ const Service: React.FC<ServiceTypes> = ({ training }) => {
                     training={ training }
                 />
             }
+            </div>
         </div>
     )
 }

@@ -7,29 +7,35 @@ import './main-article.styles.scss';
 interface MainArticleProps {
     imageURL: string;
     header: string;
-    description: string;
+    description?: string;
+    descriptionList?: string[];
     price?: number;
     otherProps?: any[]
 }
 
-const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, price, ...otherProps}: MainArticleProps) => {
+const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, descriptionList, price, ...otherProps}: MainArticleProps) => {
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
     }
-
     return (
         <section className="main__article">
             <article className="main__article__section">
                 <h1 className="main__article__header">{header}</h1>
-                <p className="main__article__description">
-                    {description}
-                </p>
+                    { description &&
+                        <p className="main__article__description">
+                            { description }
+                        </p> 
+                    }{ descriptionList &&
+                        <ul className="main__article__description main__article__description-list">
+                            { descriptionList.map((d: string, i: number) => (<li key="li-{i}">{ d }</li>)) }
+                        </ul>
+                    }
                 <div className='main__article__buttons__block'>
                 {
                     price &&
-                    <button onClick={handleClick} className="button button-primary button-primary-default">
-                        Buy Now
-                    </button>
+                    <Link to={`/${header.toLowerCase().split(" ").join("-")}#book-now`} className="button button-primary button-primary-default">
+                        Book Now
+                    </Link>
                 }
                 {
                     price &&

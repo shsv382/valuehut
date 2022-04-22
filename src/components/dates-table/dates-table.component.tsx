@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { TrainingTypes } from '../../training';
-import { useAppDispatch } from '../../redux/hooks';
+import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 import { addItem } from '../../redux/cart/cart.actions';
 
 import Table from '@mui/material/Table';
@@ -49,7 +49,9 @@ const DatesTable: React.FC<DatesTableTypes> = ({ dates, price, training }) => {
                         </TableCell>
                         <TableCell align="right">{`${date.getUTCHours()}:${date.getUTCMinutes()}`}</TableCell>
                         <TableCell align="right">$ {price}</TableCell>
-                        <TableCell align="right" onClick={() => dispatch(addItem({...training, dates: date}))}>
+                        <TableCell align="right" onClick={() => {
+                            dispatch(addItem({...training, dates: [date]}))}
+                        }>
                             <span className='link'>
                                 BOOK
                             </span>

@@ -5,8 +5,11 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
 
     if (existingCartItem) {
         return cartItems.map(cartItem => (
-            cartItem.id === cartItemToAdd.id ?
-            { ...cartItem, quantity: cartItem.quantity + 1 }
+            cartItem.id === cartItemToAdd.id && !cartItem.dates.includes(cartItemToAdd.dates[0]) ?
+            { ...cartItem, 
+                quantity: cartItem.quantity + 1,
+                dates: cartItem.dates.concat(cartItemToAdd.dates)
+            }
             :
             cartItem
         ))
