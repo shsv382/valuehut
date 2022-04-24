@@ -24,6 +24,9 @@
                 background-size: cover;
             }
         }
+        .main__article__buttons__block {
+            flex-direction: row;
+        }
     }
     &:nth-child(even) {
         flex-direction: row-reverse;
@@ -36,6 +39,9 @@
                 border-radius: 0;
                 background-size: cover;
             }
+        }
+        .main__article__buttons__block {
+            flex-direction: row-reverse;
         }
     }
     article, aside {

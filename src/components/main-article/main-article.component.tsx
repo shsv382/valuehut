@@ -5,15 +5,16 @@ import { Link } from 'react-router-dom';
 import './main-article.styles.scss';
 
 interface MainArticleProps {
-    imageURL: string;
-    header: string;
-    description?: string;
-    descriptionList?: string[];
-    price?: number;
+    imageURL: string,
+    header: string,
+    description?: string,
+    descriptionList?: string[],
+    streams?: any[],
+    isTraining?: boolean,
     otherProps?: any[]
 }
 
-const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, descriptionList, price, ...otherProps}: MainArticleProps) => {
+const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, descriptionList, streams, isTraining, ...otherProps}: MainArticleProps) => {
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
     }
@@ -32,13 +33,13 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
                     }
                 <div className='main__article__buttons__block'>
                 {
-                    price &&
+                    streams &&
                     <Link to={`/${header.toLowerCase().split(" ").join("-")}#book-now`} className="button button-primary button-primary-default">
                         Book Now
                     </Link>
                 }
                 {
-                    price &&
+                    isTraining &&
                     <Link to={"/" + header.toLowerCase().split(" ").join("-")} className="button button-secondary button-secondary-default">
                         Check Out
                     </Link>

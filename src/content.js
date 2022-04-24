@@ -22,7 +22,7 @@ export const content = {
         whatWeDo: {
             introdutionArticle: {
                 imageURL: "./landscape-large.jpg",
-                header: "About our Coach",
+                header: "What we do",
                 description: `Recent Research indicates that a lot of companies have 
                             embarked on some form of Agile Transformation in the 
                             last 10 years, however only a small proportion of these 
@@ -38,15 +38,14 @@ export const content = {
                 imageURL: "./landscape-large.jpg",
                 header: "About our Coach",
                 description: `
-
-                Sam is a dynamic Agile practitioner, Coach and Professional Scrum Trainer with Scrum.org
-                Sam's first encounter with Scrum and Agile was in 2007; He has accumulated a lot of experience supporting organisations in delivering value to their Customers and Stakeholders. 
-                Previous clients include Barclays, HSBC, BP, Ministry of Justice, UBS, Channel4, BBC Worldwide and a number of startups from around the world.
-                
-                When not training, Sam works as an Enterprise Agile Coach where he supports organizations in scaling their implementation of Agile Frameworks (e.g Scrum, Kanban) up to the Executive level of the organization.
-                Agile Frameworks including the practices and tools are great but Sam's ultimate goal is to support the organizations on building the mindset that is required for Agility to thrive.
-                
-                `
+                    Sam is a dynamic Agile practitioner, Coach and Professional Scrum Trainer with Scrum.org
+                    Sam's first encounter with Scrum and Agile was in 2007; He has accumulated a lot of experience supporting organisations in delivering value to their Customers and Stakeholders. 
+                    Previous clients include Barclays, HSBC, BP, Ministry of Justice, UBS, Channel4, BBC Worldwide and a number of startups from around the world.
+                    
+                    When not training, Sam works as an Enterprise Agile Coach where he supports organizations in scaling their implementation of Agile Frameworks (e.g Scrum, Kanban) up to the Executive level of the organization.
+                    Agile Frameworks including the practices and tools are great but Sam's ultimate goal is to support the organizations on building the mindset that is required for Agility to thrive.
+                    
+                    `
             }
         },
         contact: {

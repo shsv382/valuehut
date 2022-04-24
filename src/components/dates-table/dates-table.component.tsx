@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TrainingTypes } from '../../training';
+import { TrainingTypes, StreamTypes } from '../../training';
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 import { addItem } from '../../redux/cart/cart.actions';
 
@@ -13,16 +13,16 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 interface DatesTableTypes {
-    dates: any[],
-    price: number,
-    training: TrainingTypes
+    training: TrainingTypes,
+    streams: StreamTypes[]
 }
 
-const DatesTable: React.FC<DatesTableTypes> = ({ dates, price, training }) => {
+const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
     function getDateInWords(date: object): string  {
         let newDate = date.toString().split(" ").slice(1,4);
         return `${newDate[2]} ${newDate[1]} ${newDate[0]}`
     }
+    const region: string = useAppSelector(state => state.app.region)
     const dispatch = useAppDispatch();
     return (
         <TableContainer component={Paper}>
@@ -39,7 +39,7 @@ const DatesTable: React.FC<DatesTableTypes> = ({ dates, price, training }) => {
                 </TableHead>
                 <TableBody>
                 {
-                dates.map((date) => (
+                streams.map(({ date, price }: StreamTypes) => (
                     <TableRow
                     key={ date.toString() }
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -48,9 +48,9 @@ const DatesTable: React.FC<DatesTableTypes> = ({ dates, price, training }) => {
                             { getDateInWords(date) }
                         </TableCell>
                         <TableCell align="right">{`${date.getUTCHours()}:${date.getUTCMinutes()}`}</TableCell>
-                        <TableCell align="right">$ {price}</TableCell>
+                        <TableCell align="right">$ { price[region] }</TableCell>
                         <TableCell align="right" onClick={() => {
-                            dispatch(addItem({...training, dates: [date]}))}
+                            dispatch(addItem({ ...training, dates: [date], price: price[region] }))}
                         }>
                             <span className='link'>
                                 BOOK

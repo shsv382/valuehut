@@ -16,12 +16,12 @@ const WhatWeDoPage: React.FC = () => {
             />
             {
                 coachings.map((coaching:any, i:number) => {
-                    return i < 3 && (
+                    return (
                         <MainArticle 
                             imageURL={coaching.imageURL}
                             header={coaching.title}
-                            description={coaching.description}
-                            price={coaching.price}
+                            description={coaching.description}                            
+                            isTraining={coaching.isTraining}
                             key={`coaching-${coaching.id}`}
                         />
                     )
@@ -29,12 +29,13 @@ const WhatWeDoPage: React.FC = () => {
             }
             {
                 trainings.map((training:any, i:number) => {
-                    return i < 3 && (
+                    return (
                         <MainArticle 
                             imageURL={training.imageURL}
                             header={training.title}
                             description={training.description}
-                            price={training.price}
+                            streams={training.streams}
+                            isTraining={training.isTraining}
                             key={`training-${training.id}`}
                         />
                     )

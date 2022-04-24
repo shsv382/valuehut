@@ -3,11 +3,11 @@ import './service-article.styles.scss';
 
 interface ServiceArticleProps {
     title: string,
-    description: string,
+    description?: string,
     children?: any
 }
 
-const ServiceArticle: React.FC<ServiceArticleProps> = ({ title, description }) => {
+const ServiceArticle: React.FC<ServiceArticleProps> = ({ title, description, children }) => {
     return (
         <section className="service__article">
             <article>
@@ -15,6 +15,7 @@ const ServiceArticle: React.FC<ServiceArticleProps> = ({ title, description }) =
                 <p>
                     { description }
                 </p>
+                { children }
             </article>
         </section>
     )
