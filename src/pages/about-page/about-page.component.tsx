@@ -11,6 +11,10 @@ const AboutPage:React.FC = () => {
             <MainArticle 
                 { ...aboutCoachArticle }
             />
+            {/* { This is technical component, to be removed } */}
+            <MainArticle 
+                { ...aboutCoachArticle }
+            />
         </div>
     )
 }

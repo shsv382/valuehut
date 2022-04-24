@@ -54,7 +54,7 @@ export const training:TrainingObject = {
                         working with Leaders to co-creates experiments that 
                         would help develop the required mindset to alleviate 
                         these pain points.`,
-            imageURL: "./landscape-large.jpg",
+            imageURL: "./cameron.jpg",
             iconURL: "",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             whatWillILearn: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`,
@@ -83,7 +83,7 @@ export const training:TrainingObject = {
                         anyone working within a Product Team or anyone who 
                         intends to become a Scrum Master. The class is delivered 
                         over a two days (8hrs per day).`,
-            imageURL: "./business.jpg",
+            imageURL: "./energy.jpg",
             iconURL: "https://static.scrum.org/web/logos/psm.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             whatWillILearn: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`,
@@ -128,7 +128,7 @@ export const training:TrainingObject = {
                         Management, Agile Team Leaders, and Human Resource 
                         Leaders. The class can be delivered over a two days (8hrs 
                         per day) class or a four days (4hrs per day) class.`,
-            imageURL: "./landscape-large.jpg",
+            imageURL: "./fauxels.jpg",
             iconURL: "https://static.scrum.org/web/logos/pal-e.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             whatWillILearn: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`,
@@ -171,7 +171,7 @@ export const training:TrainingObject = {
                         that already work together in an organisation to improve 
                         their ways of working using Scrum. The class is delivered 
                         over a two days (8hrs per day).`,
-            imageURL: "./business.jpg",
+            imageURL: "./morillo.jpg",
             iconURL: "",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             whatWillILearn: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`,

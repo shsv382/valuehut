@@ -10,7 +10,7 @@ export const content = {
                 header: "Services"
             },
             whatCustomersWant: {
-                imageURL: "./landscape-large.jpg",
+                imageURL: "./rodolfo.jpg",
                 header: "What does our customer want?",
                 descriptionList: [
                     `Helping entire organizations to focus on most valuable work. (Reduce waste, supporting to link team goal to organisational objectives, Focus on outcomes.)`,
@@ -21,7 +21,7 @@ export const content = {
         },
         whatWeDo: {
             introdutionArticle: {
-                imageURL: "./landscape-large.jpg",
+                imageURL: "./mentatdgt.jpg",
                 header: "What we do",
                 description: `Recent Research indicates that a lot of companies have 
                             embarked on some form of Agile Transformation in the 

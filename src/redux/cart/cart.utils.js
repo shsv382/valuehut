@@ -37,3 +37,13 @@ export const removeItemFromCart = (cartItems, cartItemToRemove) => {
         cartItem
     );
 }
+
+export const cartStringify = ( array ) => {
+    let newArray = [];
+    array.map(item => {
+      item.dates.map(date => {
+        newArray.push(`${newArray.length ? (newArray.length+1) + ':' : ''}name=${item.title}&${newArray.length ? (newArray.length+1) + ':' : ''}date=${date}&${newArray.length ? (newArray.length+1) + ':' : ''}price=${item.price}`)
+      })
+    })
+    return newArray.join("&");
+  }

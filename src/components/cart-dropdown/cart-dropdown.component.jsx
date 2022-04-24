@@ -3,6 +3,7 @@ import { useAppSelector, useAppDispatch } from "../../redux/hooks";
 import { Link } from "react-router-dom";
 
 import CartItem from '../cart-item/cart-item.component';
+import { cartStringify } from '../../redux/cart/cart.utils';
 
 import './cart-dropdown.styles.scss';
 
@@ -23,7 +24,16 @@ const CartDropdown = () => {
                     )
                 }
             </div>
-            <Link to="#" className="button button-primary button-primary-small">GO TO CHECKOUT</Link>
+            { 
+                cartItems.length ? 
+                <a 
+                    href={`https://valuehut.foxycart.com/cart?${cartStringify(cartItems)}`} 
+                    target="_blank" 
+                    className="button button-primary button-primary-small"
+                >
+                    GO TO CHECKOUT
+                </a> : null
+            }
         </div>
     )
 }
