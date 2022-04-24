@@ -1,7 +1,8 @@
 import AppActionTypes from './app.types.js';
 
 const INITIAL_STATE = {
-    region: 'uk'
+    region: 'uk',
+    showPopupMenuTraining: true
 }
 
 const appReducer = (state=INITIAL_STATE, action) => {
@@ -10,6 +11,11 @@ const appReducer = (state=INITIAL_STATE, action) => {
             return {
                 ...state,
                 region: action.payload
+            }
+        case AppActionTypes.SHOW_POPUP_MENU_TRAINING:
+            return {
+                ...state,
+                showPopupMenuTraining: !state.showPopupMenuTraining
             }
         default:
             return state;

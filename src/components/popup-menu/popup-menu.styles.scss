@@ -1,0 +1,21 @@
+@import '../../color-scheme.scss';
+@import '../../keyframes.scss';
+
+.popup-menu {
+    position: absolute;
+    top: 90px; left: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: $neutral100;
+    border: 1px solid $neutral300;
+    &.hidden {
+        display: none;
+    }
+    @media screen and (max-width: 767px) {
+        position: fixed;
+        top: unset; bottom: 55px;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+}

@@ -8,10 +8,14 @@ import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 
 import { Link } from "react-router-dom";
+import { useAppDispatch } from '../../redux/hooks';
+import { showPopupMenuTraining } from '../../redux/app/app.actions';
+
 
 export default function BottomNav() {
   const [value, setValue] = React.useState(0);
   const links = ["/", "/training", "/about", "/contact"]
+  const dispatch = useAppDispatch();
 
   return (
     <Box sx={{
@@ -32,7 +36,7 @@ export default function BottomNav() {
         }}
       >
         <BottomNavigationAction label="Home" icon={<HomeIcon />} component={Link} to={links[0]} />
-        <BottomNavigationAction label="Training" icon={<PeopleIcon />} component={Link} to={links[1]} />
+        <BottomNavigationAction label="Training" icon={<PeopleIcon />} onClick={()=>dispatch(showPopupMenuTraining())}  />
         <BottomNavigationAction label="About" icon={<QuestionMarkIcon />} component={Link} to={links[2]} />
         <BottomNavigationAction label="Contact" icon={<ContactPageIcon />} component={Link} to={links[3]} />
       </BottomNavigation>
