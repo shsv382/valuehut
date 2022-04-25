@@ -3,6 +3,7 @@ import './about-page.styles.scss';
 import { useAppSelector } from '../../redux/hooks';
 
 import MainArticle from '../../components/main-article/main-article.component';
+import PreviousClients from '../../components/previous-clients/previous-clients.component';
 
 const AboutPage:React.FC = () => {
     const { aboutCoachArticle, moreAboutCoachArticle } = useAppSelector((state) => (state.content.pages.about));
@@ -11,7 +12,7 @@ const AboutPage:React.FC = () => {
             <MainArticle 
                 { ...aboutCoachArticle }
             />
-            {/* { This is technical component, to be removed } */}
+            <PreviousClients />
             <MainArticle 
                 { ...moreAboutCoachArticle }
             />
