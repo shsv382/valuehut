@@ -7,8 +7,7 @@ import MainArticle from '../../components/main-article/main-article.component';
 import HeaderWithButton from '../../components/header-with-button/header-with-button.component';
 import TripleBox from '../../components/triple-box/triple-box.component';
 import ServiceBox from '../../components/service-box/service-box.component';
-
-import AnimateOnScroll from '../../components/animate-on-scroll/animate-on-scroll.component';
+import PreviousClients from '../../components/previous-clients/previous-clients.component';
 
 const Homepage: React.FC = () => {
     const { headerArticle, servicesArticle, whatCustomersWant, whatWeDo } = { ...useAppSelector((state) => (state.content.pages.home)) };
@@ -44,6 +43,7 @@ const Homepage: React.FC = () => {
                 header={whatWeDo.header}
                 description={whatWeDo.description}
             />
+            <PreviousClients />
         </div>
     )
 };

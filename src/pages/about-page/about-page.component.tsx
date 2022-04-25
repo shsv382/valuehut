@@ -5,7 +5,7 @@ import { useAppSelector } from '../../redux/hooks';
 import MainArticle from '../../components/main-article/main-article.component';
 
 const AboutPage:React.FC = () => {
-    const aboutCoachArticle = useAppSelector((state) => (state.content.pages.about.aboutCoachArticle));
+    const { aboutCoachArticle, moreAboutCoachArticle } = useAppSelector((state) => (state.content.pages.about));
     return (
         <div className="page about-page">
             <MainArticle 
@@ -13,7 +13,7 @@ const AboutPage:React.FC = () => {
             />
             {/* { This is technical component, to be removed } */}
             <MainArticle 
-                { ...aboutCoachArticle }
+                { ...moreAboutCoachArticle }
             />
         </div>
     )

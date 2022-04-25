@@ -12,6 +12,19 @@ export interface WhatWeDoTypes {
     introdution: IntrodutionTypes
 }
 
+export interface PreviousClientsTypes {
+    name: string,
+    imageURL: string
+}
+
+interface HomepageTypes {
+    headerArticle: any,
+    servicesArticle: any,
+    whatCustomersWant: any,
+    whatWeDo: any,
+    previousClients: PreviousClientsTypes[]
+}
+
 export interface PagesTnterface {
     home: any,
     whatWeDo: WhatWeDoTypes,
@@ -50,7 +63,31 @@ export const content = {
                             but to a large extent a lack of understanding of the Agile 
                             Frameworks being adopted and the underlying Agile 
                             Principles.`
-            }
+            },
+            previousClients: [
+                {
+                    name: "Barclays",
+                    imageURL: "barclays.jpg"
+                }, {
+                    name: "HSBC",
+                    imageURL: "hsbc.jpg"
+                }, {
+                    name: "BP",
+                    imageURL: "bp.jpg"
+                }, {
+                    name: "Ministry of Justice",
+                    imageURL: "ministry-of-justice.jpg"
+                }, {
+                    name: "UBS",
+                    imageURL: "ubs.jpg"
+                }, {
+                    name: "Channel4",
+                    imageURL: "channel4.jpg"
+                }, {
+                    name: "BBC Worldwide",
+                    imageURL: "bbc-worldwide.jpg"
+                }
+            ]
         },
         whatWeDo: {
             introdution: {
@@ -67,7 +104,7 @@ export const content = {
                                 Principles.`
                 }, 
                 "training": {
-                    imageURL: "./mentatdgt.jpg",
+                    imageURL: "./mikael.jpg",
                     header: "Training",
                     description: `Training provides information to everyone within a team or organisation at the same time and the understanding is shared between everyone. Shared meaning in an organisation helps adoption of agile somewhat easier. We offer a number of Scrum.org Trainings and are able to create bespoke training packages on Agile Practices.`
                 }
@@ -81,8 +118,15 @@ export const content = {
                     Sam is a dynamic Agile practitioner, Coach and Professional Scrum Trainer with Scrum.org
                     Sam's first encounter with Scrum and Agile was in 2007; He has accumulated a lot of experience supporting organisations in delivering value to their Customers and Stakeholders. 
                     Previous clients include Barclays, HSBC, BP, Ministry of Justice, UBS, Channel4, BBC Worldwide and a number of startups from around the world.
-                    
-                    When not training, Sam works as an Enterprise Agile Coach where he supports organizations in scaling their implementation of Agile Frameworks (e.g Scrum, Kanban) up to the Executive level of the organization.
+                     
+                    `
+            }, 
+            moreAboutCoachArticle: {
+                imageURL: "./photo.jpg",
+                header: "When not training, ",
+                description: `
+                     
+                    Sam works as an Enterprise Agile Coach where he supports organizations in scaling their implementation of Agile Frameworks (e.g Scrum, Kanban) up to the Executive level of the organization.
                     Agile Frameworks including the practices and tools are great but Sam's ultimate goal is to support the organizations on building the mindset that is required for Agility to thrive.
                     
                     `

@@ -28,6 +28,9 @@
     @media screen and (max-width: 767px) {
         width: 100%;
     }
+    @media screen and (max-width: 424px) {
+        padding: 20px 3px; 
+    }
 }
 
 .contact-data-block {
@@ -40,5 +43,8 @@
     @media screen and (max-width: 767px) {
         width: 100%;
         padding-top: 0;
+    }
+    @media screen and (max-width: 424px) {
+        padding: 20px 3px; 
     }
 }

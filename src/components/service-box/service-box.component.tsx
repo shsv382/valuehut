@@ -15,7 +15,7 @@ interface ServiceBoxTypes extends TrainingTypes {
     children?: any
 }
 
-const ServiceBox: React.FC<ServiceBoxTypes> = ({title, acronym, description, iconURL, iconBorder, imageURL}) => {
+const ServiceBox: React.FC<ServiceBoxTypes> = ({title, description, imageURL}) => {
     return (
         <Link   to={title.toLowerCase().split(" ").join("-")} 
                 className="link service-box" 
@@ -40,17 +40,6 @@ const ServiceBox: React.FC<ServiceBoxTypes> = ({title, acronym, description, ico
                     <Button size="small">Learn More</Button>
                 </CardActions>
             </Card>
-            {/* <div className="service-box__content">
-                {
-                    iconURL ?
-                    <img className="service-box__icon" src={ iconURL } /> :
-                    <div className="service-box__icon service-box__icon-bordered"
-                         style={{backgroundImage: `url(${iconBorder})`}}>
-                             <p className="service-box__icon-bordered__acronym">{acronym}</p>
-                    </div>
-                } 
-                <h3 className="service-box__title"><span className="service-box__title__slash">/</span> {title}</h3>  
-            </div> */}
         </Link>
     )
 }
