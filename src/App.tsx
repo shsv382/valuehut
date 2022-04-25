@@ -29,7 +29,14 @@ function App() {
           <Routes>
             <Route path='/' element={<Homepage />} />
             <Route path='/contact' element={<ContactPage />} />
-            <Route path='/training' element={<WhatWeDoPage />} />
+            <Route path='/training' element={<WhatWeDoPage 
+                                              url="training"
+                                              trainings={ trainings }
+                                            />} />
+            <Route path='/coaching' element={<WhatWeDoPage 
+                                              url="coaching"
+                                              trainings={ coachings }
+                                            />} />
             <Route path='/about' element={<AboutPage />} />
             {
               coachings.map(coaching => (

@@ -1,3 +1,24 @@
+interface ArticleTypes {
+    imageURL: string,
+    header: string,
+    description: string
+}
+
+export interface IntrodutionTypes {
+    [key: string]: ArticleTypes
+}
+
+export interface WhatWeDoTypes {
+    introdution: IntrodutionTypes
+}
+
+export interface PagesTnterface {
+    home: any,
+    whatWeDo: WhatWeDoTypes,
+    about: any,
+    contact: any
+}
+
 export const content = {
     pages: {
         home: {
@@ -17,10 +38,8 @@ export const content = {
                     `Supporting organizations to make the workplace fun; people are happy at work doing the best work. (Working at a sustainable pace, Building self-managing & cross functional teams, Support people & teams to be accountable for their outcomes, Support people to build mastery by using OKR to set stretch goals)`,
                     `Continuously delighting customers. (How do Teams measure & capture measures of Value Delivered, Continuously improve the Product/Service using Feedback received.)`
                 ]
-            }
-        },
-        whatWeDo: {
-            introdutionArticle: {
+            },
+            whatWeDo: {
                 imageURL: "./mentatdgt.jpg",
                 header: "What we do",
                 description: `Recent Research indicates that a lot of companies have 
@@ -31,6 +50,27 @@ export const content = {
                             but to a large extent a lack of understanding of the Agile 
                             Frameworks being adopted and the underlying Agile 
                             Principles.`
+            }
+        },
+        whatWeDo: {
+            introdution: {
+                "coaching": {
+                    imageURL: "./mentatdgt.jpg",
+                    header: "Coaching",
+                    description: `Recent Research indicates that a lot of companies have 
+                                embarked on some form of Agile Transformation in the 
+                                last 10 years, however only a small proportion of these 
+                                companies have realised the value promises by Agile 
+                                Transformation. This realisation is not an issue with Agile 
+                                but to a large extent a lack of understanding of the Agile 
+                                Frameworks being adopted and the underlying Agile 
+                                Principles.`
+                }, 
+                "training": {
+                    imageURL: "./mentatdgt.jpg",
+                    header: "Training",
+                    description: `Training provides information to everyone within a team or organisation at the same time and the understanding is shared between everyone. Shared meaning in an organisation helps adoption of agile somewhat easier. We offer a number of Scrum.org Trainings and are able to create bespoke training packages on Agile Practices.`
+                }
             }
         },
         about: {

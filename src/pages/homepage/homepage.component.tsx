@@ -11,7 +11,7 @@ import ServiceBox from '../../components/service-box/service-box.component';
 import AnimateOnScroll from '../../components/animate-on-scroll/animate-on-scroll.component';
 
 const Homepage: React.FC = () => {
-    const { headerArticle, servicesArticle, whatCustomersWant } = { ...useAppSelector((state) => (state.content.pages.home)) };
+    const { headerArticle, servicesArticle, whatCustomersWant, whatWeDo } = { ...useAppSelector((state) => (state.content.pages.home)) };
     const trainings = useAppSelector((state) => (state.training.training))
     return (
         <div className='page homepage'>
@@ -38,6 +38,11 @@ const Homepage: React.FC = () => {
                 imageURL={whatCustomersWant.imageURL}
                 header={whatCustomersWant.header}
                 descriptionList={whatCustomersWant.descriptionList}
+            />
+            <MainArticle 
+                imageURL={whatWeDo.imageURL}
+                header={whatWeDo.header}
+                description={whatWeDo.description}
             />
         </div>
     )

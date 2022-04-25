@@ -1,34 +1,28 @@
 import React from 'react';
-import './what-we-do-page.styles.scss';
-
 import { useAppSelector } from '../../redux/hooks';
+import './what-we-do-page.styles.scss';
 
 import MainArticle from '../../components/main-article/main-article.component';
 
-const WhatWeDoPage: React.FC = () => {
-    const introdutionArticle = useAppSelector((state) => (state.content.pages.whatWeDo.introdutionArticle));
-    const coachings = useAppSelector((state) => (state.training.coaching));
-    const trainings = useAppSelector((state) => (state.training.training))
+import { TrainingTypes } from '../../training';
+import { IntrodutionTypes } from '../../content';
+
+interface WhatWeDoTypes {
+    url: string,
+    trainings: TrainingTypes[],
+    children?: any
+}
+
+const WhatWeDoPage: React.FC<WhatWeDoTypes> = ({ url, trainings }) => {
+    const introdution: IntrodutionTypes = { ...useAppSelector(state => state.content.pages.whatWeDo.introdution) };
+    const introdutionArticle = introdution[url];
     return (
         <div className='page what-we-do-page'>
             <MainArticle 
                 { ...introdutionArticle }
             />
             {
-                coachings.map((coaching:any, i:number) => {
-                    return (
-                        <MainArticle 
-                            imageURL={coaching.imageURL}
-                            header={coaching.title}
-                            description={coaching.description}                            
-                            isTraining={coaching.isTraining}
-                            key={`coaching-${coaching.id}`}
-                        />
-                    )
-                })
-            }
-            {
-                trainings.map((training:any, i:number) => {
+                trainings.map((training:TrainingTypes, i:number) => {
                     return (
                         <MainArticle 
                             imageURL={training.imageURL}
@@ -39,8 +33,8 @@ const WhatWeDoPage: React.FC = () => {
                             key={`training-${training.id}`}
                         />
                     )
-                })
-            }
+                }
+            )}
         </div>
     );
 }
