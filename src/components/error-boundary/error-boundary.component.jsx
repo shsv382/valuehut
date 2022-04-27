@@ -31,7 +31,7 @@ class ErrorBoundary extends React.Component {
                 <ErrorImageContainer imageUrl='./404.png' />
                 <ErrorImageText>This Page Lost in Space</ErrorImageText>
                 <br />
-                <Link to='/' className="link">Return to Homepage</Link>
+                <p>Try to refresh or <Link to='/' className="link">Return to Homepage</Link></p>
             </ErrorImageOverlay>
         }
 

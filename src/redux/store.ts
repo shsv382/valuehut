@@ -9,7 +9,34 @@ import rootReducer from './root-reducer';
 // }
 
 // export const store = createStore(rootReducer, applyMiddleware(...middlewares));
-export const store = createStore(rootReducer);
+
+const saveToLocalStorage = (state: any) => {
+    try {
+      localStorage.setItem('state', JSON.stringify(state));
+    } catch (e) {
+      console.error(e);
+    }
+};
+
+const loadFromLocalStorage = () => {
+    try {
+        const stateStr = localStorage.getItem('state');
+        return stateStr ? JSON.parse(stateStr) : undefined;
+    } catch (e) {
+        console.error(e);
+        return undefined;
+    }
+};
+
+const persistedStore = loadFromLocalStorage();
+
+const store = createStore(rootReducer, persistedStore);
+
+store.subscribe(() => {
+    saveToLocalStorage(store.getState());
+});
+
+export default store;
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch

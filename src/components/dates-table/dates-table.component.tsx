@@ -20,7 +20,7 @@ interface DatesTableTypes {
 const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
     function getDateInWords(date: object): string  {
         let newDate = date.toString().split(" ").slice(1,4);
-        return `${newDate[2]} ${newDate[1]} ${newDate[0]}`
+        return `${newDate[0]} ${newDate[1]}, ${newDate[2]}`
     }
     const region: string = useAppSelector(state => state.app.region)
     const dispatch = useAppDispatch();
@@ -45,9 +45,9 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
                         <TableCell component="th" scope="row">
-                            { getDateInWords(date) }
+                            { getDateInWords(new Date(date)) }
                         </TableCell>
-                        <TableCell align="right">{`${date.getUTCHours()}:${date.getUTCMinutes()}`}</TableCell>
+                        <TableCell align="right">{`${new Date(date).getUTCHours()}:${new Date(date).getUTCMinutes()}`}</TableCell>
                         <TableCell align="right">$ { price[region] }</TableCell>
                         <TableCell align="right" onClick={() => {
                             dispatch(addItem({ ...training, dates: [date], price: price[region] }))}
