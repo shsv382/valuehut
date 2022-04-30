@@ -9,7 +9,7 @@ import PopupMenuTraining from '../popup-menu-training/popup-menu-training.compon
 const Header: React.FC = () => {
     return (
         <header>
-            <div className="header-container">
+            <div className="header-container" id="start">
                 <LogoContainer imageURL='./logo/logo-primary.png' />
                 <NavbarContainer />
                 <PopupMenuTraining />

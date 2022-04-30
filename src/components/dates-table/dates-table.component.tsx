@@ -57,6 +57,7 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
                             </span>
                         </TableCell>
                     </TableRow>
+                    
                 ))
                 }
                 </TableBody>
