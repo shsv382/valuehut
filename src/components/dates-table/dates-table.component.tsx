@@ -32,13 +32,13 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
                 <TableHead>
                 <TableRow>
                     <TableCell>Dates</TableCell>
-                    <TableCell align="right">Time</TableCell>
-                    <TableCell align="right">&nbsp;</TableCell>
+                    <TableCell>Time</TableCell>
+                    <TableCell align="right">Duration</TableCell>
                 </TableRow>
                 </TableHead>
                 <TableBody>
                 {
-                streams.map(({ date, price }: StreamTypes) => (
+                streams.map(({ date, duration, price }: StreamTypes) => (
                     <><TableRow
                     key={ date.toString() }
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -46,23 +46,21 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
                         <TableCell component="th" scope="row">
                             { getDateInWords(new Date(date)) }
                         </TableCell>
-                        <TableCell align="right">{`${new Date(date).getUTCHours()}:${new Date(date).getUTCMinutes()}`}</TableCell>
-                        <TableCell>
-                            <span className='link'>
-                                BOOK
-                            </span>
+                        <TableCell>{`${new Date(date).getUTCHours()}:${new Date(date).getUTCMinutes()}`}</TableCell>
+                        <TableCell align="right">
+                            { duration } hours
                         </TableCell>
                     </TableRow>
                     {
                         price.map(({ region, regionDescription, amount }: PriceTypes) => (
                             <TableRow
                                 key={ date.toString() + region.toString() }
-                                sx={{ backgroundColor:"#cccccc", '&:last-child td, &:last-child th': { border: 0 } }}
+                                sx={{ backgroundColor:"#f5f5f5", '&:last-child td, &:last-child th': { border: 0 } }}
                                 >
                                     <TableCell component="th" scope="row">
                                         { region }: { regionDescription }
                                     </TableCell>
-                                    <TableCell align="right">$ { amount }</TableCell>
+                                    <TableCell>$ { amount }</TableCell>
                                     <TableCell align="right" onClick={() => {
                                         dispatch(addItem({ ...training, dates: [date], price: amount }))}
                                     }>

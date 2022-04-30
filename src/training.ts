@@ -13,6 +13,7 @@ export interface PriceTypes {
 
 export interface StreamTypes {
     date: any,
+    duration: number,
     price: PriceTypes[]
 }
 
@@ -33,6 +34,8 @@ export interface TrainingTypes {
     /*
         Dates should be created by JavaScript method in UTC format
         new Date("2023-03-11T11:30:00+09:00")
+
+        Duration in hours
     */
 }
 
@@ -104,6 +107,7 @@ export const training:TrainingObject = {
             streams: [
                 {
                     date: new Date("2023-06-11T11:30:00+07:00"),
+                    duration: 2,
                     price: [
                         {
                         region: "Primary Market",
@@ -124,6 +128,7 @@ export const training:TrainingObject = {
                 },
                 {
                     date: new Date("2023-07-11T11:30:00+09:00"),
+                    duration: 2,
                     price: [
                         {
                         region: "Primary Market",
@@ -170,6 +175,7 @@ export const training:TrainingObject = {
             streams: [
                 {
                     date: new Date("2023-06-11T11:30:00+07:00"),
+                    duration: 2,
                     price: [
                         {
                         region: "Primary Market",
@@ -190,6 +196,7 @@ export const training:TrainingObject = {
                 },
                 {
                     date: new Date("2023-07-11T11:30:00+09:00"),
+                    duration: 2,
                     price: [
                         {
                         region: "Primary Market",
@@ -240,6 +247,7 @@ export const training:TrainingObject = {
             streams: [
                 {
                     date: new Date("2023-06-11T11:30:00+07:00"),
+                    duration: 2,
                     price: [
                         {
                         region: "Primary Market",
@@ -260,6 +268,7 @@ export const training:TrainingObject = {
                 },
                 {
                     date: new Date("2023-07-11T11:30:00+09:00"),
+                    duration: 2,
                     price: [
                         {
                         region: "Primary Market",
