@@ -32,7 +32,7 @@ const Footer: React.FC<FooterTypes> = ({ email, phone, address, howto }) => {
                 <p>Mail to <a className='link footer__link' href={`mailto:${email}`}>{email}</a></p>
                 <p>Call <a className='link footer__link' href={`tel:${phone}`}>{phone}</a></p>
                 <div className="change-region-block">
-                    <FormControl>
+                    {/* <FormControl>
                     <InputLabel id="change-region-label" 
                         sx={{color: "#ffffff"}}>Region:</InputLabel>
                         <Select
@@ -47,7 +47,7 @@ const Footer: React.FC<FooterTypes> = ({ email, phone, address, howto }) => {
                         <MenuItem value='us' >US</MenuItem>
                         <MenuItem value='uk'>UK</MenuItem>
                         </Select>
-                    </FormControl>
+                    </FormControl> */}
                 </div>
             </div>
         </footer>

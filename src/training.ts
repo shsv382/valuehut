@@ -111,17 +111,17 @@ export const training:TrainingObject = {
                     price: [
                         {
                         region: "Primary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "Austria, Belgium, Canada, Denmark, Finland, France, Germany, Ireland, Italy, Japan, Korea, Luxembourg, Netherlands, Norway, Sweden, Switzerland, United Kingdom, United States",
                         amount: 1000
                         },
                         {
                         region: "Secondary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "All countries not listed as primary or tertiary",
                         amount: 900    
                         },
                         {
                         region: "Tertiary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "India and African nations",
                         amount: 800
                         }
                     ]
@@ -132,17 +132,17 @@ export const training:TrainingObject = {
                     price: [
                         {
                         region: "Primary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "Austria, Belgium, Canada, Denmark, Finland, France, Germany, Ireland, Italy, Japan, Korea, Luxembourg, Netherlands, Norway, Sweden, Switzerland, United Kingdom, United States",
                         amount: 1000
                         },
                         {
                         region: "Secondary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "All countries not listed as primary or tertiary",
                         amount: 900    
                         },
                         {
                         region: "Tertiary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "India and African nations",
                         amount: 800
                         }
                     ]
@@ -179,17 +179,17 @@ export const training:TrainingObject = {
                     price: [
                         {
                         region: "Primary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "Austria, Belgium, Canada, Denmark, Finland, France, Germany, Ireland, Italy, Japan, Korea, Luxembourg, Netherlands, Norway, Sweden, Switzerland, United Kingdom, United States",
                         amount: 1000
                         },
                         {
                         region: "Secondary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "All countries not listed as primary or tertiary",
                         amount: 900    
                         },
                         {
                         region: "Tertiary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "India and African nations",
                         amount: 800
                         }
                     ]
@@ -200,17 +200,17 @@ export const training:TrainingObject = {
                     price: [
                         {
                         region: "Primary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "Austria, Belgium, Canada, Denmark, Finland, France, Germany, Ireland, Italy, Japan, Korea, Luxembourg, Netherlands, Norway, Sweden, Switzerland, United Kingdom, United States",
                         amount: 1000
                         },
                         {
                         region: "Secondary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "All countries not listed as primary or tertiary",
                         amount: 900    
                         },
                         {
                         region: "Tertiary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "India and African nations",
                         amount: 800
                         }
                     ]
@@ -251,17 +251,17 @@ export const training:TrainingObject = {
                     price: [
                         {
                         region: "Primary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "Austria, Belgium, Canada, Denmark, Finland, France, Germany, Ireland, Italy, Japan, Korea, Luxembourg, Netherlands, Norway, Sweden, Switzerland, United Kingdom, United States",
                         amount: 1000
                         },
                         {
                         region: "Secondary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "All countries not listed as primary or tertiary",
                         amount: 900    
                         },
                         {
                         region: "Tertiary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "India and African nations",
                         amount: 800
                         }
                     ]
@@ -272,17 +272,17 @@ export const training:TrainingObject = {
                     price: [
                         {
                         region: "Primary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "Austria, Belgium, Canada, Denmark, Finland, France, Germany, Ireland, Italy, Japan, Korea, Luxembourg, Netherlands, Norway, Sweden, Switzerland, United Kingdom, United States",
                         amount: 1000
                         },
                         {
                         region: "Secondary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "All countries not listed as primary or tertiary",
                         amount: 900    
                         },
                         {
                         region: "Tertiary Market",
-                        regionDescription: "Countries",
+                        regionDescription: "India and African nations",
                         amount: 800
                         }
                     ]

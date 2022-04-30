@@ -1,4 +1,5 @@
 import React from 'react';
+import './dates-table.styles.scss';
 
 import { TrainingTypes, StreamTypes, PriceTypes } from '../../training';
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
@@ -27,7 +28,8 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
     return (
         <TableContainer component={Paper}>
             <Table sx={{ 
-                minWidth: 320
+                minWidth: 320,
+                fontSize: "20px"
             }} aria-label="simple table">
                 <TableHead>
                 <TableRow>
@@ -58,10 +60,10 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
                                 sx={{ backgroundColor:"#f5f5f5", '&:last-child td, &:last-child th': { border: 0 } }}
                                 >
                                     <TableCell component="th" scope="row">
-                                        { region }: { regionDescription }
+                                        <span className='details'><strong className='details'>{ region }:</strong> { regionDescription }</span>
                                     </TableCell>
-                                    <TableCell>$ { amount }</TableCell>
-                                    <TableCell align="right" onClick={() => {
+                                    <TableCell className='dates-table__price-amount'>$ { amount }</TableCell>
+                                    <TableCell align="right" className="dates-table__book-btn" onClick={() => {
                                         dispatch(addItem({ ...training, dates: [date], price: amount }))}
                                     }>
                                         <span className='link'>
