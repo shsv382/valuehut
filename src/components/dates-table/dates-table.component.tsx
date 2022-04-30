@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TrainingTypes, StreamTypes } from '../../training';
+import { TrainingTypes, StreamTypes, PriceTypes } from '../../training';
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 import { addItem } from '../../redux/cart/cart.actions';
 
@@ -33,14 +33,13 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
                 <TableRow>
                     <TableCell>Dates</TableCell>
                     <TableCell align="right">Time</TableCell>
-                    <TableCell align="right">Price</TableCell>
                     <TableCell align="right">&nbsp;</TableCell>
                 </TableRow>
                 </TableHead>
                 <TableBody>
                 {
                 streams.map(({ date, price }: StreamTypes) => (
-                    <TableRow
+                    <><TableRow
                     key={ date.toString() }
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
@@ -48,17 +47,35 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
                             { getDateInWords(new Date(date)) }
                         </TableCell>
                         <TableCell align="right">{`${new Date(date).getUTCHours()}:${new Date(date).getUTCMinutes()}`}</TableCell>
-                        <TableCell align="right">$ { price[region] }</TableCell>
-                        <TableCell align="right" onClick={() => {
-                            dispatch(addItem({ ...training, dates: [date], price: price[region] }))}
-                        }>
+                        <TableCell>
                             <span className='link'>
                                 BOOK
                             </span>
                         </TableCell>
                     </TableRow>
-                    
-                ))
+                    {
+                        price.map(({ region, regionDescription, amount }: PriceTypes) => (
+                            <TableRow
+                                key={ date.toString() + region.toString() }
+                                sx={{ backgroundColor:"#cccccc", '&:last-child td, &:last-child th': { border: 0 } }}
+                                >
+                                    <TableCell component="th" scope="row">
+                                        { region }: { regionDescription }
+                                    </TableCell>
+                                    <TableCell align="right">$ { amount }</TableCell>
+                                    <TableCell align="right" onClick={() => {
+                                        dispatch(addItem({ ...training, dates: [date], price: amount }))}
+                                    }>
+                                        <span className='link'>
+                                            BOOK
+                                        </span>
+                                    </TableCell>
+                            </TableRow>
+                        )
+                    )
+                    }</>
+                    )
+                )
                 }
                 </TableBody>
             </Table>

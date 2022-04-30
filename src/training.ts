@@ -6,12 +6,14 @@
 // Each word of title should be in Capitalize Case
 
 export interface PriceTypes {
-    [key: string]: number | undefined
+    region: string,
+    regionDescription: string,
+    amount: number
 }
 
 export interface StreamTypes {
     date: any,
-    price: PriceTypes
+    price: PriceTypes[]
 }
 
 export interface TrainingTypes {
@@ -102,19 +104,43 @@ export const training:TrainingObject = {
             streams: [
                 {
                     date: new Date("2023-06-11T11:30:00+07:00"),
-                    price: {
-                        "us": 1000,
-                        "uk": 800,
-                        "africa": 500
-                    }
+                    price: [
+                        {
+                        region: "Primary Market",
+                        regionDescription: "Countries",
+                        amount: 1000
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "Countries",
+                        amount: 900    
+                        },
+                        {
+                        region: "Tertiary Market",
+                        regionDescription: "Countries",
+                        amount: 800
+                        }
+                    ]
                 },
                 {
                     date: new Date("2023-07-11T11:30:00+09:00"),
-                    price: {
-                        "us": 1000,
-                        "uk": 800,
-                        "africa": 500
-                    }
+                    price: [
+                        {
+                        region: "Primary Market",
+                        regionDescription: "Countries",
+                        amount: 1000
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "Countries",
+                        amount: 900    
+                        },
+                        {
+                        region: "Tertiary Market",
+                        regionDescription: "Countries",
+                        amount: 800
+                        }
+                    ]
                 }
             ],
             isTraining: true
@@ -144,19 +170,43 @@ export const training:TrainingObject = {
             streams: [
                 {
                     date: new Date("2023-06-11T11:30:00+07:00"),
-                    price: {
-                        "us": 1000,
-                        "uk": 800,
-                        "africa": 500
-                    }
+                    price: [
+                        {
+                        region: "Primary Market",
+                        regionDescription: "Countries",
+                        amount: 1000
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "Countries",
+                        amount: 900    
+                        },
+                        {
+                        region: "Tertiary Market",
+                        regionDescription: "Countries",
+                        amount: 800
+                        }
+                    ]
                 },
                 {
                     date: new Date("2023-07-11T11:30:00+09:00"),
-                    price: {
-                        "us": 1000,
-                        "uk": 800,
-                        "africa": 500
-                    }
+                    price: [
+                        {
+                        region: "Primary Market",
+                        regionDescription: "Countries",
+                        amount: 1000
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "Countries",
+                        amount: 900    
+                        },
+                        {
+                        region: "Tertiary Market",
+                        regionDescription: "Countries",
+                        amount: 800
+                        }
+                    ]
                 }
             ],
             isTraining: true
@@ -190,19 +240,43 @@ export const training:TrainingObject = {
             streams: [
                 {
                     date: new Date("2023-06-11T11:30:00+07:00"),
-                    price: {
-                        "us": 1000,
-                        "uk": 800,
-                        "africa": 500
-                    }
+                    price: [
+                        {
+                        region: "Primary Market",
+                        regionDescription: "Countries",
+                        amount: 1000
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "Countries",
+                        amount: 900    
+                        },
+                        {
+                        region: "Tertiary Market",
+                        regionDescription: "Countries",
+                        amount: 800
+                        }
+                    ]
                 },
                 {
                     date: new Date("2023-07-11T11:30:00+09:00"),
-                    price: {
-                        "us": 1000,
-                        "uk": 800,
-                        "africa": 500
-                    }
+                    price: [
+                        {
+                        region: "Primary Market",
+                        regionDescription: "Countries",
+                        amount: 1000
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "Countries",
+                        amount: 900    
+                        },
+                        {
+                        region: "Tertiary Market",
+                        regionDescription: "Countries",
+                        amount: 800
+                        }
+                    ]
                 }
             ],
             isTraining: true
