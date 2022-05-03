@@ -1,15 +1,13 @@
 import React from 'react';
 import './contact-data.styles.scss';
+import { ContactDataTypes } from '../../content';
 
-interface ContactDataTypes {
-    address: string,
-    email: string,
-    phone: string | number
-}
-
-const ContactData: React.FC<ContactDataTypes> = ({ address, email, phone }) => {
+const ContactData: React.FC<ContactDataTypes> = ({ region, address, email, phone }) => {
     return (
         <ul className='contact-data'>
+            <li><span className="contact-data__list__slash">/ </span>
+                <b>{ region } office</b>
+            </li>
             <li><span className="contact-data__list__slash">/ </span>
                 { address }
             </li>

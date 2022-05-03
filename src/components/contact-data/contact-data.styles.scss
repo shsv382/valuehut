@@ -2,8 +2,13 @@
 
 .contact-data {
     width: 100%;
-    border-bottom: 1px solid $primaryColorLight;
+    padding-top: 20px;
     margin-bottom: 30px;
+    border-top: 1px solid $primaryColorLight;
+    &:last-of-type {
+        padding-bottom: 30px;
+        border-bottom: 1px solid $primaryColorLight;
+    }
     @media screen and (max-width: 767px) {
         border-top: 1px solid $primaryColorLight;
         padding: 30px 10px;

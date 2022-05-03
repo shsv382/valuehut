@@ -12,7 +12,8 @@ footer {
     justify-content: center;
     align-items: center;
     @media screen and (max-width: 767px) {
-        height: 240px;
+        min-height: 440px;
+        padding-bottom: 180px;
     }
 }
 
@@ -49,5 +50,15 @@ footer {
             font-size: 80%;
             height: 30px;
         }
+    }
+}
+
+.footer__contact-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        margin-top: 20px;
     }
 }

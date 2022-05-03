@@ -19,11 +19,12 @@
 }
 
 .service__header {
-    height: 80px;
+    height: 100px;
     width: 100vw;
     text-align: center;
     line-height: 80px;
     color: $primaryColorDark;
+    background-size: cover;
     @media screen and (max-width: 767px) {
         line-height: 48px;
         height: 96px;

@@ -19,7 +19,7 @@ function App() {
   
   const coachings = useAppSelector((state) => (state.training.coaching));
   const trainings = useAppSelector((state) => (state.training.training));
-  const contactData = { ...useAppSelector((state) => (state.content.pages.contact)) };
+  const contactData = useAppSelector((state) => (state.content.pages.contact));
 
   return (
     <div className="App">

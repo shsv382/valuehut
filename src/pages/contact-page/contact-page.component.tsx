@@ -1,12 +1,13 @@
 import React from 'react';
 import './contact-page.styles.scss';
+import { ContactDataTypes } from '../../content';
 
 import { useAppSelector } from '../../redux/hooks';
 
 import ContactData from '../../components/contact-data/contact-data.component';
 
 const ContactPage: React.FC = () => {
-    const { email, phone, address, howto } = { ...useAppSelector((state) => (state.content.pages.contact)) };
+    const { offices, howto } = { ...useAppSelector((state) => (state.content.pages.contact)) };
     return (
         <div className='page contact-page'>
             <div className='how-to-contact'>
@@ -14,11 +15,16 @@ const ContactPage: React.FC = () => {
                 <p>{ howto }</p>
             </div>
             <div className='contact-data-block'>
-                <ContactData 
-                    email={email}
-                    phone={phone}
-                    address={address}
-                />
+                {
+                    offices.map(({ region, address, email, phone }) => (
+                        <ContactData 
+                            region={region}
+                            email={email}
+                            phone={phone}
+                            address={address}
+                        />
+                    ))
+                }
             </div>
         </div>
     )

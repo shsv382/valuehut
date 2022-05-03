@@ -14,7 +14,7 @@ interface ServiceTypes {
 }
 
 const Service: React.FC<ServiceTypes> = ({ training }) => {
-    const { title, description, whatWillILearn, whoShouldAttend, streams } = { ...training };
+    const { title, description, whatWillILearn, whoShouldAttend, streams, imageURL } = { ...training };
     return (
         <div className='page service-page'>
             <h1 className="service__header">{title}</h1>

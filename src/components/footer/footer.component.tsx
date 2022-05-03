@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 import { changeRegion } from '../../redux/app/app.actions';
+import { ContactDataTypes } from '../../content';
 
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -11,13 +12,11 @@ import './footer.styles.scss';
 import LogoContainer from '../logo-container/logo-container.component';
 
 interface FooterTypes {
-    email: string, 
-    phone: string | number, 
-    address?: string, 
     howto?: string 
+    offices: ContactDataTypes[], 
 }
 
-const Footer: React.FC<FooterTypes> = ({ email, phone, address, howto }) => {
+const Footer: React.FC<FooterTypes> = ({ howto, offices }) => {
     const region = useAppSelector(state => state.app.region);
     const dispatch = useAppDispatch();
     const handleChange = (event: SelectChangeEvent) => {
@@ -27,10 +26,16 @@ const Footer: React.FC<FooterTypes> = ({ email, phone, address, howto }) => {
     return (
         <footer>
             <div className='footer-container'>
+                <>
                 <LogoContainer imageURL='./logo/logo-primary-bg-black.png' />
                 <h3>Contact Us Now:</h3>
-                <p>Mail to <a className='link footer__link' href={`mailto:${email}`}>{email}</a></p>
-                <p>Call <a className='link footer__link' href={`tel:${phone}`}>{phone}</a></p>
+                    { offices.map(({region, email, address, phone}) => (
+                        <div className="footer__contact-data">
+                            <p className="details-responsive"><u>{region} office:</u></p>
+                            <p className="details-responsive">Mail to <a className='link footer__link' href={`mailto:${email}`}>{email}</a></p>
+                            <p className="details-responsive">Call <a className='link footer__link' href={`tel:${phone}`}>{phone}</a></p>
+                        </div>)
+                    )}
                 <div className="change-region-block">
                     {/* <FormControl>
                     <InputLabel id="change-region-label" 
@@ -49,6 +54,7 @@ const Footer: React.FC<FooterTypes> = ({ email, phone, address, howto }) => {
                         </Select>
                     </FormControl> */}
                 </div>
+                </>
             </div>
         </footer>
     )
