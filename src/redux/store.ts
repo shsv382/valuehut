@@ -1,5 +1,14 @@
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './root-reducer';
+
+import { persistStore } from 'redux-persist';
+
+export const store = createStore(rootReducer);
+export const persistor = persistStore(store);
+
+export default { store, persistor };
+
+// -----   Without persisted store   ----- //
 // import logger from 'redux-logger';
 
 // const middlewares = [];
@@ -10,33 +19,33 @@ import rootReducer from './root-reducer';
 
 // export const store = createStore(rootReducer, applyMiddleware(...middlewares));
 
-const saveToLocalStorage = (state: any) => {
-    try {
-      localStorage.setItem('state', JSON.stringify(state));
-    } catch (e) {
-      console.error(e);
-    }
-};
 
-const loadFromLocalStorage = () => {
-    try {
-        const stateStr = localStorage.getItem('state');
-        return stateStr ? JSON.parse(stateStr) : undefined;
-    } catch (e) {
-        console.error(e);
-        return undefined;
-    }
-};
+// -----   With manually persisted store ----- //
+// const saveToLocalStorage = (state: any) => {
+//     try {
+//       localStorage.setItem('state', JSON.stringify(state));
+//     } catch (e) {
+//       console.error(e);
+//     }
+// };
 
-const persistedStore = loadFromLocalStorage();
+// const loadFromLocalStorage = () => {
+//     try {
+//         const stateStr = localStorage.getItem('state');
+//         return stateStr ? JSON.parse(stateStr) : undefined;
+//     } catch (e) {
+//         console.error(e);
+//         return undefined;
+//     }
+// };
 
-const store = createStore(rootReducer, persistedStore);
+// const persistedStore = loadFromLocalStorage();
 
-store.subscribe(() => {
-    saveToLocalStorage(store.getState());
-});
+// const store = createStore(rootReducer, persistedStore);
 
-export default store;
+// store.subscribe(() => {
+//     saveToLocalStorage(store.getState());
+// });
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch

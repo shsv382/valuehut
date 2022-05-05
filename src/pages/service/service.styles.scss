@@ -27,8 +27,8 @@
     background-size: cover;
     @media screen and (max-width: 767px) {
         line-height: 48px;
-        height: 96px;
         margin-bottom: 24px;
+        height: fit-content;
     }
 }
 
