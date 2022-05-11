@@ -35,7 +35,7 @@ const ServiceBox: React.FC<ServiceBoxTypes> = ({header, description, imageURL}) 
                     <Typography gutterBottom variant="h5" component="div">
                     { header }
                     </Typography>
-                    <Typography variant="body2" color="text.secondary" className="details">
+                    <Typography variant="body2" color="text.secondary">
                     { description }
                     </Typography>
                 </CardContent>
