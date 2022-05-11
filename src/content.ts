@@ -114,6 +114,11 @@ export const content = {
                     imageURL: "./mikael.jpg",
                     header: "Training",
                     description: `Training provides information to everyone within a team or organisation at the same time and the understanding is shared between everyone. Shared meaning in an organisation helps adoption of agile somewhat easier. We offer a number of Scrum.org Trainings and are able to create bespoke training packages on Agile Practices.`
+                },
+                "consultancy": {
+                    imageURL: "./cameron.jpg",
+                    header: "Consultancy",
+                    description: "Some text for consultancy"
                 }
             }
         },

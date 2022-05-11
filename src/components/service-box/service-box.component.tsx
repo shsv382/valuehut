@@ -11,26 +11,29 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-interface ServiceBoxTypes extends TrainingTypes {
+interface ServiceBoxTypes {
+    header: string, 
+    description: string, 
+    imageURL: string,
     children?: any
 }
 
-const ServiceBox: React.FC<ServiceBoxTypes> = ({title, description, imageURL}) => {
+const ServiceBox: React.FC<ServiceBoxTypes> = ({header, description, imageURL}) => {
     return (
-        <Link   to={title.toLowerCase().split(" ").join("-")} 
+        <Link   to={header.toLowerCase().split(" ").join("-")} 
                 className="link service-box" 
                 style={{backgroundImage: imageURL}}>
             <Card sx={{ maxWidth: 345, position: 'relative' }} className="service-box__content">
                 <CardMedia
                     className="service-box__image-content"
                     component="img"
-                    alt={`${title}`}
+                    alt={`${header}`}
                     height="140"
                     image={`images/${imageURL}`}
                 />
                 <CardContent className="service-box__text-content">
                     <Typography gutterBottom variant="h5" component="div">
-                    { title }
+                    { header }
                     </Typography>
                     <Typography variant="body2" color="text.secondary" className="details">
                     { description }

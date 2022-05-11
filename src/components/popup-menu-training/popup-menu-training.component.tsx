@@ -9,7 +9,7 @@ const PopupMenuTraining: React.FC = () => {
     const showPopupMenuTraining = useAppSelector(state => state.app.showPopupMenuTraining)
     return (
         <PopupMenu hidden={showPopupMenuTraining}>
-            <PopupMenuItem label="Consultancy" href="/coaching" />
+            <PopupMenuItem label="Consultancy" href="/consultancy" />
             <PopupMenuItem label="Coaching" href="/coaching" />
             <PopupMenuItem label="Training" href="/training" />
         </PopupMenu>

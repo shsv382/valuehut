@@ -40,11 +40,29 @@ export interface TrainingTypes {
 }
 
 interface TrainingObject {
+    consultancy: TrainingTypes[],
     coaching: TrainingTypes[],
     training: TrainingTypes[]
 }
 
 export const training:TrainingObject = {
+    consultancy: [ 
+        {
+            id: 19,
+            title: "Enterprise and Organizational Consultancy",
+            acronym: "",
+            description: `Efforts to embark on Agility at the team level especially when it doesn’t involve the whole organisation could be an uphill battle; we advise our clients that in other to deliver sustainable and long-lasting change, agility should be introduced using a “whole organisation” approach to agility. This approach however comes with it own sets of challenges which might be familiar to you.`,
+            imageURL: "./mikael.jpg",
+            iconURL: "",
+            whatWillILearn: `Typical challenges that are faced include:
+            \n•	Resistance at different levels within the organisation.\n
+            \n•	Organisational structure & culture that is not optimised for Agility.\n
+            \n•	Disjointed perceptions of the current and the future state for the Organisation across the Organisation.\n
+            `,
+            whoShouldAttend: `We have helped a lot of organisation to navigate these kinds of challenges to deliver true agility across the enterprise by leverage their experience and skills in Large scale facilitation, co-creation of outcomes and the use of experimentation across the enterprise.`,
+            isTraining: true
+        }
+    ],
     coaching: [
         {
             id: 1,

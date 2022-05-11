@@ -19,6 +19,7 @@ function App() {
   
   const coachings = useAppSelector((state) => (state.training.coaching));
   const trainings = useAppSelector((state) => (state.training.training));
+  const consultancy = useAppSelector((state) => (state.training.consultancy));
   const contactData = useAppSelector((state) => (state.content.pages.contact));
 
   return (
@@ -29,6 +30,10 @@ function App() {
           <Routes>
             <Route path='/' element={<Homepage />} />
             <Route path='/contact' element={<ContactPage />} />
+            <Route path='/consultancy' element={<WhatWeDoPage 
+                                              url="consultancy"
+                                              trainings={ consultancy }
+                                            />} />
             <Route path='/training' element={<WhatWeDoPage 
                                               url="training"
                                               trainings={ trainings }
@@ -38,6 +43,14 @@ function App() {
                                               trainings={ coachings }
                                             />} />
             <Route path='/about' element={<AboutPage />} />
+            {
+              consultancy.map(consult => (
+                <Route 
+                  path={consult.title.toLowerCase().split(" ").join("-")} 
+                  element={<ServicePage training={ consult } />}
+                />
+              ))
+            }
             {
               coachings.map(coaching => (
                 <Route 
