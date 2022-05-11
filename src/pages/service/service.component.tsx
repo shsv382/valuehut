@@ -17,7 +17,10 @@ const Service: React.FC<ServiceTypes> = ({ training }) => {
     const { title, description, whatWillILearn, whoShouldAttend, streams, imageURL } = { ...training };
     return (
         <div className='page service-page'>
-            <h1 className="service__header">{title}</h1>
+            <div className="service__header" style={{backgroundImage: `url('images/${imageURL}')`}}>
+                <h1><span>{title}</span></h1>
+            </div>
+            <div className="service-page__placeholder"></div>
             {    description &&
                 <ServiceArticle 
                     title="About this Course"

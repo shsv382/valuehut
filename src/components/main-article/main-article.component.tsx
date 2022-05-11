@@ -43,7 +43,7 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
                 {
                     isTraining &&
                     <Link to={"/" + header.toLowerCase().split(" ").join("-")} className="button button-secondary button-secondary-default">
-                        Check Out
+                        Read More
                     </Link>
                 }
                 </div>
