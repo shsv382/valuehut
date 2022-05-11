@@ -8,6 +8,7 @@
     flex-direction: column;
     background-color: $neutral100;
     border: 1px solid $neutral300;
+    z-index: 10000;
     &.hidden {
         display: none;
     }
