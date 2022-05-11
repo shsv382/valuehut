@@ -19,8 +19,9 @@ interface DatesTableTypes {
 }
 
 const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
-    function getDateInWords(date: object): string  {
-        let newDate = date.toString().split(" ").slice(1,4);
+    function getDateInWords(date: any, duration: number = 0): string  {
+        let newDate = date.setDate(date.getDate() + duration);
+        newDate = date.toString().split(" ").slice(1,4);
         return `${newDate[0]} ${newDate[1]}, ${newDate[2]}`
     }
     const region: string = useAppSelector(state => state.app.region)
@@ -46,11 +47,11 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
                         <TableCell component="th" scope="row">
-                            { getDateInWords(new Date(date)) }
+                            { getDateInWords(new Date(date)) } - { getDateInWords(new Date(date), duration) }
                         </TableCell>
                         <TableCell>{`${new Date(date).getUTCHours()}:${new Date(date).getUTCMinutes()}`}</TableCell>
                         <TableCell align="right">
-                            { duration } hours
+                            { duration } days
                         </TableCell>
                     </TableRow>
                     {

@@ -267,8 +267,8 @@ export const training:TrainingObject = {
                     ]
                 },
                 {
-                    date: new Date("2023-07-11T11:30:00+09:00"),
-                    duration: 2,
+                    date: new Date("2023-07-14T11:30:00+09:00"),
+                    duration: 3,
                     price: [
                         {
                         region: "Primary Market",
