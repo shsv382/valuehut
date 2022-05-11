@@ -9,6 +9,15 @@
     }
 }
 
+@keyframes swimming {
+    0% { 
+        right: 0; 
+    }
+    100% { 
+        right: 2240px; 
+    }
+}
+
 .appearancable {
     animation: appearance 0.35s ease-in;
     position: relative;

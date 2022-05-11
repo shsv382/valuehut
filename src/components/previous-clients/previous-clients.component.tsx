@@ -9,9 +9,14 @@ const PreviousClients = () => {
     return (
         <div className="previous-clients">
             <h1 className="previous-clients__header">Previous clients include</h1>
+            <div className="previous-clients__carousel">
                 {
-                    previousClients.map(client => <ClientBox {...client} />)
+                    <>
+                        {previousClients.map(client => <ClientBox {...client} />)}
+                        {previousClients.map(client => <ClientBox {...client} />)}
+                    </>
                 }
+            </div>
         </div>  
         
     )

@@ -1,6 +1,7 @@
 @import '../../color-scheme.scss';
 
 .client-box {
+    width: 260px;
     max-width: 100%;
     height: 320px;
     max-height: 100%;
@@ -23,7 +24,7 @@
         }
     }
     @media screen and (max-width: 767px) {
-        width: 280px;
+        width: 260px;
         box-sizing: content-box;
         max-width: 100%;
         padding-bottom: 40px;

@@ -1,10 +1,14 @@
+@import '../../keyframes.scss';
+
 .previous-clients {
     display: flex;
     width: 100%;
+    overflow: hidden;
     padding: 30px 10px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     @media screen and (max-width: 767px) {
         justify-content: center;
     }
@@ -13,4 +17,10 @@
 .previous-clients__header {
     width: 100%;
     margin-bottom: 30px;
+}
+
+.previous-clients__carousel {
+    display: flex;
+    position: relative;
+    animation: swimming 21s linear infinite;
 }

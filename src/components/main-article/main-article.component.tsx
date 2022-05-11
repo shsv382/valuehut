@@ -5,22 +5,24 @@ import { Link } from 'react-router-dom';
 import './main-article.styles.scss';
 
 interface MainArticleProps {
-    imageURL: string,
+    imageURL?: string,
     header: string,
     description?: string,
     descriptionList?: string[],
     streams?: any[],
     isTraining?: boolean,
-    otherProps?: any[]
+    otherProps?: any[],
+    style?: any
 }
 
-const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, descriptionList, streams, isTraining, ...otherProps}: MainArticleProps) => {
+const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, descriptionList, streams, isTraining, style, ...otherProps}: MainArticleProps) => {
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
     }
+    const articleWidth: object = imageURL ? {} : {width: "100%"}
     return (
-        <section className="main__article">
-            <article className="main__article__section">
+        <section className="main__article" style={style}>
+            <article className="main__article__section" style={articleWidth}>
                 <h1 className="main__article__header">{header}</h1>
                     { description &&
                         <p className="main__article__description">
@@ -46,9 +48,10 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
                 }
                 </div>
             </article>
-            <aside className="main__article__aside main__article__aside__image"
-                    style={{backgroundImage: `url("/images/${imageURL}")`}} >
-            </aside>
+            { imageURL && ( <aside className="main__article__aside main__article__aside__image"
+                            style={{backgroundImage: `url("/images/${imageURL}")`}} >
+                            </aside>)
+            }
         </section>
     )
 }

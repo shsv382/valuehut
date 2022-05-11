@@ -119,7 +119,6 @@ export const content = {
         },
         about: {
             aboutCoachArticle: {
-                imageURL: "./landscape-large.jpg",
                 header: "About our Coach",
                 description: `
                     Sam is a dynamic Agile practitioner, Coach and Professional Scrum Trainer with Scrum.org
