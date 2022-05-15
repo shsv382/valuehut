@@ -16,3 +16,20 @@
     }
     margin: auto;
 }
+
+.about-page__avatar {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.about-page__avatar-image {
+    display: block;
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    overflow: hidden;
+    @media screen and (max-width: 767px) {
+        margin: auto;
+    }
+}
