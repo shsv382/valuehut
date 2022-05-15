@@ -3,6 +3,7 @@ import './homepage.styles.scss';
 
 import { useAppSelector } from '../../redux/hooks';
 
+import WidescreenBanner from '../../components/widescreen-banner/widescreen-banner.component';
 import MainArticle from '../../components/main-article/main-article.component';
 import HeaderWithButton from '../../components/header-with-button/header-with-button.component';
 import TripleBox from '../../components/triple-box/triple-box.component';
@@ -14,6 +15,8 @@ const Homepage: React.FC = () => {
     const trainings = useAppSelector((state) => (state.training.training))
     const services = { ...useAppSelector((state) => (state.content.pages.whatWeDo.introdution)) };
     return (
+        <>
+        <WidescreenBanner />
         <div className='page homepage'>
             <MainArticle 
                 imageURL={headerArticle.imageURL}
@@ -46,6 +49,7 @@ const Homepage: React.FC = () => {
             />
             <PreviousClients />
         </div>
+        </>
     )
 };
 

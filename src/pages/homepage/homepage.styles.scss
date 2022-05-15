@@ -1,9 +1,12 @@
 @import '../../keyframes.scss';
+@import '../../color-scheme.scss';
 
 .homepage {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
+    background-color: $light;
     width: 1024px;
     @media screen and (max-width: 1080px) {
         width: 992px;
