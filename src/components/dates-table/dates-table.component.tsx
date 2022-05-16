@@ -64,11 +64,17 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
                                         <span className='details'><strong className='details'>{ region }:</strong> { regionDescription }</span>
                                     </TableCell>
                                     <TableCell className='dates-table__price-amount'>$ { amount }</TableCell>
-                                    <TableCell align="right" className="dates-table__book-btn" onClick={() => {
+                                    {/* <TableCell align="right" className="dates-table__book-btn" onClick={() => {
                                         dispatch(addItem({ ...training, dates: [date], price: amount }))}
-                                    }>
+                                    }> */}
+                                    <TableCell align="right" className="dates-table__book-btn">
                                         <span className='link'>
-                                            BOOK
+                                            <a 
+                                                href={`https://valuehut.foxycart.com/cart?name=${training.title}&date=${date}&price=${amount}`} 
+                                                target="_blank" 
+                                            >
+                                                BOOK
+                                            </a>
                                         </span>
                                     </TableCell>
                             </TableRow>

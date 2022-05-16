@@ -7,7 +7,7 @@ import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { ReactComponent as Cart } from './basket_12.svg';
 
 const CartButtonContainer: React.FC = () => {
-    const hidden = useAppSelector((state) => state.cart.hidden);
+    // const hidden = useAppSelector((state) => state.cart.hidden);
     const dispatch = useAppDispatch();
     const handleClick = () => {
         dispatch(toggleCartHidden());
@@ -15,9 +15,9 @@ const CartButtonContainer: React.FC = () => {
     return (
         <div className='cart-button-container'>
             <Cart onClick={handleClick} />
-            {
+            {/* {
                 !hidden && <CartDropdown /> 
-            }
+            } */}
         </div>
     )
 }

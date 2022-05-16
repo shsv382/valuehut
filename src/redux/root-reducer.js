@@ -4,7 +4,7 @@ import storage from 'redux-persist/lib/storage';
 
 import appReducer from './app/app.reducers';
 import contentReducer from './content/content.reducers';
-import cartReducer from './cart/cart.reducer';
+// import cartReducer from './cart/cart.reducer';
 import trainingReducer from './training/training.reducer';
 
 const persistConfig = {
@@ -16,7 +16,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
     app: appReducer,
     content: contentReducer,
-    cart: cartReducer,
+    cart: null,
     training: trainingReducer
 })
 
