@@ -10,11 +10,13 @@ const CartButtonContainer: React.FC = () => {
     // const hidden = useAppSelector((state) => state.cart.hidden);
     const dispatch = useAppDispatch();
     const handleClick = () => {
-        dispatch(toggleCartHidden());
+        // dispatch(toggleCartHidden());
     }
     return (
         <div className='cart-button-container'>
-            <Cart onClick={handleClick} />
+            <a href={`https://valuehut.foxycart.com/cart?cart=view`}>
+                <Cart />
+            </a>
             {/* {
                 !hidden && <CartDropdown /> 
             } */}
