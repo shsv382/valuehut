@@ -70,6 +70,7 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
                                     <TableCell align="right" className="dates-table__book-btn">
                                         <span className='link'>
                                             <a 
+                                                className="link"
                                                 href={`https://valuehut.foxycart.com/cart?name=${training.title}&date=${date}&price=${amount}`} 
                                                 target="_blank" 
                                             >
