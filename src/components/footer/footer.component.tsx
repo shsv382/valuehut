@@ -49,7 +49,6 @@ const Footer: React.FC<FooterTypes> = ({ howto, offices }) => {
                         sx={{color: "#ffffff"}}
                         >
                         <MenuItem value='africa'>Africa</MenuItem>
-                        <MenuItem value='us' >US</MenuItem>
                         <MenuItem value='uk'>UK</MenuItem>
                         </Select>
                     </FormControl> */}

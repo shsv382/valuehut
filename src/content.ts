@@ -144,24 +144,18 @@ export const content = {
             }
         },
         contact: {
-            howto: 'If you’re considering using the services provided by Adventures with Agile, please phone or email us your query with as much detail as possible. Upon receiving your email, we will either call or email you – within 24 hours of your email being sent – to discuss the services further and initiate the next step.',
+            howto: 'If you’re considering using the services provided by ValueHut, please phone or email us your query with as much detail as possible. Upon receiving your email, we will either call or email you – within 24 hours of your email being sent – to discuss the services further and initiate the next step.',
             offices: [
                 {
                     region: "UK",
-                    email: "info@valuehut.uk",
-                    phone: '(0)000-00-00',
-                    address: 'Amelia House, Crescent Rd, Worthing, BN11 1QR'
-                },
-                {
-                    region: "US",
-                    email: 'email@example.com',
-                    phone: '(0)000-00-00',
-                    address: 'Amelia House, Crescent Rd, Worthing, BN11 1QR'
+                    email: "info@valuehut.co",
+                    phone: '+44(0)7946713054',
+                    address: 'North Westgate House,Harlow CM20 1YS'
                 },
                 {
                     region: "Nigeria",
-                    email: 'email@example.com',
-                    phone: '(0)000-00-00',
+                    email: 'info@valuehut.co',
+                    phone: '+234(0)818193501',
                     address: 'Amelia House, Crescent Rd, Worthing, BN11 1QR'
                 }
             ]
