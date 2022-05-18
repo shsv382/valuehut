@@ -113,12 +113,21 @@ export const content = {
                 "training": {
                     imageURL: "./mikael.jpg",
                     header: "Training",
-                    description: `Training provides information to everyone within a team or organisation at the same time and the understanding is shared between everyone. Shared meaning in an organisation helps adoption of agile somewhat easier. We offer a number of Scrum.org Trainings and are able to create bespoke training packages on Agile Practices.`
+                    description: `Training provides information to everyone within a team or organisation 
+                    at the same time and the understanding is shared between everyone. Shared meaning in 
+                    an organisation helps adoption of agile somewhat easier. 
+                    We offer a number of Scrum.org Trainings and are able to create 
+                    bespoke training packages on Agile Practices.`
                 },
                 "consultancy": {
                     imageURL: "./cameron.jpg",
                     header: "Consultancy",
-                    description: "Some text for consultancy"
+                    description: `In situations where the Organisation has made a decision 
+                    on the Agile Framework that should be adopted by the Product Teams, a 
+                    Scrum Master from ValueHut would help improve the understandinging of 
+                    Scrum or Kanban. In addtion, the Scrum Master would help improve the use 
+                    of the Agile Framework by teaching Supplimentary practices that extend the 
+                    benefit of using such Frameworks.`
                 }
             }
         },
