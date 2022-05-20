@@ -47,7 +47,7 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                     >
                         <TableCell component="th" scope="row">
-                            { getDateInWords(new Date(date)) } - { getDateInWords(new Date(date), duration) }
+                            { getDateInWords(new Date(date)) } - <br className="xs-visible" />{ getDateInWords(new Date(date), duration) }
                         </TableCell>
                         <TableCell>{`${new Date(date).getUTCHours()}:${new Date(date).getUTCMinutes()}`}</TableCell>
                         <TableCell align="right">
