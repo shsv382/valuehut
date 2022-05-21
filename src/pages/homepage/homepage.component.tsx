@@ -23,11 +23,16 @@ const Homepage: React.FC = () => {
                 header={headerArticle.header}
                 description={headerArticle.description}
                 />
+            <MainArticle 
+                imageURL={whatCustomersWant.imageURL}
+                header={whatCustomersWant.header}
+                descriptionList={whatCustomersWant.descriptionList}
+            />
             <HeaderWithButton
                 header={servicesArticle.header}
                 link="View all"
                 href="training"    
-                />
+            />
             <TripleBox>
                 {
                     Object.values(services).map((training:any, i:number) => {
@@ -37,11 +42,6 @@ const Homepage: React.FC = () => {
                     })
                 }
             </TripleBox>
-            <MainArticle 
-                imageURL={whatCustomersWant.imageURL}
-                header={whatCustomersWant.header}
-                descriptionList={whatCustomersWant.descriptionList}
-            />
             <MainArticle 
                 imageURL={whatWeDo.imageURL}
                 header={whatWeDo.header}
