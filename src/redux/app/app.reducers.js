@@ -1,7 +1,7 @@
 import AppActionTypes from './app.types.js';
 
 const INITIAL_STATE = {
-    region: 'uk',
+    region: 'United Kingdom',
     showPopupMenuTraining: true
 }
 
