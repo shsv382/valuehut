@@ -12,7 +12,15 @@ body {
   padding: 30px 10px;
   @media screen and (max-width: 424px) {
     padding: 20px 5px; 
+  } 
+}
+
+.App {
+  padding-top: 120px;
+  @media screen and (max-width: 767px) {
+    padding-top: 80px;
   }
+  position: unset;
 }
 
 .link {
