@@ -36,7 +36,10 @@ const WhatWeDoPage: React.FC<WhatWeDoTypes> = ({ url, trainings }) => {
                     )
                 }
             )}
-            <TrustBox />
+            {
+                url === "training" &&
+                <TrustBox />
+            }
         </div>
     );
 }
