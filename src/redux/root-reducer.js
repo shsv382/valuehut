@@ -7,12 +7,6 @@ import contentReducer from './content/content.reducers';
 // import cartReducer from './cart/cart.reducer';
 import trainingReducer from './training/training.reducer';
 
-const persistConfig = {
-    key: 'root',
-    storage,
-    whitelist: ['cart']
-}
-
 const rootReducer = combineReducers({
     app: appReducer,
     content: contentReducer,
@@ -20,4 +14,4 @@ const rootReducer = combineReducers({
     training: trainingReducer
 })
 
-export default persistReducer(persistConfig, rootReducer);
+export default rootReducer;

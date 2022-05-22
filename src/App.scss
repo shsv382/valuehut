@@ -23,12 +23,6 @@ body {
   position: unset;
 }
 
-#fc header {
-  position: relative;
-  background: none;
-  top: 0; left: 0;
-}
-
 .link {
   text-decoration: none;
   color: $primaryColorDark;
@@ -192,3 +186,18 @@ p.details {
   outline-color: $primaryColor !important;
 }
 
+/* FoxyCart styles */@at-root
+#fc header {
+  position: relative;
+  background: none;
+  top: 0; left: 0;
+}
+
+.fc-fixed-button-right .fc-btn-action, .fc-action--checkout--button {
+  background: $primaryColor !important;
+  border: none !important;
+}
+
+.fc-svg-icon {
+  text-shadow: unset !important;
+}
