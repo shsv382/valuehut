@@ -22,3 +22,34 @@
     animation: appearance 0.35s ease-in;
     position: relative;
 }
+
+@keyframes fadeDown {
+	from {
+		height: 0;
+	}
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotateBack {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		background: rgba(30,30,30,0);
+	}
+}
