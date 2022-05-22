@@ -7,7 +7,7 @@ import PreviousClients from '../../components/previous-clients/previous-clients.
 
 const AboutPage:React.FC = () => {
     const { aboutCoachArticle } = useAppSelector((state) => (state.content.pages.about));
-    const { aboutValueHut } = useAppSelector((state) => (state.content.pages.home));
+    const { headerArticle } = useAppSelector((state) => (state.content.pages.home));
     return (
         <div className="page about-page">
             <div  className="about-page__avatar">
@@ -15,7 +15,7 @@ const AboutPage:React.FC = () => {
             </div>
             <div></div>
             <MainArticle 
-                { ...aboutValueHut }
+                { ...headerArticle }
             />
             <MainArticle 
                 { ...aboutCoachArticle }
