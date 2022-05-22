@@ -53,7 +53,7 @@ const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
                 className="button button-primary button-primary-small"
                 href={`https://valuehut.foxycart.com/cart?name=${training.title}&date=${stream.date}&price=${bookPrice}`} 
             >
-                BOOK
+                BOOK FOR $ {bookPrice}
             </a>
         </div>
     )
