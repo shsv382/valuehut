@@ -201,3 +201,10 @@ p.details {
 .fc-svg-icon {
   text-shadow: unset !important;
 }
+
+.fc-messages__empty-notification {
+  background: $primaryColorLight !important;
+  a {
+    color: $primaryColor !important;
+  }
+}

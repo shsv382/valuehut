@@ -8,3 +8,7 @@ export const changeRegion = (region) => ({
 export const showPopupMenuTraining = () => ({
     type: AppActionTypes.SHOW_POPUP_MENU_TRAINING
 })
+
+export const toggleModalHidden = () => ({
+    type: AppActionTypes.TOGGLE_MODAL_HIDDEN
+})

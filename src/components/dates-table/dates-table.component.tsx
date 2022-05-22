@@ -1,10 +1,13 @@
 import React from 'react';
+import ReactDOM from 'react-dom/client';
 import './dates-table.styles.scss';
 
 import { TrainingTypes, StreamTypes, PriceTypes } from '../../training';
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 import { addItem } from '../../redux/cart/cart.actions';
+import { toggleModalHidden } from '../../redux/app/app.actions';
 
+import BookingForm from '../booking-form/booking-form.component';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -18,71 +21,30 @@ interface DatesTableTypes {
     streams: StreamTypes[]
 }
 
+export function getDateInWords(date: any, duration: number = 0): string  {
+    let newDate = date.setDate(date.getDate() + duration);
+    newDate = date.toString().split(" ").slice(1,4);
+    return `${newDate[0]} ${newDate[1]}, ${newDate[2]}`
+}
+
 const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
-    function getDateInWords(date: any, duration: number = 0): string  {
-        let newDate = date.setDate(date.getDate() + duration);
-        newDate = date.toString().split(" ").slice(1,4);
-        return `${newDate[0]} ${newDate[1]}, ${newDate[2]}`
-    }
     const region: string = useAppSelector(state => state.app.region)
     const dispatch = useAppDispatch();
+    
     return (
         <TableContainer component={Paper}>
             <Table sx={{ 
                 minWidth: 320,
                 fontSize: "20px"
             }} aria-label="simple table">
-                <TableHead>
-                <TableRow>
-                    <TableCell>Dates</TableCell>
-                    <TableCell>Time</TableCell>
-                    <TableCell align="right">Duration</TableCell>
-                </TableRow>
-                </TableHead>
+                <DatesTableHead />
                 <TableBody>
                 {
-                streams.map(({ date, duration, price }: StreamTypes) => (
-                    <><TableRow
-                    key={ date.toString() }
-                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                    >
-                        <TableCell component="th" scope="row">
-                            { getDateInWords(new Date(date)) } - <br className="xs-visible" />{ getDateInWords(new Date(date), duration) }
-                        </TableCell>
-                        <TableCell>{`${new Date(date).getUTCHours()}:${new Date(date).getUTCMinutes()}`}</TableCell>
-                        <TableCell align="right">
-                            { duration } days
-                        </TableCell>
-                    </TableRow>
-                    {
-                        price.map(({ region, regionDescription, amount }: PriceTypes) => (
-                            <TableRow
-                                key={ date.toString() + region.toString() }
-                                sx={{ backgroundColor:"#f5f5f5", '&:last-child td, &:last-child th': { border: 0 } }}
-                                >
-                                    <TableCell component="th" scope="row">
-                                        <span className='details'><strong className='details'>{ region }:</strong> { regionDescription }</span>
-                                    </TableCell>
-                                    <TableCell className='dates-table__price-amount'>$ { amount }</TableCell>
-                                    {/* <TableCell align="right" className="dates-table__book-btn" onClick={() => {
-                                        dispatch(addItem({ ...training, dates: [date], price: amount }))}
-                                    }> */}
-                                    <TableCell align="right" className="dates-table__book-btn">
-                                        <span className='link'>
-                                            <a 
-                                                className="link"
-                                                href={`https://valuehut.foxycart.com/cart?name=${training.title}&date=${date}&price=${amount}`} 
-                                                target="_blank" 
-                                            >
-                                                BOOK
-                                            </a>
-                                        </span>
-                                    </TableCell>
-                            </TableRow>
-                        )
-                    )
-                    }</>
-                    )
+                streams.map((stream: StreamTypes) => {
+                    const { date, duration, price } = stream;
+                    return (
+                    <DatesTableStream training={training} stream={stream} />
+                    )}
                 )
                 }
                 </TableBody>
@@ -90,5 +52,67 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
         </TableContainer>
     )
 }
+
+
+
+const DatesTableHead = () => {
+    return (
+        <TableHead>
+            <TableRow>
+                <TableCell>Dates</TableCell>
+                <TableCell align="center">Time</TableCell>
+                <TableCell align="center">Duration</TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+        </TableHead>
+    )
+}
+
+
+
+interface DatesTableStreamTypes {
+    training: TrainingTypes,
+    stream: StreamTypes
+}
+
+const DatesTableStream: React.FC<DatesTableStreamTypes> = ({ training, stream }) => {
+    const dispatch = useAppDispatch();
+    const { date, duration, price } = stream;
+    const showModal = (stream: any): any => (e: MouseEvent): any => {
+        dispatch(toggleModalHidden())
+        e.preventDefault();
+        const Modal = React.lazy(() => import('../modal/modal.component'));
+        const modalRoot = ReactDOM.createRoot(document.getElementById("modal-root") as HTMLElement);
+        modalRoot.render(<React.Suspense fallback={<div style={{display: 'none'}}> </div>}>
+                            <Modal root={modalRoot}>
+                                <BookingForm training={training} stream={stream} />
+                            </Modal>
+                        </React.Suspense>)
+    }
+    return (
+        <TableRow
+            key={ date.toString() }
+            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+            <TableCell component="th" scope="row">
+                { getDateInWords(new Date(date)) } - <br className="xs-visible" />{ getDateInWords(new Date(date), duration) }
+            </TableCell>
+            <TableCell align="center">{`${new Date(date).getUTCHours()}:${new Date(date).getUTCMinutes()}`}</TableCell>
+            <TableCell align="center">
+                { duration } days
+            </TableCell>
+            <TableCell align="right">
+            <span 
+                className="link"
+                onClick={showModal(stream)}
+            >
+                BOOK
+            </span>
+            </TableCell>
+        </TableRow>
+    )
+}
+
+
 
 export default DatesTable;
