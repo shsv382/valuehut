@@ -10,13 +10,13 @@ const AboutPage:React.FC = () => {
     const { headerArticle } = useAppSelector((state) => (state.content.pages.home));
     return (
         <div className="page about-page">
+            <MainArticle 
+                { ...headerArticle }
+            />
             <div  className="about-page__avatar">
                 <img src="images/avatar.jpeg" className="about-page__avatar-image" />
             </div>
             <div></div>
-            <MainArticle 
-                { ...headerArticle }
-            />
             <MainArticle 
                 { ...aboutCoachArticle }
             />
