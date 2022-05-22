@@ -6,7 +6,8 @@ import MainArticle from '../../components/main-article/main-article.component';
 import PreviousClients from '../../components/previous-clients/previous-clients.component';
 
 const AboutPage:React.FC = () => {
-    const { aboutCoachArticle, moreAboutCoachArticle } = useAppSelector((state) => (state.content.pages.about));
+    const { aboutCoachArticle } = useAppSelector((state) => (state.content.pages.about));
+    const { aboutValueHut } = useAppSelector((state) => (state.content.pages.home));
     return (
         <div className="page about-page">
             <div  className="about-page__avatar">
@@ -14,12 +15,12 @@ const AboutPage:React.FC = () => {
             </div>
             <div></div>
             <MainArticle 
+                { ...aboutValueHut }
+            />
+            <MainArticle 
                 { ...aboutCoachArticle }
             />
             <PreviousClients />
-            <MainArticle 
-                { ...moreAboutCoachArticle }
-            />
         </div>
     )
 }

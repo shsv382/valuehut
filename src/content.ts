@@ -143,7 +143,7 @@ export const content = {
             }, 
             moreAboutCoachArticle: {
                 imageURL: "./photo.jpg",
-                header: "When not training, ",
+                header: "When not training,",
                 description: `
                      
                     Sam works as an Enterprise Agile Coach where he supports organizations in scaling their implementation of Agile Frameworks (e.g Scrum, Kanban) up to the Executive level of the organization.
