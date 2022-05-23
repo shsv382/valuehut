@@ -143,9 +143,8 @@ export const content = {
             }, 
             moreAboutCoachArticle: {
                 imageURL: "./photo.jpg",
-                header: "When not training, ",
-                description: `
-                     
+                header: "When not training,",
+                description: `               
                     Sam works as an Enterprise Agile Coach where he supports organizations in scaling their implementation of Agile Frameworks (e.g Scrum, Kanban) up to the Executive level of the organization.
                     Agile Frameworks including the practices and tools are great but Sam's ultimate goal is to support the organizations on building the mindset that is required for Agility to thrive.
                     
