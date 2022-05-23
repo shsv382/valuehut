@@ -13,6 +13,9 @@
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 40px;
+    .client-box__text-content {
+        font-size: 16px;
+    }
     .client-box__image-content {
         max-height: 80%;
         transition: transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -24,12 +27,12 @@
         }
     }
     @media screen and (max-width: 767px) {
-        width: 260px;
+        // width: 260px;
         box-sizing: content-box;
         max-width: 100%;
         padding-bottom: 40px;
         margin-bottom: 40px;
-        border-bottom: 1px solid $neutral300;
+        // border-bottom: 1px solid $neutral300;
         .client-box__image-content {
             max-width: 100%;
         }

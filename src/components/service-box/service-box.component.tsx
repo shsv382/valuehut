@@ -35,13 +35,13 @@ const ServiceBox: React.FC<ServiceBoxTypes> = ({header, description, imageURL}) 
                     <Typography gutterBottom variant="h5" component="div">
                     { header }
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    {/* <Typography variant="body2" color="text.secondary">
                     { description }
-                    </Typography>
+                    </Typography> */}
                 </CardContent>
-                <CardActions className="service-box__actions">
+                {/* <CardActions className="service-box__actions">
                     <Button size="small">Learn More</Button>
-                </CardActions>
+                </CardActions> */}
             </Card>
         </Link>
     )
