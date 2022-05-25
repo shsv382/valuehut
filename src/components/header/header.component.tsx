@@ -16,7 +16,9 @@ const Header: React.FC = () => {
         }
     };
     return (
-        <header style={{height: scrolled ? 80 : 120, transition: "all 0.25s"}}>
+        <header style={{
+            height: scrolled ? 80 : "", transition: "all 0.25s"
+        }}>
             <div className="header-container" id="start">
                 <LogoContainer imageURL='./logo/logo-primary.png' />
                 <NavbarContainer />
