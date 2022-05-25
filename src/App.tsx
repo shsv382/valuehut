@@ -18,9 +18,9 @@ function App() {
   const TrainingPage = lazy(() => import('./pages/training/training.component'));
   const AboutPage = lazy(() => import('./pages/about-page/about-page.component'));
   
-  // const coachings = useAppSelector((state) => (state.training));
-  const trainings = useAppSelector((state) => (state.training.training));
-  // const consultancy = useAppSelector((state) => (state.training));
+  // const coachings = useAppSelector((state) => (state.services));
+  const trainings = useAppSelector((state) => (state.services.training));
+  // const consultancy = useAppSelector((state) => (state.services));
   const contactData = useAppSelector((state) => (state.content.pages.contact));
 
   return (

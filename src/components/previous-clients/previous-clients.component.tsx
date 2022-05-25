@@ -12,8 +12,8 @@ const PreviousClients = () => {
             <div className="previous-clients__carousel">
                 {
                     <>
-                        {previousClients.map(client => <ClientBox {...client} />)}
-                        {previousClients.map(client => <ClientBox {...client} />)}
+                        {previousClients.map((client, i) => <ClientBox {...client} key={`client-${i}`} />)}
+                        {previousClients.map((client, i) => <ClientBox {...client} key={`client-${1000+i}`} />)}
                     </>
                 }
             </div>

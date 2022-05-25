@@ -12,7 +12,7 @@ import PreviousClients from '../../components/previous-clients/previous-clients.
 
 const Homepage: React.FC = () => {
     const { headerArticle, servicesArticle, whatCustomersWant, whatWeDo } = { ...useAppSelector((state) => (state.content.pages.home)) };
-    const trainings = useAppSelector((state) => (state.training))
+    const trainings = useAppSelector((state) => (state.services.training))
     const services = { ...useAppSelector((state) => (state.content.pages.whatWeDo.introdution)) };
     return (
         <>
@@ -35,9 +35,9 @@ const Homepage: React.FC = () => {
             />
             <TripleBox>
                 {
-                    Object.values(services).map((training:any, i:number) => {
+                    Object.values(services).map((service:any, i:number) => {
                         return i < 3 && (
-                            <ServiceBox {...training} key={`service-${training.id}`} />
+                            <ServiceBox {...service} key={`service-${service.header}`} />
                         )
                     })
                 }

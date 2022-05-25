@@ -5,13 +5,13 @@ import storage from 'redux-persist/lib/storage';
 import appReducer from './app/app.reducers';
 import contentReducer from './content/content.reducers';
 // import cartReducer from './cart/cart.reducer';
-import trainingReducer from './training/training.reducer';
+import servicesReducer from './services/services.reducer';
 
 const rootReducer = combineReducers({
     app: appReducer,
     content: contentReducer,
     cart: null,
-    training: trainingReducer
+    services: servicesReducer
 })
 
 export default rootReducer;
