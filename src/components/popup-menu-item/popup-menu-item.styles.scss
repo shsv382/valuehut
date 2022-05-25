@@ -2,7 +2,9 @@
 @import '../../keyframes.scss';
 
 .popup-menu-item {
-    padding: 15px 30px;
+    padding: 15px 15px;
+    height: 60px;
+    text-align: center;
     border-bottom: 1px solid $neutral200;
     &:last-of-type {
         border-bottom: none;

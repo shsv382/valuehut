@@ -20,7 +20,6 @@ const Header: React.FC = () => {
             <div className="header-container" id="start">
                 <LogoContainer imageURL='./logo/logo-primary.png' />
                 <NavbarContainer />
-                <PopupMenuTraining />
                 <CartButtonContainer />
             </div>
         </header>

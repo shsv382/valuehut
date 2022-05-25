@@ -1,8 +1,9 @@
 @import '../../color-scheme.scss';
+@import '../../keyframes.scss';
 
 .navbar-container {
     height: 100%;
-    width: 50%;
+    max-width: 67%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -15,9 +16,10 @@
 }
 
 .navbar__link {
-    height: 50px;
+    height: 60px;
     min-width: 50px;
     display: flex;
+    width: 150px;
     justify-content: center;
     align-items: center;
 }
@@ -26,5 +28,28 @@
     display: none;
     @media screen and (min-width: 1023px) {
         display: flex;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar__what-we-do {
+        position: relative;
+        &:hover {
+            .popup-menu-training {
+                display: flex;
+                animation: fadeIn 0.1s;
+            }   
+        }
+        .popup-menu-training {
+            display: none;
+            position: absolute;
+            top: 1.5px;
+            width: 150px;
+            &:hover {
+                .navbar__what-we-do {
+                    display: none;
+                }
+            }
+        }
     }
 }
