@@ -15,6 +15,7 @@ function App() {
   const ContactPage = lazy(() => import('./pages/contact-page/contact-page.component'));
   const WhatWeDoPage = lazy(() => import('./pages/what-we-do-page/what-we-do-page.component'));
   const ServicePage = lazy(() => import('./pages/service/service.component'));
+  const TrainingPage = lazy(() => import('./pages/training/training.component'));
   const AboutPage = lazy(() => import('./pages/about-page/about-page.component'));
   
   const coachings = useAppSelector((state) => (state.training.coaching));
@@ -63,7 +64,7 @@ function App() {
               trainings.map(training => (
                 <Route 
                   path={training.title.toLowerCase().split(" ").join("-")} 
-                  element={<ServicePage training={ training } />}
+                  element={<TrainingPage training={ training } />}
                 />
               ))
             }
