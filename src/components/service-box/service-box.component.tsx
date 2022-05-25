@@ -1,7 +1,7 @@
 import { url } from "inspector";
 import React from "react";
 import './service-box.styles.scss';
-import { TrainingTypes } from '../../training';
+import { TrainingTypes } from '../../data/training';
 import { Link } from 'react-router-dom';
 
 import Card from '@mui/material/Card';

@@ -18,9 +18,9 @@ function App() {
   const TrainingPage = lazy(() => import('./pages/training/training.component'));
   const AboutPage = lazy(() => import('./pages/about-page/about-page.component'));
   
-  const coachings = useAppSelector((state) => (state.training.coaching));
+  // const coachings = useAppSelector((state) => (state.training));
   const trainings = useAppSelector((state) => (state.training.training));
-  const consultancy = useAppSelector((state) => (state.training.consultancy));
+  // const consultancy = useAppSelector((state) => (state.training));
   const contactData = useAppSelector((state) => (state.content.pages.contact));
 
   return (
@@ -31,38 +31,39 @@ function App() {
           <Routes>
             <Route path='/' element={<Homepage />} />
             <Route path='/contact' element={<ContactPage />} />
-            <Route path='/consultancy' element={<WhatWeDoPage 
+            {/* <Route path='/consultancy' element={<WhatWeDoPage 
                                               url="consultancy"
                                               trainings={ consultancy }
-                                            />} />
+                                            />} /> */}
             <Route path='/training' element={<WhatWeDoPage 
                                               url="training"
                                               trainings={ trainings }
                                             />} />
-            <Route path='/coaching' element={<WhatWeDoPage 
+            {/* <Route path='/coaching' element={<WhatWeDoPage 
                                               url="coaching"
                                               trainings={ coachings }
-                                            />} />
+                                            />} /> */}
             <Route path='/about' element={<AboutPage />} />
             {
-              consultancy.map(consult => (
-                <Route 
-                  path={consult.title.toLowerCase().split(" ").join("-")} 
-                  element={<ServicePage training={ consult } />}
-                />
-              ))
+            //   consultancy.map(consult => (
+            //     <Route 
+            //       path={consult.title.toLowerCase().split(" ").join("-")} 
+            //       element={<ServicePage training={ consult } />}
+            //     />
+            //   ))
+            // }
+            // {
+            //   coachings.map(coaching => (
+            //     <Route 
+            //       path={coaching.title.toLowerCase().split(" ").join("-")} 
+            //       element={<ServicePage training={ coaching } />}
+            //     />
+            //   ))
             }
             {
-              coachings.map(coaching => (
+              trainings.map((training, i) => (
                 <Route 
-                  path={coaching.title.toLowerCase().split(" ").join("-")} 
-                  element={<ServicePage training={ coaching } />}
-                />
-              ))
-            }
-            {
-              trainings.map(training => (
-                <Route 
+                  key={`training-${i}`}
                   path={training.title.toLowerCase().split(" ").join("-")} 
                   element={<TrainingPage training={ training } />}
                 />

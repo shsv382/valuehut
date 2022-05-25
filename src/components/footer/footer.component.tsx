@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 import { changeRegion } from '../../redux/app/app.actions';
-import { ContactDataTypes } from '../../content';
+import { ContactDataTypes } from '../../data/content';
 
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';

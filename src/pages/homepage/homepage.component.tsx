@@ -12,7 +12,7 @@ import PreviousClients from '../../components/previous-clients/previous-clients.
 
 const Homepage: React.FC = () => {
     const { headerArticle, servicesArticle, whatCustomersWant, whatWeDo } = { ...useAppSelector((state) => (state.content.pages.home)) };
-    const trainings = useAppSelector((state) => (state.training.training))
+    const trainings = useAppSelector((state) => (state.training))
     const services = { ...useAppSelector((state) => (state.content.pages.whatWeDo.introdution)) };
     return (
         <>

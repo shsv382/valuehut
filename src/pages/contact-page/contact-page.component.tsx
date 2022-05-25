@@ -1,6 +1,6 @@
 import React from 'react';
 import './contact-page.styles.scss';
-import { ContactDataTypes } from '../../content';
+import { ContactDataTypes } from '../../data/content';
 
 import { useAppSelector } from '../../redux/hooks';
 

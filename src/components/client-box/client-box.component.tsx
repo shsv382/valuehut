@@ -1,7 +1,7 @@
 import { url } from "inspector";
 import React from "react";
 import './client-box.styles.scss';
-import { TrainingTypes } from '../../training';
+import { TrainingTypes } from '../../data/training';
 import { Link } from 'react-router-dom';
 
 import Card from '@mui/material/Card';
@@ -10,7 +10,7 @@ import CardMedia from '@mui/material/CardMedia';
 // import CardActions from '@mui/material/CardActions';
 // import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { PreviousClientsTypes } from '../../content';
+import { PreviousClientsTypes } from '../../data/content';
 
 interface ClientBoxTypes extends PreviousClientsTypes {
     children?: any

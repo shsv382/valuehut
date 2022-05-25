@@ -15,7 +15,8 @@ export default { store };
 //     middlewares.push(logger);
 // }
 
-// export const store = createStore(rootReducer, applyMiddleware(...middlewares));
+// const store = createStore(rootReducer, applyMiddleware(...middlewares));
+// export default { store };
 
 
 // -----   With manually persisted store ----- //

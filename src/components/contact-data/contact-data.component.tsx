@@ -1,6 +1,6 @@
 import React from 'react';
 import './contact-data.styles.scss';
-import { ContactDataTypes } from '../../content';
+import { ContactDataTypes } from '../../data/content';
 
 const ContactData: React.FC<ContactDataTypes> = ({ region, address, email, phone }) => {
     return (

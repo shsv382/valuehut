@@ -3,7 +3,7 @@ import './booking-form.styles.scss';
 
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 
-import { TrainingTypes, StreamTypes, PriceTypes } from '../../training';
+import { TrainingTypes, StreamTypes, PriceTypes } from '../../data/training';
 import { getDateInWords } from '../dates-table/dates-table.component';
 
 import InputLabel from '@mui/material/InputLabel';

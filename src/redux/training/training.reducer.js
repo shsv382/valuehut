@@ -1,4 +1,4 @@
-import { training } from "../../training";
+import { training } from "../../data/training";
 
 const initialState = { ...training };
 

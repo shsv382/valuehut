@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './dates-table.styles.scss';
 
-import { TrainingTypes, StreamTypes, PriceTypes } from '../../training';
+import { TrainingTypes, StreamTypes, PriceTypes } from '../../data/training';
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 import { addItem } from '../../redux/cart/cart.actions';
 import { toggleModalHidden } from '../../redux/app/app.actions';

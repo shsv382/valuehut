@@ -1,4 +1,4 @@
-// Here you can add the new coaching and training. 
+// Here you can add the new training. 
 // Use Interface below as a template to add right fields 
 // when you will create a new training
 

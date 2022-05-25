@@ -4,8 +4,8 @@ import './what-we-do-page.styles.scss';
 
 import MainArticle from '../../components/main-article/main-article.component';
 
-import { TrainingTypes } from '../../training';
-import { IntrodutionTypes } from '../../content';
+import { TrainingTypes } from '../../data/training';
+import { IntrodutionTypes } from '../../data/content';
 import TrustBox from '../../components/trustbox/trustbox.component';
 
 interface WhatWeDoTypes {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './service.styles.scss';
-import { TrainingTypes } from '../../training';
+import { TrainingTypes } from '../../data/training';
 import ServiceArticle from '../../components/service-article/service-article.component';
 import { useAppDispatch } from '../../redux/hooks';
 import { addItem } from '../../redux/cart/cart.actions';
