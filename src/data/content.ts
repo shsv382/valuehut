@@ -32,7 +32,13 @@ interface HomepageTypes {
     previousClients: PreviousClientsTypes[]
 }
 
-export interface PagesTnterface {
+export interface TrainerTypes {
+    name: string,
+    avatar: string,
+    about: string
+}
+
+export interface PagesInterface {
     home: any,
     whatWeDo: WhatWeDoTypes,
     about: any,
@@ -132,24 +138,26 @@ export const content = {
             }
         },
         about: {
-            aboutCoachArticle: {
-                header: "About our Coach",
-                description: `
+            trainers: [
+                {
+                    name: "Samuel Adesoga",
+                    avatar: "avatar.jpeg",
+                    about: `
                     Sam is a dynamic Agile practitioner, Coach and Professional Scrum Trainer with Scrum.org
                     Sam's first encounter with Scrum and Agile was in 2007; He has accumulated a lot of experience supporting organisations in delivering value to their Customers and Stakeholders. 
                     Previous clients include Barclays, HSBC, BP, Ministry of Justice, UBS, Channel4, BBC Worldwide and a number of startups from around the world.
-                     
                     `
-            }, 
-            moreAboutCoachArticle: {
-                imageURL: "./photo.jpg",
-                header: "When not training,",
-                description: `               
-                    Sam works as an Enterprise Agile Coach where he supports organizations in scaling their implementation of Agile Frameworks (e.g Scrum, Kanban) up to the Executive level of the organization.
-                    Agile Frameworks including the practices and tools are great but Sam's ultimate goal is to support the organizations on building the mindset that is required for Agility to thrive.
-                    
+                },
+                {
+                    name: "Samuel Adesoga",
+                    avatar: "avatar.jpeg",
+                    about: `
+                    Sam is a dynamic Agile practitioner, Coach and Professional Scrum Trainer with Scrum.org
+                    Sam's first encounter with Scrum and Agile was in 2007; He has accumulated a lot of experience supporting organisations in delivering value to their Customers and Stakeholders. 
+                    Previous clients include Barclays, HSBC, BP, Ministry of Justice, UBS, Channel4, BBC Worldwide and a number of startups from around the world.
                     `
-            }
+                }
+            ]
         },
         contact: {
             howto: 'If you’re considering using the services provided by ValueHut, please phone or email us your query with as much detail as possible. Upon receiving your email, we will either call or email you – within 24 hours of your email being sent – to discuss the services further and initiate the next step.',
