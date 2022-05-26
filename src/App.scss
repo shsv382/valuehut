@@ -44,6 +44,13 @@ body {
   }
 }
 
+.link-disabled {
+  color: $neutral400 !important;
+  &:hover {
+    color: $neutral500 !important;
+  }
+}
+
 h1 {
   font-size: 40px;
   font-weight: bold;

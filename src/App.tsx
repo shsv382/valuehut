@@ -14,11 +14,12 @@ function App() {
   const Homepage = lazy(() => import('./pages/homepage/homepage.component'));
   const ContactPage = lazy(() => import('./pages/contact-page/contact-page.component'));
   const WhatWeDoPage = lazy(() => import('./pages/what-we-do-page/what-we-do-page.component'));
+  const TrainingsPage = lazy(() => import('./pages/trainings-page/trainings-page.component'));
   const ServicePage = lazy(() => import('./pages/service/service.component'));
   const TrainingPage = lazy(() => import('./pages/training/training.component'));
   const AboutPage = lazy(() => import('./pages/about-page/about-page.component'));
   
-  // const coachings = useAppSelector((state) => (state.services));
+  const coachings = useAppSelector((state) => (state.services.coaching));
   const trainings = useAppSelector((state) => (state.services.training));
   // const consultancy = useAppSelector((state) => (state.services));
   const contactData = useAppSelector((state) => (state.content.pages.contact));
@@ -35,14 +36,14 @@ function App() {
                                               url="consultancy"
                                               trainings={ consultancy }
                                             />} /> */}
-            <Route path='/training' element={<WhatWeDoPage 
+            <Route path='/training' element={<TrainingsPage 
                                               url="training"
                                               trainings={ trainings }
                                             />} />
-            {/* <Route path='/coaching' element={<WhatWeDoPage 
+            <Route path='/coaching' element={<WhatWeDoPage 
                                               url="coaching"
                                               trainings={ coachings }
-                                            />} /> */}
+                                            />} />
             <Route path='/about' element={<AboutPage />} />
             {
             //   consultancy.map(consult => (

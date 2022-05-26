@@ -41,7 +41,7 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
                 <TableBody>
                 {
                 streams.map((stream: StreamTypes) => {
-                    const { date, duration, price } = stream;
+                    const { date, duration, price, filled } = stream;
                     return (
                     <DatesTableStream training={training} stream={stream} />
                     )}
@@ -77,7 +77,7 @@ interface DatesTableStreamTypes {
 
 const DatesTableStream: React.FC<DatesTableStreamTypes> = ({ training, stream }) => {
     const dispatch = useAppDispatch();
-    const { date, duration, price } = stream;
+    const { date, duration, price, filled } = stream;
     const showModal = (stream: any): any => (e: MouseEvent): any => {
         dispatch(toggleModalHidden())
         e.preventDefault();
@@ -102,12 +102,21 @@ const DatesTableStream: React.FC<DatesTableStreamTypes> = ({ training, stream })
                 { duration } days
             </TableCell>
             <TableCell align="right">
-            <span 
-                className="link"
-                onClick={showModal(stream)}
-            >
-                BOOK
-            </span>
+                {
+                    filled ?
+                        (<span 
+                            className="link"
+                            onClick={showModal(stream)}
+                        >
+                            BOOK
+                        </span>) : (
+                            <span 
+                            className="link link-disabled"
+                        >
+                            CLASS FULL
+                        </span>
+                        )
+                }
             </TableCell>
         </TableRow>
     )

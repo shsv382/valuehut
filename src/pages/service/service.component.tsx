@@ -14,7 +14,7 @@ interface ServiceTypes {
 }
 
 const Service: React.FC<ServiceTypes> = ({ training }) => {
-    const { title, description, whatWillILearn, whoShouldAttend, streams, imageURL } = { ...training };
+    const { title, description, articles, streams, imageURL } = { ...training };
     return (
         <div className='page service-page'>
             <div className="service__header" style={{backgroundImage: `url('images/${imageURL}')`}}>
@@ -24,39 +24,26 @@ const Service: React.FC<ServiceTypes> = ({ training }) => {
             {    description &&
                 <ServiceArticle 
                     title="About this Course"
-                    description={ description }
+                    content={ description }
                 />
             }
-            {    whatWillILearn &&
-                <ServiceArticle 
-                    title="What will I learn"
-                    description={ whatWillILearn }
-                />
-            }
-            {    whoShouldAttend &&
-                <ServiceArticle 
-                    title="Who should attend?"
-                    description={ whoShouldAttend }
-                />
-            }
-            {
-                streams ?
-                <div id="book-now">
-                    <DatesTable
-                        streams={ streams }
-                        training={ training }
+            {   articles && articles.map((article, i) => (
+                    <ServiceArticle key={article.content[0] + i + article.content[0]}
+                        title={ article.title }
+                        content={ article.content }
                     />
-                </div> :
-                <ServiceArticle 
-                    title="For more details"
-                >
-                    <Link 
-                        className="button button-primary button-primary-large"
-                        to="/contact">
-                            Contact us
-                    </Link>
-                </ServiceArticle>
+                ))
             }
+            <ServiceArticle 
+                title="For more details"
+                content=""
+            >
+                <Link 
+                    className="button button-primary button-primary-large"
+                    to="/contact">
+                        Contact us
+                </Link>
+            </ServiceArticle>
         </div>
     )
 }

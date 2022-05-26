@@ -14,7 +14,7 @@ interface TrainingComponentTypes {
 }
 
 const Training: React.FC<TrainingComponentTypes> = ({ training }) => {
-    const { title, description, whatWillILearn, whoShouldAttend, streams, imageURL } = { ...training };
+    const { title, description, articles, streams, imageURL } = { ...training };
     return (
         <div className='page training-page'>
             <div className="training__header" style={{backgroundImage: `url('images/${imageURL}')`}}>
@@ -24,39 +24,25 @@ const Training: React.FC<TrainingComponentTypes> = ({ training }) => {
             {    description &&
                 <TrainingArticle 
                     title="About this Course"
-                    description={ description }
+                    content={ description }
                 />
             }
-            {    whatWillILearn &&
-                <TrainingArticle 
-                    title="What will I learn"
-                    description={ whatWillILearn }
-                />
-            }
-            {    whoShouldAttend &&
-                <TrainingArticle 
-                    title="Who should attend?"
-                    description={ whoShouldAttend }
-                />
-            }
-            {
-                streams ?
-                <div id="book-now">
-                    <DatesTable
-                        streams={ streams }
-                        training={ training }
+            {   articles && articles.map((article, i) => (
+                    <TrainingArticle key={article.content[0] + i + article.content[0]}
+                        title={ article.title }
+                        content={ article.content }
                     />
-                </div> :
-                <TrainingArticle 
-                    title="For more details"
-                >
-                    <Link 
-                        className="button button-primary button-primary-large"
-                        to="/contact">
-                            Contact us
-                    </Link>
-                </TrainingArticle>
+                ))
             }
+            <div id="book-now">
+                {
+                    streams &&
+                    <DatesTable
+                    streams={ streams }
+                    training={ training }
+                    />
+                }
+            </div>
         </div>
     )
 }

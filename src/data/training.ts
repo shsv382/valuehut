@@ -14,7 +14,16 @@ export interface PriceTypes {
 export interface StreamTypes {
     date: any,
     duration: number,
-    price: PriceTypes[]
+    price: PriceTypes[],
+    filled?: boolean
+}
+
+export interface TrainingArticleTypes {
+    title?: string,
+    content: string,
+    imageURL?: string,
+    textAlign?: string,
+    imagePosition?: string
 }
 
 export interface TrainingTypes {
@@ -25,8 +34,7 @@ export interface TrainingTypes {
     iconURL?: string,
     iconBorder?: string,
     imageURL: string,
-    whatWillILearn?: string,
-    whoShouldAttend?: string,
+    articles?: TrainingArticleTypes[],
     streams?: StreamTypes[], 
     isTraining?: boolean
     
@@ -65,14 +73,22 @@ export const training:TrainingObject = {
             imageURL: "./energy.jpg",
             iconURL: "https://static.scrum.org/web/logos/psm.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
-            whatWillILearn: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`,
-            whoShouldAttend: `The Advanced Certified ScrumMaster workshop requires previous Scrum knowledge and experience.
+            articles: [
+                {
+                    title: "What Will I Learn?",
+                    content: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`
+                },
+                {
+                    title: "Who should attend?",
+                    content: `The Advanced Certified ScrumMaster workshop requires previous Scrum knowledge and experience.
 
-            This is NOT a session for those who are new to Agile and Scrum.
-            
-            All attendees must have the Certified ScrumMaster certification (CSM) and with a minimum of one year practice prior to the Advanced Certified ScrumMaster (A-CSM) workshop. If you don’t currently have a CSM certification, please contact us for options.
-            
-            Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`,
+                    This is NOT a session for those who are new to Agile and Scrum.
+                    
+                    All attendees must have the Certified ScrumMaster certification (CSM) and with a minimum of one year practice prior to the Advanced Certified ScrumMaster (A-CSM) workshop. If you don’t currently have a CSM certification, please contact us for options.
+                    
+                    Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`
+                }
+            ],
             streams: [
                 {
                     date: new Date("2023-06-11T11:30:00+07:00"),
@@ -93,7 +109,8 @@ export const training:TrainingObject = {
                         regionDescription: "India and African nations",
                         amount: 800
                         }
-                    ]
+                    ], 
+                    filled: true
                 },
                 {
                     date: new Date("2023-07-11T11:30:00+09:00"),
@@ -136,11 +153,19 @@ export const training:TrainingObject = {
             imageURL: "./fauxels.jpg",
             iconURL: "https://static.scrum.org/web/logos/pal-e.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
-            whatWillILearn: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`,
-            whoShouldAttend: `The Advanced Certified ScrumMaster workshop requires previous Scrum knowledge and experience.
-            This is NOT a session for those who are new to Agile and Scrum.
-            All attendees must have the Certified ScrumMaster certification (CSM) and with a minimum of one year practice prior to the Advanced Certified ScrumMaster (A-CSM) workshop. If you don’t currently have a CSM certification, please contact us for options.
-            Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`,
+            articles: [
+                {
+                    title: "What will I learn?",
+                    content: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`
+                },
+                {
+                    title: "Who should attend?",
+                    content: `The Advanced Certified ScrumMaster workshop requires previous Scrum knowledge and experience.
+                    This is NOT a session for those who are new to Agile and Scrum.
+                    All attendees must have the Certified ScrumMaster certification (CSM) and with a minimum of one year practice prior to the Advanced Certified ScrumMaster (A-CSM) workshop. If you don’t currently have a CSM certification, please contact us for options.
+                    Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`
+                }
+            ],
             streams: [
                 {
                     date: new Date("2023-06-11T11:30:00+07:00"),
@@ -205,14 +230,19 @@ export const training:TrainingObject = {
             imageURL: "./morillo.jpg",
             iconURL: "",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
-            whatWillILearn: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`,
-            whoShouldAttend: `The Advanced Certified ScrumMaster workshop requires previous Scrum knowledge and experience.
-
-            This is NOT a session for those who are new to Agile and Scrum.
-            
-            All attendees must have the Certified ScrumMaster certification (CSM) and with a minimum of one year practice prior to the Advanced Certified ScrumMaster (A-CSM) workshop. If you don’t currently have a CSM certification, please contact us for options.
-            
-            Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`,
+            articles: [
+                {
+                    title: "What will I learn?",
+                    content: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`
+                },
+                {
+                    title: "Who should attend?",
+                    content: `The Advanced Certified ScrumMaster workshop requires previous Scrum knowledge and experience.
+                    This is NOT a session for those who are new to Agile and Scrum.
+                    All attendees must have the Certified ScrumMaster certification (CSM) and with a minimum of one year practice prior to the Advanced Certified ScrumMaster (A-CSM) workshop. If you don’t currently have a CSM certification, please contact us for options.
+                    Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`
+                }
+            ],
             streams: [
                 {
                     date: new Date("2023-06-11T11:30:00+07:00"),

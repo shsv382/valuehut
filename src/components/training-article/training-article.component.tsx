@@ -2,18 +2,18 @@ import React from "react";
 import './training-article.styles.scss';
 
 interface TrainingArticleProps {
-    title: string,
-    description?: string,
+    title?: string,
+    content?: string,
     children?: any
 }
 
-const TrainingArticle: React.FC<TrainingArticleProps> = ({ title, description, children }) => {
+const TrainingArticle: React.FC<TrainingArticleProps> = ({ title, content, children }) => {
     return (
         <section className="training__article">
             <article>
-                <h2 className="training__article__section__header">{ title }</h2>
+                {title && <h2 className="training__article__section__header">{ title }</h2>}
                 <p>
-                    { description }
+                    { content }
                 </p>
                 { children }
             </article>
