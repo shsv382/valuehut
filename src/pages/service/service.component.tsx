@@ -35,7 +35,7 @@ const Service: React.FC<ServiceTypes> = ({ service }) => {
                 ))
             }
             <ServiceArticle 
-                title="For more details"
+                title="For more details:"
                 content=""
             >
                 <Link 
