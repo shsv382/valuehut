@@ -11,10 +11,10 @@
 
 @keyframes swimming {
     0% { 
-        right: 0; 
+        transform: translateX(0%); 
     }
     100% { 
-        right: 1330px; 
+        transform: translateX(-50%);
     }
 }
 
