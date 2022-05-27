@@ -40,8 +40,8 @@ const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
             <span> </span>
             <br className="xs-visible" />
             { getDateInWords(new Date(stream.date), stream.duration) }
-            <br />
-            <label>Choose your region</label>
+            <br /><br />
+            <label>Where do you live?</label>
             <br />
             
             <select onChange={handleChange}>
