@@ -7,7 +7,7 @@ const WidescreenBanner = () => {
     return (
         <BannerImage>
             <BannerShadow>
-                <img src={Logo} />
+                <img src="logo/logo-transparent.png" />
             </BannerShadow>
         </BannerImage>
     )
