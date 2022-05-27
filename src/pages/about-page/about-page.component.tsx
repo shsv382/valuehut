@@ -15,7 +15,7 @@ const AboutPage:React.FC = () => {
                 { ...headerArticle }
             />
 
-            <h1 className="about-page__trainers-header">Coach, Trainers and Facilitators</h1>
+            <h1 className="about-page__trainers-header">Our People</h1>
             { trainers.map(trainer => <Employee {...trainer} />) }
 
             <PreviousClients />

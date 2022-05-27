@@ -8,7 +8,7 @@ const PreviousClients = () => {
     const previousClients = useAppSelector(state => state.content.pages.home.previousClients);
     return (
         <div className="previous-clients">
-            <h1 className="previous-clients__header">Previous clients include</h1>
+            <h1 className="previous-clients__header">Previous clients</h1>
             <div className="previous-clients__carousel">
                 {
                     <>
