@@ -19,9 +19,9 @@ function App() {
   const TrainingPage = lazy(() => import('./pages/training/training.component'));
   const AboutPage = lazy(() => import('./pages/about-page/about-page.component'));
   
-  const coachings = useAppSelector((state) => (state.services.coaching));
   const trainings = useAppSelector((state) => (state.services.training));
-  // const consultancy = useAppSelector((state) => (state.services));
+  const coachings = useAppSelector((state) => (state.services.coaching));
+  const consultancy = useAppSelector((state) => (state.services.consultancy));
   const contactData = useAppSelector((state) => (state.content.pages.contact));
 
   return (
@@ -40,9 +40,11 @@ function App() {
                                               url="training"
                                               trainings={ trainings }
                                             />} />
-            <Route path='/coaching' element={<WhatWeDoPage 
-                                              url="coaching"
-                                              trainings={ coachings }
+            <Route path='/coaching' element={<ServicePage 
+                                              service={ coachings }
+                                            />} />
+            <Route path='/consultancy' element={<ServicePage 
+                                              service={ consultancy }
                                             />} />
             <Route path='/about' element={<AboutPage />} />
             {

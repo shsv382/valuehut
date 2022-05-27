@@ -9,9 +9,12 @@ interface HeroBannerTypes {
 
 const HeroBanner: React.FC<HeroBannerTypes> = ({ imageURL, title }) => {
     return (
-        <div className="hero-banner" style={{backgroundImage: `url(${imageURL})`}}>
-            <h1><span>{title}</span></h1>
-        </div>
+        <>
+            <div className="hero-banner-placeholder"></div>
+            <div className="hero-banner" style={{backgroundImage: `url(${imageURL})`}}>
+                <h1>{title}</h1>
+            </div>
+        </>
     )
 }
 

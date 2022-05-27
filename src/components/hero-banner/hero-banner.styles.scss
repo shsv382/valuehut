@@ -1,8 +1,23 @@
 @import '../../color-scheme.scss';
 
+.hero-banner-placeholder, .hero-banner {
+    min-height: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+    @media screen and (max-width: 991px) {
+        min-height: 250px;
+        height: 250px;
+        margin-bottom: 40px;
+    }
+    @media screen and (max-width: 767px) {
+        min-height: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+}
+
 .hero-banner {
     position: absolute;
-    height: 200px;
     width: 100vw;
     display: flex;
     flex-wrap: wrap;

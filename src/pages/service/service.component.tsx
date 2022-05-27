@@ -1,29 +1,29 @@
 import React from 'react';
 import './service.styles.scss';
-import { TrainingTypes } from '../../data/training';
+import { CoachingTypes } from '../../data/coaching';
+import { ConsultancyTypes } from '../../data/consultancy';
 import ServiceArticle from '../../components/service-article/service-article.component';
-import { useAppDispatch } from '../../redux/hooks';
-import { addItem } from '../../redux/cart/cart.actions';
+import HeroBanner from '../../components/hero-banner/hero-banner.component';
+
 import { Link } from 'react-router-dom';
 
-import DatesTable from '../../components/dates-table/dates-table.component';
-
 interface ServiceTypes {
-    training: TrainingTypes,
+    service: CoachingTypes | ConsultancyTypes,
     children?: any
 }
 
-const Service: React.FC<ServiceTypes> = ({ training }) => {
-    const { title, description, articles, streams, imageURL } = { ...training };
+const Service: React.FC<ServiceTypes> = ({ service }) => {
+    const { title, description, articles, imageURL } = { ...service };
     return (
         <div className='page service-page'>
-            <div className="service__header" style={{backgroundImage: `url('images/${imageURL}')`}}>
-                <h1><span>{title}</span></h1>
-            </div>
+            <HeroBanner
+                title={title}
+                imageURL={`images/${imageURL}`}
+            />
             <div className="service-page__placeholder"></div>
             {    description &&
                 <ServiceArticle 
-                    title="About this Course"
+                    title={ title }
                     content={ description }
                 />
             }
