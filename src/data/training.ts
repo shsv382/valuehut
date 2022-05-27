@@ -4,10 +4,11 @@
 
 // Important!
 // Each word of title should be in Capitalize Case
+import { primaryMarket, tertiaryMarket } from "./countries"
 
 export interface PriceTypes {
     region: string,
-    regionDescription: string,
+    regionDescription: string | string[],
     amount: number
 }
 
@@ -96,7 +97,7 @@ export const training:TrainingObject = {
                     price: [
                         {
                         region: "Primary Market",
-                        regionDescription: "Austria, Belgium, Canada, Denmark, Finland, France, Germany, Ireland, Italy, Japan, Korea, Luxembourg, Netherlands, Norway, Sweden, Switzerland, United Kingdom, United States",
+                        regionDescription: primaryMarket,
                         amount: 1000
                         },
                         {
@@ -106,7 +107,7 @@ export const training:TrainingObject = {
                         },
                         {
                         region: "Tertiary Market",
-                        regionDescription: "India and African nations",
+                        regionDescription: tertiaryMarket,
                         amount: 800
                         }
                     ], 
@@ -118,7 +119,7 @@ export const training:TrainingObject = {
                     price: [
                         {
                         region: "Primary Market",
-                        regionDescription: "Austria, Belgium, Canada, Denmark, Finland, France, Germany, Ireland, Italy, Japan, Korea, Luxembourg, Netherlands, Norway, Sweden, Switzerland, United Kingdom, United States",
+                        regionDescription: primaryMarket,
                         amount: 1000
                         },
                         {
@@ -128,7 +129,7 @@ export const training:TrainingObject = {
                         },
                         {
                         region: "Tertiary Market",
-                        regionDescription: "India and African nations",
+                        regionDescription: tertiaryMarket,
                         amount: 800
                         }
                     ]
@@ -173,7 +174,7 @@ export const training:TrainingObject = {
                     price: [
                         {
                         region: "Primary Market",
-                        regionDescription: "Austria, Belgium, Canada, Denmark, Finland, France, Germany, Ireland, Italy, Japan, Korea, Luxembourg, Netherlands, Norway, Sweden, Switzerland, United Kingdom, United States",
+                        regionDescription: primaryMarket,
                         amount: 1000
                         },
                         {
@@ -183,7 +184,7 @@ export const training:TrainingObject = {
                         },
                         {
                         region: "Tertiary Market",
-                        regionDescription: "India and African nations",
+                        regionDescription: tertiaryMarket,
                         amount: 800
                         }
                     ]
@@ -194,7 +195,7 @@ export const training:TrainingObject = {
                     price: [
                         {
                         region: "Primary Market",
-                        regionDescription: "Austria, Belgium, Canada, Denmark, Finland, France, Germany, Ireland, Italy, Japan, Korea, Luxembourg, Netherlands, Norway, Sweden, Switzerland, United Kingdom, United States",
+                        regionDescription: primaryMarket,
                         amount: 1000
                         },
                         {
@@ -204,7 +205,7 @@ export const training:TrainingObject = {
                         },
                         {
                         region: "Tertiary Market",
-                        regionDescription: "India and African nations",
+                        regionDescription: tertiaryMarket,
                         amount: 800
                         }
                     ]
@@ -250,7 +251,7 @@ export const training:TrainingObject = {
                     price: [
                         {
                         region: "Primary Market",
-                        regionDescription: "Austria, Belgium, Canada, Denmark, Finland, France, Germany, Ireland, Italy, Japan, Korea, Luxembourg, Netherlands, Norway, Sweden, Switzerland, United Kingdom, United States",
+                        regionDescription: primaryMarket,
                         amount: 1000
                         },
                         {
@@ -260,7 +261,7 @@ export const training:TrainingObject = {
                         },
                         {
                         region: "Tertiary Market",
-                        regionDescription: "India and African nations",
+                        regionDescription: tertiaryMarket,
                         amount: 800
                         }
                     ]
@@ -271,7 +272,7 @@ export const training:TrainingObject = {
                     price: [
                         {
                         region: "Primary Market",
-                        regionDescription: "Austria, Belgium, Canada, Denmark, Finland, France, Germany, Ireland, Italy, Japan, Korea, Luxembourg, Netherlands, Norway, Sweden, Switzerland, United Kingdom, United States",
+                        regionDescription: primaryMarket,
                         amount: 1000
                         },
                         {
@@ -281,7 +282,7 @@ export const training:TrainingObject = {
                         },
                         {
                         region: "Tertiary Market",
-                        regionDescription: "India and African nations",
+                        regionDescription: tertiaryMarket,
                         amount: 800
                         }
                     ]

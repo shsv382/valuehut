@@ -5,6 +5,7 @@ import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 
 import { TrainingTypes, StreamTypes, PriceTypes } from '../../data/training';
 import { getDateInWords } from '../dates-table/dates-table.component';
+import { countries, primaryMarket, tertiaryMarket } from '../../data/countries';
 
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -18,10 +19,18 @@ interface BookingFormTypes {
 }
 
 const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
+    const [country, setCountry] = useState("United Kingdom");
     const [bookPrice, setBookPrice] = useState(stream.price[0].amount.toString());
     const handleChange = (event: any) => {
-        setBookPrice(event.target.value);
-      };
+        setCountry(event.target.value);
+        if (primaryMarket.includes(event.target.value)) {
+            setBookPrice(stream.price[0].amount.toString())
+        } else if (tertiaryMarket.includes(event.target.value)) {
+            setBookPrice(stream.price[2].amount.toString())
+        } else {
+            setBookPrice(stream.price[1].amount.toString())
+        }
+    };
     return (
         <div className="booking-form">
             <h3>{training.title}</h3>
@@ -31,19 +40,15 @@ const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
             <span> </span>
             <br className="xs-visible" />
             { getDateInWords(new Date(stream.date), stream.duration) }
+            <br /><br />
+            <label>Where do you live?</label>
             <br />
-            <label>Choose your region</label>
-            <br />
-            {
-                stream.price.map(({ region, regionDescription, amount }: PriceTypes) => (
-                    <p><span className='details'><strong className='details'>{ region }:</strong> { regionDescription }</span></p>
-                ))
-            }
+            
             <select onChange={handleChange}>
                 {
-                    stream.price.map(p => {
+                    countries.map(c => {
                         return (
-                            <option value={p.amount}>{p.region}</option>
+                            <option value={c} selected={c === country} >{c}</option>
                         )
                     })
                 }
