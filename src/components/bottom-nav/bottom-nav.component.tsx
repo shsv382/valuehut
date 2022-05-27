@@ -25,7 +25,7 @@ export default function BottomNav() {
       bottom: 0, 
       backgroundColor: "#ffffff", 
       zIndex: 9999,
-      '@media screen and (min-width: 768px)': {
+      '@media screen and (min-width: 769px)': {
         display: 'none'
       } 
     }}>
