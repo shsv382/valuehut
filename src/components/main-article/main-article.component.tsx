@@ -12,16 +12,17 @@ interface MainArticleProps {
     streams?: any[],
     isTraining?: boolean,
     otherProps?: any[],
-    style?: any
+    style?: any,
+    children?: any
 }
 
-const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, descriptionList, streams, isTraining, style, ...otherProps}: MainArticleProps) => {
+const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, descriptionList, streams, isTraining, style, children, ...otherProps}: MainArticleProps) => {
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
     }
     const articleWidth: object = imageURL ? {} : {width: "100%"}
     return (
-        <section className="main__article" style={style}>
+        <section className={`main__article`} style={style}>
             <article className="main__article__section" style={articleWidth}>
                 <h1 className="main__article__header">{header}</h1>
                     { description &&
@@ -45,6 +46,9 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
                     <Link to={"/" + header.toLowerCase().split(" ").join("-")} className="button button-secondary button-secondary-default">
                         Read More
                     </Link>
+                }
+                {
+                    children
                 }
                 </div>
             </article>

@@ -31,7 +31,7 @@ const Homepage: React.FC = () => {
             <HeaderWithButton
                 header={servicesArticle.header}
                 link="View all"
-                href="training"    
+                href="services"    
             />
             <TripleBox>
                 {

@@ -1,45 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAppSelector } from '../../redux/hooks';
 import './what-we-do-page.styles.scss';
-
+import { Link } from 'react-router-dom';
 import MainArticle from '../../components/main-article/main-article.component';
 
-import { TrainingTypes } from '../../data/training';
 import { IntrodutionTypes } from '../../data/content';
-import TrustBox from '../../components/trustbox/trustbox.component';
 
-interface WhatWeDoTypes {
-    url: string,
-    trainings: TrainingTypes[],
-    children?: any
-}
+// interface WhatWeDoTypes {
+//     children?: any
+// }
 
-const WhatWeDoPage: React.FC<WhatWeDoTypes> = ({ url, trainings }) => {
+const WhatWeDoPage: React.FC = () => {
+    const [service, setService] = useState("training");
+    const [appearancable, setAppearancable] = useState(true);
+    useEffect(() => setAppearancable(true), [service])
     const introdution: IntrodutionTypes = { ...useAppSelector(state => state.content.pages.whatWeDo.introdution) };
-    const introdutionArticle = introdution[url];
     return (
-        <div className='page what-we-do-page'>
-            <MainArticle 
-                { ...introdutionArticle }
-            />
-            {
-                trainings.map((training:TrainingTypes, i:number) => {
-                    return (
-                        <MainArticle 
-                            imageURL={training.imageURL}
-                            header={training.title}
-                            description={training.description}
-                            streams={training.streams}
-                            isTraining={training.isTraining}
-                            key={`training-${training.id}`}
-                        />
+        <div className='what-we-do-page'>
+            <nav className="services-navigation">
+                {
+                    Object.keys(introdution).map(s => (
+                        <span 
+                            key={`nav-${s}`} 
+                            className={`link services-navigation-item ${(service === s) && `services-navigation-item-checked`}`} 
+                            onClick={() => {
+                                setAppearancable(false);
+                                setService(s);
+                            }
+                            }>
+                            {s[0].toUpperCase() + s.slice(1).toLowerCase()}
+                        </span>)
                     )
                 }
-            )}
-            {
-                url === "training" &&
-                <TrustBox />
-            }
+            </nav>
+            <div className={`what-we-do-page__content ${appearancable ? "appearancable" : ""}`}>
+                <MainArticle 
+                    imageURL={ introdution[service].imageURL }
+                    header={ introdution[service].header }
+                    description={ introdution[service].description }
+                >
+                <Link to={service.toLowerCase()} className="button button-secondary button-secondary-default" style={{marginBottom: 30}}>
+                    Read More
+                </Link>
+                </MainArticle>
+            </div>
         </div>
     );
 }

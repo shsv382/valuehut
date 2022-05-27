@@ -9,6 +9,7 @@ import { useAppSelector } from './redux/hooks';
 import Header from './components/header/header.component';
 import Footer from './components/footer/footer.component';
 import BottomNav from './components/bottom-nav/bottom-nav.component';
+import ServicesPage from './pages/services-page/services-page.component';
 
 function App() {
   const Homepage = lazy(() => import('./pages/homepage/homepage.component'));
@@ -17,6 +18,7 @@ function App() {
   const TrainingsPage = lazy(() => import('./pages/trainings-page/trainings-page.component'));
   const ServicePage = lazy(() => import('./pages/service/service.component'));
   const TrainingPage = lazy(() => import('./pages/training/training.component'));
+  const ServicesPage = lazy(() => import('./pages/services-page/services-page.component'));
   const AboutPage = lazy(() => import('./pages/about-page/about-page.component'));
   
   const trainings = useAppSelector((state) => (state.services.training));
@@ -32,20 +34,19 @@ function App() {
           <Routes>
             <Route path='/' element={<Homepage />} />
             <Route path='/contact' element={<ContactPage />} />
-            {/* <Route path='/consultancy' element={<WhatWeDoPage 
-                                              url="consultancy"
-                                              trainings={ consultancy }
-                                            />} /> */}
-            <Route path='/training' element={<TrainingsPage 
-                                              url="training"
-                                              trainings={ trainings }
-                                            />} />
-            <Route path='/coaching' element={<ServicePage 
-                                              service={ coachings }
-                                            />} />
-            <Route path='/consultancy' element={<ServicePage 
-                                              service={ consultancy }
-                                            />} />
+            <Route path='/services' element={<ServicesPage />}>
+              <Route path='/services' element={<WhatWeDoPage />} />
+              <Route path='training' element={<TrainingsPage 
+                                                url="training"
+                                                trainings={ trainings }
+                                              />} />
+              <Route path='coaching' element={<ServicePage 
+                                                service={ coachings }
+                                              />} />
+              <Route path='consultancy' element={<ServicePage 
+                                                service={ consultancy }
+                                              />} />
+            </Route>
             <Route path='/about' element={<AboutPage />} />
             {
             //   consultancy.map(consult => (

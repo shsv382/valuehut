@@ -14,9 +14,9 @@ const PopupMenuTraining: React.FC<PopupMenuTrainingTypes> = ({ classname }) => {
     return (
         <PopupMenu classname={ classname } hidden={showPopupMenuTraining}>
             <PopupMenuItem label="What We Do" href="/services" />
-            <PopupMenuItem label="Consultancy" href="/consultancy" />
-            <PopupMenuItem label="Coaching" href="/coaching" />
-            <PopupMenuItem label="Training" href="/training" />
+            <PopupMenuItem label="Consultancy" href="/services/consultancy" />
+            <PopupMenuItem label="Coaching" href="/services/coaching" />
+            <PopupMenuItem label="Training" href="/services/training" />
         </PopupMenu>
     )
 }

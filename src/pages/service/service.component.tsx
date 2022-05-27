@@ -18,7 +18,7 @@ const Service: React.FC<ServiceTypes> = ({ service }) => {
         <div className='page service-page'>
             <HeroBanner
                 title={title}
-                imageURL={`images/${imageURL}`}
+                imageURL={`/images/${imageURL}`}
             />
             <div className="service-page__placeholder"></div>
             {    description &&
