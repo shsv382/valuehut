@@ -36,10 +36,21 @@ function App() {
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/services' element={<ServicesPage />}>
               <Route path='/services' element={<WhatWeDoPage />} />
-              <Route path='training' element={<TrainingsPage 
-                                                url="training"
-                                                trainings={ trainings }
-                                              />} />
+              <Route path='training' element={<ServicesPage />}>
+                <Route path='/services/training' element={<TrainingsPage 
+                  url="training"
+                  trainings={ trainings }
+                />}></Route>
+              {
+                trainings.map((training, i) => (
+                  <Route 
+                    key={`training-${i}`}
+                    path={training.title.toLowerCase().split(" ").join("-")} 
+                    element={<TrainingPage training={ training } />}
+                  />
+                ))
+              }  
+              </Route>
               <Route path='coaching' element={<ServicePage 
                                                 service={ coachings }
                                               />} />
@@ -64,15 +75,7 @@ function App() {
             //     />
             //   ))
             }
-            {
-              trainings.map((training, i) => (
-                <Route 
-                  key={`training-${i}`}
-                  path={training.title.toLowerCase().split(" ").join("-")} 
-                  element={<TrainingPage training={ training } />}
-                />
-              ))
-            }
+            
             <Route path='*' element={<ErrorBoundary hasError={true} />} />
           </Routes>
         </Suspense>

@@ -20,7 +20,7 @@ const Training: React.FC<TrainingComponentTypes> = ({ training }) => {
         <div className='page training-page'>
             <HeroBanner
                 title={title}
-                imageURL={`images/${imageURL}`}
+                imageURL={`/images/${imageURL}`}
             />
             <div className="training-page__placeholder"></div>
             {    description &&

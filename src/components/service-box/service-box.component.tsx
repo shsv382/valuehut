@@ -13,14 +13,15 @@ import Typography from '@mui/material/Typography';
 
 interface ServiceBoxTypes {
     header: string, 
-    description: string, 
+    description: string,
+    url: string, 
     imageURL: string,
     children?: any
 }
 
-const ServiceBox: React.FC<ServiceBoxTypes> = ({header, description, imageURL}) => {
+const ServiceBox: React.FC<ServiceBoxTypes> = ({header, description, imageURL, url}) => {
     return (
-        <Link   to={header.toLowerCase().split(" ").join("-")} 
+        <Link   to={url} 
                 className="link service-box" 
                 style={{backgroundImage: imageURL}}>
             <Card sx={{ maxWidth: 345, position: 'relative' }} className="service-box__content">

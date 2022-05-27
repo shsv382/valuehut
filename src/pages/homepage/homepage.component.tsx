@@ -37,7 +37,7 @@ const Homepage: React.FC = () => {
                 {
                     Object.values(services).map((service:any, i:number) => {
                         return i < 3 && (
-                            <ServiceBox {...service} key={`service-${service.header}`} />
+                            <ServiceBox {...service} url={`/services/${service.header.toLowerCase()}`} key={`service-${service.header}`} />
                         )
                     })
                 }
