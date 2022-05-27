@@ -79,6 +79,10 @@ export const content = {
             },
             previousClients: [
                 {
+                    name: "MTN",
+                    imageURL: "mtn.jpg"
+                }, 
+                {
                     name: "Barclays",
                     imageURL: "barclays.jpg"
                 }, {
@@ -88,7 +92,7 @@ export const content = {
                     name: "BP",
                     imageURL: "bp.jpg"
                 }, {
-                    name: "Ministry of Justice",
+                    name: "Government",
                     imageURL: "ministry-of-justice.jpg"
                 }, {
                     name: "UBS",
