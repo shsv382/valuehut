@@ -24,12 +24,12 @@ interface ConsultancyObject {
 
 export const consultancy: ConsultancyObject = {
     consultancy: {
-        title: "Enterprise and Organizational Consultancy",
+        title: "Agile Consultancy",
         description: `Efforts to embark on Agility at the team level especially when it doesn’t involve the whole organisation could be an uphill battle; we advise our clients that in other to deliver sustainable and long-lasting change, agility should be introduced using a “whole organisation” approach to agility. This approach however comes with it own sets of challenges which might be familiar to you.`,
         imageURL: "./mikael.jpg",
         articles: [
             {
-                title: "Typical challenges ",
+                title: "Continuous Integration / Continous Delivery",
                 content: `that are faced include:
                 \n•	Resistance at different levels within the organisation.\n
                 \n•	Organisational structure & culture that is not optimised for Agility.\n
@@ -37,12 +37,17 @@ export const consultancy: ConsultancyObject = {
                 `
             }, 
             {
-                title: "Enterprise and Organizational Consultancy",
-                content: `We have helped a lot of organisation to navigate these kinds of challenges to deliver true agility across the enterprise by leverage their experience and skills in Large scale facilitation, co-creation of outcomes and the use of experimentation across the enterprise.`
+                title: "Behaviour Driven Development",
+                content: `Behaviour Driven Development is an Agile Development practise that fosters collaboration between the Business and the Development teams. It encourages communication based on the expected behaviour of the product to be implmented and subsequently enables the team to capture requirements as specification which can then be automated by the Development Team.`
             },
             {
-                title: "Team Consultancy",
-                content: `Far too many teams are “Doing Agile” rather than “Being Agile”. Often times, the this could mean that the “Agile Rituals” are being done but Agile doesn’t seem to be delivering on it’s promise. The Principles of Agile are very simple but take a long time to be consistent in its application to every aspect of Delivery.`,
+                title: "Agile Fundamentals",
+                content: `This training covers the fundamentals of working using any Agile Methodology and is particular targetted for team that are new to Agile. The training introduces some of the popular Agile Frameworks such as Scrum and Kanban. Attendees will have gained have sufficient knowledge to work in a team that has adopted any of the Agile frameworks that was covered as part of the training.
+                        \n• Agile Principles
+                        \n• Roles within an Agile Team (Agile BA, Developer & Tester)
+                        \n• Estimation & Product Planning
+                        \n• User Stories & Vertical Slicing of Stories.
+                         `,
                 imageURL: "./cameron.jpg"
             }
         ]
