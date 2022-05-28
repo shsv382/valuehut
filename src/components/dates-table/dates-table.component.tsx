@@ -103,7 +103,7 @@ const DatesTableStream: React.FC<DatesTableStreamTypes> = ({ training, stream })
             </TableCell>
             <TableCell align="right">
                 {
-                    filled ?
+                    !filled ?
                         (<span 
                             className="link"
                             onClick={showModal(stream)}

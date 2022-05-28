@@ -16,7 +16,7 @@ export interface StreamTypes {
     date: any,
     duration: number,
     price: PriceTypes[],
-    filled?: boolean
+    filled: boolean
 }
 
 export interface TrainingArticleTypes {
@@ -132,7 +132,8 @@ export const training:TrainingObject = {
                         regionDescription: tertiaryMarket,
                         amount: 800
                         }
-                    ]
+                    ], 
+                    filled: false
                 }
             ],
             isTraining: true
@@ -187,7 +188,8 @@ export const training:TrainingObject = {
                         regionDescription: tertiaryMarket,
                         amount: 800
                         }
-                    ]
+                    ], 
+                    filled: true
                 },
                 {
                     date: new Date("2023-07-11T11:30:00+09:00"),
@@ -208,7 +210,8 @@ export const training:TrainingObject = {
                         regionDescription: tertiaryMarket,
                         amount: 800
                         }
-                    ]
+                    ], 
+                    filled: false
                 }
             ],
             isTraining: true
@@ -264,7 +267,8 @@ export const training:TrainingObject = {
                         regionDescription: tertiaryMarket,
                         amount: 800
                         }
-                    ]
+                    ], 
+                    filled: false
                 },
                 {
                     date: new Date("2023-07-14T11:30:00+09:00"),
@@ -285,7 +289,8 @@ export const training:TrainingObject = {
                         regionDescription: tertiaryMarket,
                         amount: 800
                         }
-                    ]
+                    ], 
+                    filled: true
                 }
             ],
             isTraining: true
