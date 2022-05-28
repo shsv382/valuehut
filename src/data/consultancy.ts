@@ -43,11 +43,11 @@ export const consultancy: ConsultancyObject = {
             {
                 title: "Agile Fundamentals",
                 content: `This training covers the fundamentals of working using any Agile Methodology and is particular targetted for team that are new to Agile. The training introduces some of the popular Agile Frameworks such as Scrum and Kanban. Attendees will have gained have sufficient knowledge to work in a team that has adopted any of the Agile frameworks that was covered as part of the training.
-                        \n• Agile Principles
-                        \n• Roles within an Agile Team (Agile BA, Developer & Tester)
-                        \n• Estimation & Product Planning
-                        \n• User Stories & Vertical Slicing of Stories.
-                         `,
+                \n• Agile Principles
+                \n• Roles within an Agile Team (Agile BA, Developer & Tester)
+                \n• Estimation & Product Planning
+                \n• User Stories & Vertical Slicing of Stories.
+                `,
                 imageURL: "./cameron.jpg"
             }
         ]
