@@ -27,7 +27,7 @@ const Footer: React.FC<FooterTypes> = ({ howto, offices }) => {
         <footer>
             <div className='footer-container'>
                 <>
-                <LogoContainer imageURL='./logo/logo-primary-bg-black.png' />
+                <LogoContainer imageURL='/logo/logo-primary-bg-black.png' />
                 <h3>Contact Us Now:</h3>
                     { offices.map(({region, email, address, phone}, i) => (
                         <div className="footer__contact-data" key={`office-${i}`}>
