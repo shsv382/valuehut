@@ -32,8 +32,8 @@ const Footer: React.FC<FooterTypes> = ({ howto, offices }) => {
                     { offices.map(({region, email, address, phone}, i) => (
                         <div className="footer__contact-data" key={`office-${i}`}>
                             <p className="details-responsive"><u>{region} office:</u></p>
-                            <p className="details-responsive">Mail to <a className='link footer__link' href={`mailto:${email}`}>{email}</a></p>
-                            <p className="details-responsive">Call <a className='link footer__link' href={`tel:${phone}`}>{phone}</a></p>
+                            <p className="details-responsive">Email: <a className='link footer__link' href={`mailto:${email}`}>{email}</a></p>
+                            <p className="details-responsive">Call: <a className='link footer__link' href={`tel:${phone}`}>{phone}</a></p>
                         </div>)
                     )}
                 <div className="change-region-block">
