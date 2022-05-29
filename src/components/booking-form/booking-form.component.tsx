@@ -56,7 +56,7 @@ const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
             <a 
                 id="addToCart"
                 className="button button-primary button-primary-small"
-                href={`https://valuehut.foxycart.com/cart?name=${training.title}&date=${stream.date}&price=${bookPrice}`} 
+                href={`https://valuehut.foxycart.com/cart?name=${training.title}&Date=${stream.date}&price=${bookPrice}`} 
             >
                 BOOK FOR $ {bookPrice}
             </a>
