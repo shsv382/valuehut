@@ -113,7 +113,7 @@ export const training:TrainingObject = {
                         amount: 800
                         }
                     ], 
-                    filled: true
+                    filled: false
                 },
                 {
                     startDate: new Date("2022-07-11"),
@@ -242,8 +242,8 @@ export const training:TrainingObject = {
             ],
             streams: [
                 {
-                    startDate: new Date("2023-06-11"),
-                    endDate: new Date("2023-06-13"),
+                    startDate: new Date("2023-08-11"),
+                    endDate: new Date("2023-08-13"),
                     time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
@@ -262,7 +262,7 @@ export const training:TrainingObject = {
                         amount: 800
                         }
                     ], 
-                    filled: true
+                    filled: false
                 },
                 {
                     startDate: new Date("2023-06-11"),
@@ -323,8 +323,8 @@ export const training:TrainingObject = {
             ],
             streams: [
                 {
-                    startDate: new Date("2023-06-11"),
-                    endDate: new Date("2023-06-13"),
+                    startDate: new Date("2023-07-11"),
+                    endDate: new Date("2023-07-13"),
                     time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
@@ -366,7 +366,7 @@ export const training:TrainingObject = {
                         amount: 800
                         }
                     ], 
-                    filled: true
+                    filled: false
                 }
             ],
             isTraining: true

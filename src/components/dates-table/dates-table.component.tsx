@@ -116,7 +116,7 @@ const DatesTableStream: React.FC<DatesTableStreamTypes> = ({ training, stream })
                             <span 
                             className="link link-disabled"
                         >
-                            CLASS FULL
+                            FULLY BOOKED
                         </span>
                         )
                 }

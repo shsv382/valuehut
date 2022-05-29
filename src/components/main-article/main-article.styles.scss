@@ -33,8 +33,9 @@
     }
     &:nth-child(even) {
         flex-direction: row-reverse;
-        text-align: justify;.main__article__header {
-            text-align: right;
+        text-align: justify;
+        .main__article__header {
+            text-align: left;
         }
         .main__article__aside__image {
             border-radius: 0;

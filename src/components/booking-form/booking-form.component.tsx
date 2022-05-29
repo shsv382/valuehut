@@ -44,11 +44,11 @@ const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
             <label>Where do you live?</label>
             <br />
             
-            <select onChange={handleChange}>
+            <select onChange={handleChange} defaultValue={country}>
                 {
                     countries.map(c => {
                         return (
-                            <option value={c} selected={c === country} >{c}</option>
+                            <option value={c} key={c} >{c}</option>
                         )
                     })
                 }
@@ -56,7 +56,10 @@ const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
             <a 
                 id="addToCart"
                 className="button button-primary button-primary-small"
-                href={`https://valuehut.foxycart.com/cart?name=${training.title}&Start Date=${stream.startDate}&End Date=${stream.endDate}&price=${bookPrice}`} 
+                href={`https://valuehut.foxycart.com/cart?name=${training.title}
+                &Start Date=${getDateInWords(stream.startDate)}
+                &End Date=${getDateInWords(stream.endDate)}
+                &price=${bookPrice}`} 
             >
                 BOOK FOR $ {bookPrice}
             </a>

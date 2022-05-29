@@ -24,7 +24,10 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
     return (
         <section className={`main__article`} style={style}>
             <article className="main__article__section" style={articleWidth}>
-                <h1 className="main__article__header">{header}</h1>
+                <h1 className={`main__article__header`}>
+                    
+                    {header}
+                </h1>
                     { description &&
                         <p className="main__article__description">
                             { description }
