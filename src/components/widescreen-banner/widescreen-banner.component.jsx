@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from './logo-transparent.png';
 import { BannerImage } from "./banner-image";
 import { BannerShadow } from "./banner-shadow";
 

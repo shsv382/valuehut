@@ -34,12 +34,12 @@ const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
     return (
         <div className="booking-form">
             <h3>{training.title}</h3>
-            { getDateInWords(new Date(stream.date)) } 
+            { getDateInWords(new Date(stream.startDate)) } 
             <span> </span>
             -
             <span> </span>
             <br className="xs-visible" />
-            { getDateInWords(new Date(stream.date), stream.duration) }
+            { getDateInWords(new Date(stream.endDate)) }
             <br /><br />
             <label>Where do you live?</label>
             <br />
@@ -56,7 +56,7 @@ const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
             <a 
                 id="addToCart"
                 className="button button-primary button-primary-small"
-                href={`https://valuehut.foxycart.com/cart?name=${training.title}&date=${stream.date}&price=${bookPrice}`} 
+                href={`https://valuehut.foxycart.com/cart?name=${training.title}&Start Date=${stream.startDate}&End Date=${stream.endDate}&price=${bookPrice}`} 
             >
                 BOOK FOR $ {bookPrice}
             </a>

@@ -21,8 +21,8 @@ interface DatesTableTypes {
     streams: StreamTypes[]
 }
 
-export function getDateInWords(date: any, duration: number = 0): string  {
-    let newDate = date.setDate(date.getDate() + duration);
+export function getDateInWords(date: any): string  {
+    let newDate = date.setDate(date.getDate());
     newDate = date.toString().split(" ").slice(1,4);
     return `${newDate[0]} ${newDate[1]}, ${newDate[2]}`
 }
@@ -41,7 +41,7 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
                 <TableBody>
                 {
                 streams.map((stream: StreamTypes) => {
-                    const { date, duration, price, filled } = stream;
+                    const { startDate, endDate, time, price, filled } = stream;
                     return (
                     <DatesTableStream training={training} stream={stream} />
                     )}
@@ -59,9 +59,10 @@ const DatesTableHead = () => {
     return (
         <TableHead>
             <TableRow>
-                <TableCell>Dates</TableCell>
+                <TableCell>
+                    Dates
+                </TableCell>
                 <TableCell align="center">Time</TableCell>
-                <TableCell align="center">Duration</TableCell>
                 <TableCell></TableCell>
             </TableRow>
         </TableHead>
@@ -77,7 +78,7 @@ interface DatesTableStreamTypes {
 
 const DatesTableStream: React.FC<DatesTableStreamTypes> = ({ training, stream }) => {
     const dispatch = useAppDispatch();
-    const { date, duration, price, filled } = stream;
+    const { startDate, endDate, time, price, filled } = stream;
     const showModal = (stream: any): any => (e: MouseEvent): any => {
         dispatch(toggleModalHidden())
         e.preventDefault();
@@ -91,16 +92,15 @@ const DatesTableStream: React.FC<DatesTableStreamTypes> = ({ training, stream })
     }
     return (
         <TableRow
-            key={ date.toString() }
+            key={ startDate.toString() }
             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-            <TableCell component="th" scope="row">
-                { getDateInWords(new Date(date)) } - <br className="xs-visible" />{ getDateInWords(new Date(date), duration) }
+            <TableCell component="th" scope="row" style={{width: "40%", }}>
+                { getDateInWords(new Date(startDate)) }
+                &#160; - &#160;<br className="xs-visible" />
+                { getDateInWords(new Date(endDate)) }
             </TableCell>
-            <TableCell align="center">{`${new Date(date).getUTCHours()}:${new Date(date).getUTCMinutes()}`}</TableCell>
-            <TableCell align="center">
-                { duration } days
-            </TableCell>
+            <TableCell align="center">{time}</TableCell>
             <TableCell align="right">
                 {
                     !filled ?

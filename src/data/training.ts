@@ -13,8 +13,9 @@ export interface PriceTypes {
 }
 
 export interface StreamTypes {
-    date: any,
-    duration: number,
+    startDate: any,
+    endDate: any,
+    time: string,
     price: PriceTypes[],
     filled: boolean
 }
@@ -92,8 +93,9 @@ export const training:TrainingObject = {
             ],
             streams: [
                 {
-                    date: new Date("2023-06-11T11:30:00+07:00"),
-                    duration: 2,
+                    startDate: new Date("2023-06-11"),
+                    endDate: new Date("2023-06-13"),
+                    time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
                         region: "Primary Market",
@@ -114,8 +116,9 @@ export const training:TrainingObject = {
                     filled: true
                 },
                 {
-                    date: new Date("2023-07-11T11:30:00+09:00"),
-                    duration: 2,
+                    startDate: new Date("2023-06-11"),
+                    endDate: new Date("2023-06-13"),
+                    time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
                         region: "Primary Market",
@@ -170,8 +173,9 @@ export const training:TrainingObject = {
             ],
             streams: [
                 {
-                    date: new Date("2023-06-11T11:30:00+07:00"),
-                    duration: 2,
+                    startDate: new Date("2023-06-11"),
+                    endDate: new Date("2023-06-13"),
+                    time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
                         region: "Primary Market",
@@ -192,8 +196,9 @@ export const training:TrainingObject = {
                     filled: true
                 },
                 {
-                    date: new Date("2023-07-11T11:30:00+09:00"),
-                    duration: 2,
+                    startDate: new Date("2023-06-11"),
+                    endDate: new Date("2023-06-13"),
+                    time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
                         region: "Primary Market",
@@ -249,8 +254,9 @@ export const training:TrainingObject = {
             ],
             streams: [
                 {
-                    date: new Date("2023-06-11T11:30:00+07:00"),
-                    duration: 2,
+                    startDate: new Date("2023-06-11"),
+                    endDate: new Date("2023-06-13"),
+                    time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
                         region: "Primary Market",
@@ -271,8 +277,9 @@ export const training:TrainingObject = {
                     filled: false
                 },
                 {
-                    date: new Date("2023-07-14T11:30:00+09:00"),
-                    duration: 3,
+                    startDate: new Date("2023-06-11"),
+                    endDate: new Date("2023-06-13"),
+                    time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
                         region: "Primary Market",
