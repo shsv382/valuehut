@@ -6,6 +6,7 @@ import { TrainingTypes, StreamTypes, PriceTypes } from '../../data/training';
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 import { addItem } from '../../redux/cart/cart.actions';
 import { toggleModalHidden } from '../../redux/app/app.actions';
+import { sortStreams } from './dates-table.helpers';
 
 import BookingForm from '../booking-form/booking-form.component';
 import Table from '@mui/material/Table';
@@ -30,7 +31,8 @@ export function getDateInWords(date: any): string  {
 const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
     const region: string = useAppSelector(state => state.app.region)
     const dispatch = useAppDispatch();
-    
+    const tableStreams = sortStreams(streams);
+                    
     return (
         <TableContainer component={Paper}>
             <Table sx={{ 
@@ -40,12 +42,13 @@ const DatesTable: React.FC<DatesTableTypes> = ({ training, streams }) => {
                 <DatesTableHead />
                 <TableBody>
                 {
-                streams.map((stream: StreamTypes) => {
-                    const { startDate, endDate, time, price, filled } = stream;
-                    return (
-                    <DatesTableStream training={training} stream={stream} />
-                    )}
-                )
+                    tableStreams.filter((stream: StreamTypes) => (new Date(stream.endDate) > new Date()))
+                        .map((stream: StreamTypes) => {
+                        const { startDate, endDate, time, price, filled } = stream;
+                        return (
+                        <DatesTableStream training={training} stream={stream} key={`${training.title}-${stream.startDate}`} />
+                        )}
+                    )
                 }
                 </TableBody>
             </Table>

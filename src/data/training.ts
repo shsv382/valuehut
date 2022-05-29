@@ -116,8 +116,77 @@ export const training:TrainingObject = {
                     filled: true
                 },
                 {
-                    startDate: new Date("2023-06-11"),
-                    endDate: new Date("2023-06-13"),
+                    startDate: new Date("2022-07-11"),
+                    endDate: new Date("2022-07-13"),
+                    time: "9:00 - 17:00 London UTC Timezone",
+                    price: [
+                        {
+                        region: "Primary Market",
+                        regionDescription: primaryMarket,
+                        amount: 1000
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "All countries not listed as primary or tertiary",
+                        amount: 900    
+                        },
+                        {
+                        region: "Tertiary Market",
+                        regionDescription: tertiaryMarket,
+                        amount: 800
+                        }
+                    ], 
+                    filled: false
+                },
+                {
+                    startDate: new Date("2021-06-11"),
+                    endDate: new Date("2021-06-13"),
+                    time: "9:00 - 17:00 London UTC Timezone",
+                    price: [
+                        {
+                        region: "Primary Market",
+                        regionDescription: primaryMarket,
+                        amount: 1000
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "All countries not listed as primary or tertiary",
+                        amount: 900    
+                        },
+                        {
+                        region: "Tertiary Market",
+                        regionDescription: tertiaryMarket,
+                        amount: 800
+                        }
+                    ], 
+                    filled: false
+                },
+                {
+                    startDate: new Date("2022-06-11"),
+                    endDate: new Date("2022-06-13"),
+                    time: "9:00 - 17:00 London UTC Timezone",
+                    price: [
+                        {
+                        region: "Primary Market",
+                        regionDescription: primaryMarket,
+                        amount: 1000
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "All countries not listed as primary or tertiary",
+                        amount: 900    
+                        },
+                        {
+                        region: "Tertiary Market",
+                        regionDescription: tertiaryMarket,
+                        amount: 800
+                        }
+                    ], 
+                    filled: false
+                },
+                {
+                    startDate: new Date("2022-05-11"),
+                    endDate: new Date("2022-05-13"),
                     time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
