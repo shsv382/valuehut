@@ -1,7 +1,9 @@
 .service__article {
-    text-align: left;
+    text-align: justify;
     width: 100%;
     margin-bottom: 30px;
+    padding: 10px;
+    max-width: 90%;
     h2, p {
         margin-bottom: 20px;
     }
