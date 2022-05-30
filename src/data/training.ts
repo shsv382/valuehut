@@ -94,7 +94,7 @@ export const training:TrainingObject = {
             streams: [
                 {
                     startDate: new Date("2023-06-11"),
-                    endDate: new Date("2023-06-13"),
+                    endDate: new Date("2023-06-12"),
                     time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
@@ -117,7 +117,7 @@ export const training:TrainingObject = {
                 },
                 {
                     startDate: new Date("2022-07-11"),
-                    endDate: new Date("2022-07-13"),
+                    endDate: new Date("2022-07-12"),
                     time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
@@ -140,7 +140,7 @@ export const training:TrainingObject = {
                 },
                 {
                     startDate: new Date("2021-06-11"),
-                    endDate: new Date("2021-06-13"),
+                    endDate: new Date("2021-06-12"),
                     time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
@@ -163,7 +163,7 @@ export const training:TrainingObject = {
                 },
                 {
                     startDate: new Date("2022-06-11"),
-                    endDate: new Date("2022-06-13"),
+                    endDate: new Date("2022-06-12"),
                     time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
@@ -186,7 +186,7 @@ export const training:TrainingObject = {
                 },
                 {
                     startDate: new Date("2022-05-11"),
-                    endDate: new Date("2022-05-13"),
+                    endDate: new Date("2022-05-12"),
                     time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
@@ -243,7 +243,7 @@ export const training:TrainingObject = {
             streams: [
                 {
                     startDate: new Date("2023-08-11"),
-                    endDate: new Date("2023-08-13"),
+                    endDate: new Date("2023-08-12"),
                     time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
@@ -266,7 +266,7 @@ export const training:TrainingObject = {
                 },
                 {
                     startDate: new Date("2023-06-11"),
-                    endDate: new Date("2023-06-13"),
+                    endDate: new Date("2023-06-12"),
                     time: "9:00 - 17:00 London UTC Timezone",
                     price: [
                         {
