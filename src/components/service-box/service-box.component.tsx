@@ -22,28 +22,10 @@ interface ServiceBoxTypes {
 const ServiceBox: React.FC<ServiceBoxTypes> = ({header, description, imageURL, url}) => {
     return (
         <Link   to={url} 
-                className="link service-box" 
-                style={{backgroundImage: imageURL}}>
-            <Card sx={{ maxWidth: 345, position: 'relative' }} className="service-box__content">
-                <CardMedia
-                    className="service-box__image-content"
-                    component="img"
-                    alt={`${header}`}
-                    height="140"
-                    image={`images/${imageURL}`}
-                />
-                <CardContent className="service-box__text-content">
-                    <Typography gutterBottom variant="h5" component="div">
-                    { header }
-                    </Typography>
-                    {/* <Typography variant="body2" color="text.secondary">
-                    { description }
-                    </Typography> */}
-                </CardContent>
-                {/* <CardActions className="service-box__actions">
-                    <Button size="small">Learn More</Button>
-                </CardActions> */}
-            </Card>
+                className="link service-box">
+            <div className="link service-box__content" style={{backgroundImage: `url(/images/${imageURL})`}}>
+                <h2 className="service-box__header">{ header }</h2>
+            </div>
         </Link>
     )
 }
