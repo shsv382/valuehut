@@ -13,9 +13,11 @@ const CartButtonContainer: React.FC = () => {
         // dispatch(toggleCartHidden());
     }
     return (
-        <div className='cart-button-container'>
+        <div className='cart-button-container' data-fc-id="minicart" >
             <a href={`https://valuehut.foxycart.com/cart?cart=view`}>
                 <Cart />
+                <span className="cart-quantity" data-fc-id="minicart-quantity">0</span>
+                <span className="cart-total">$ <span data-fc-id="minicart-order-total">0</span></span>
             </a>
             {/* {
                 !hidden && <CartDropdown /> 
