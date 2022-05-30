@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { useAppSelector } from '../../redux/hooks';
 import './trainings-page.styles.scss';
 
 import MainArticle from '../../components/main-article/main-article.component';
+import Spinner from '../../components/spinner/spinner.component';
 
 import { TrainingTypes } from '../../data/training';
 import { IntrodutionTypes } from '../../data/content';
@@ -22,6 +23,7 @@ const TrainingsPage: React.FC<TrainingsPageTypes> = ({ url, trainings }) => {
             <MainArticle 
                 { ...introdutionArticle }
             />
+            <Suspense fallback={<Spinner />}>
             {
                 trainings.map((training:TrainingTypes, i:number) => {
                     return (
@@ -31,11 +33,13 @@ const TrainingsPage: React.FC<TrainingsPageTypes> = ({ url, trainings }) => {
                             description={training.description}
                             streams={training.streams}
                             isTraining={training.isTraining}
+                            logo={training.logo}
                             key={`training-${training.id}`}
                         />
                     )
                 }
             )}
+            </Suspense>
             {
                 url === "training" &&
                 <TrustBox />

@@ -13,10 +13,11 @@ interface MainArticleProps {
     isTraining?: boolean,
     otherProps?: any[],
     style?: any,
+    logo?: any,
     children?: any
 }
 
-const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, descriptionList, streams, isTraining, style, children, ...otherProps}: MainArticleProps) => {
+const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, descriptionList, streams, isTraining, style, logo, children, ...otherProps}: MainArticleProps) => {
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
     }
@@ -24,10 +25,15 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
     return (
         <section className={`main__article`} style={style}>
             <article className="main__article__section" style={articleWidth}>
+                { isTraining ? 
+                <h2 className={`main__article__header`}>
+                    { logo ? <img src={`/training/${logo}`} /> : "" }
+                    <span>{ header }</span>
+                </h2> : 
                 <h1 className={`main__article__header`}>
-                    
-                    {header}
+                    { header }
                 </h1>
+                }
                     { description &&
                         <p className="main__article__description">
                             { description }

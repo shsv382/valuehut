@@ -33,7 +33,7 @@ export interface TrainingTypes {
     title: string,
     acronym?: string,
     description?: string,
-    iconURL?: string,
+    logo?: any,
     iconBorder?: string,
     imageURL: string,
     articles?: TrainingArticleTypes[],
@@ -73,7 +73,7 @@ export const training:TrainingObject = {
                         intends to become a Scrum Master. The class is delivered 
                         over a two days (8hrs per day).`,
             imageURL: "./energy.jpg",
-            iconURL: "https://static.scrum.org/web/logos/psm.svg",
+            logo: "psm.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             articles: [
                 {
@@ -225,7 +225,7 @@ export const training:TrainingObject = {
                         Leaders. The class can be delivered over a two days (8hrs 
                         per day) class or a four days (4hrs per day) class.`,
             imageURL: "./fauxels.jpg",
-            iconURL: "https://static.scrum.org/web/logos/pal-e.svg",
+            logo: "pal-e.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             articles: [
                 {
@@ -306,7 +306,7 @@ export const training:TrainingObject = {
                         their ways of working using Scrum. The class is delivered 
                         over a two days (8hrs per day).`,
             imageURL: "./morillo.jpg",
-            iconURL: "",
+            logo: "aps.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             articles: [
                 {

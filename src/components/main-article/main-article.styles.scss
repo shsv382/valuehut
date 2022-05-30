@@ -92,6 +92,24 @@
     margin: 10px 0 30px 0;
 }
 
+h2.main__article__header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    span {
+        max-width: 60%;
+        height: 100%;
+        @media screen and (min-width: 1024px) {
+            max-width: 70%;
+        }
+    }
+    img {
+        max-height: 100px;
+        max-width: 30%;
+    }
+}
+
 .main__article__buttons__block {
     display: flex;
     justify-content: space-between;
