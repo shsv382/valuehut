@@ -9,6 +9,9 @@
         text-decoration: none;
         font-size: 12px;
     }
+    &[data-fc-id="minicart"] {
+        display: unset !important;
+    }
     .cart-quantity {
         position: absolute;
         top: 0; left: 0;
