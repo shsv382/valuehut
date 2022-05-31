@@ -2,7 +2,7 @@
   "name": "Valuehut",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://valuehut.co",
+  "homepage": "https://samueladesoga.github.io/valuehut/",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
