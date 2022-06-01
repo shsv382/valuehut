@@ -29,8 +29,7 @@ const Service: React.FC<ServiceTypes> = ({ service }) => {
             }
             {   articles && articles.map((article, i) => (
                     <ServiceArticle key={article.content[0] + i + article.content[0]}
-                        title={ article.title }
-                        content={ article.content }
+                        { ...article }
                     />
                 ))
             }

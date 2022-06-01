@@ -40,7 +40,7 @@ const MainArticle:React.FC<MainArticleProps> = ({imageURL, header, description, 
                         </p> 
                     }{ descriptionList &&
                         <ul className="main__article__description main__article__description-list">
-                            { descriptionList.map((d: string, i: number) => (<li key={`ma-li-${i}`}>{ d }</li>)) }
+                            { descriptionList.map((d: string, i: number) => (<li key={`${header}-ma-li-${i}`}>{ d }</li>)) }
                         </ul>
                     }
                 <div className='main__article__buttons__block'>

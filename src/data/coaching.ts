@@ -5,6 +5,7 @@
 export interface CoachingArticleTypes {
     title?: string,
     content: string,
+    contentList?: string[],
     imageURL?: string,
     textAlign?: string,
     imagePosition?: string
@@ -29,12 +30,13 @@ export const coaching: CoachingObject = {
         imageURL: "./cameron.jpg",
         articles: [
             {
-                title: "Typical challenges ",
-                content: `that are faced include:
-                \n•	Resistance at different levels within the organisation.\n
-                \n•	Organisational structure & culture that is not optimised for Agility.\n
-                \n•	Disjointed perceptions of the current and the future state for the Organisation across the Organisation.\n
-                `
+                title: "Typical challenges that are faced include:",
+                content: ``,
+                contentList: [
+                    `Resistance at different levels within the organisation.`,
+                    `Organisational structure & culture that is not optimised for Agility.`,
+                    `Disjointed perceptions of the current and the future state for the Organisation across the Organisation.`
+                ]
             }, 
             {
                 title: "Enterprise and Organizational Coaching",
