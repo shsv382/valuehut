@@ -81,14 +81,12 @@ export const training:TrainingObject = {
                     content: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`
                 },
                 {
-                    title: "Who should attend?",
-                    content: `The Advanced Certified ScrumMaster workshop requires previous Scrum knowledge and experience.
-
-                    This is NOT a session for those who are new to Agile and Scrum.
-                    
-                    All attendees must have the Certified ScrumMaster certification (CSM) and with a minimum of one year practice prior to the Advanced Certified ScrumMaster (A-CSM) workshop. If you don’t currently have a CSM certification, please contact us for options.
-                    
-                    Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`
+                    title: "Assessment Certification",
+                    content: `All participants completing the Professional Scrum Master course will receive 
+                    a password to attempt the Professional Scrum Master I (PSM I) assessment. 
+                    The industry-recognized PSM I certification requires a minimum passing score of 85%. 
+                    PSM class participants who attempt the PSM I assessment within 14 days of receiving their 
+                    free password and do not score at least 85% will be granted a 2nd attempt at no additional cost.`
                 }
             ],
             streams: [
@@ -138,14 +136,16 @@ export const training:TrainingObject = {
             articles: [
                 {
                     title: "What will I learn?",
-                    content: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`
+                    content: `In this class, Leaders understand how agility adds value to their 
+                    organization and why their support in creating an agile culture is essential to success. 
+                    The class provides Leaders information that is required to support and enable teams by 
+                    providing guidance and removing impediments that are beyond the team’s ability to address.`
                 },
                 {
-                    title: "Who should attend?",
-                    content: `The Advanced Certified ScrumMaster workshop requires previous Scrum knowledge and experience.
-                    This is NOT a session for those who are new to Agile and Scrum.
-                    All attendees must have the Certified ScrumMaster certification (CSM) and with a minimum of one year practice prior to the Advanced Certified ScrumMaster (A-CSM) workshop. If you don’t currently have a CSM certification, please contact us for options.
-                    Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`
+                    title: "Assessment Certification",
+                    content: `All participants will receive a password to attempt the will receive a password to attempt the PAL I assessment.
+                    PAL participants who attempt the PAL I assessment within 14 days of receiving their free password and do not score at 
+                    least 85% will be granted a 2nd attempt at no additional cost.`
                 }
             ],
             streams: [
@@ -199,11 +199,10 @@ export const training:TrainingObject = {
                     content: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`
                 },
                 {
-                    title: "Who should attend?",
-                    content: `The Advanced Certified ScrumMaster workshop requires previous Scrum knowledge and experience.
-                    This is NOT a session for those who are new to Agile and Scrum.
-                    All attendees must have the Certified ScrumMaster certification (CSM) and with a minimum of one year practice prior to the Advanced Certified ScrumMaster (A-CSM) workshop. If you don’t currently have a CSM certification, please contact us for options.
-                    Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`
+                    title: "Assessment Certification",
+                    content: `All participants will receive a password to attempt the Professional Scrum Master I (PSM I) assessment. 
+                    PSM class participants who attempt the PSM I assessment within 14 days of receiving their free password and 
+                    do not score at least 85% will be granted a 2nd attempt at no additional cost.`
                 }
             ],
             streams: [],
