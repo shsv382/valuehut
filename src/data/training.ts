@@ -82,113 +82,35 @@ export const training:TrainingObject = {
                     content: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`
                 },
                 {
-                    title: "Who should attend?",
-                    content: `The Advanced Certified ScrumMaster workshop requires previous Scrum knowledge and experience.
-
-                    This is NOT a session for those who are new to Agile and Scrum.
-                    
-                    All attendees must have the Certified ScrumMaster certification (CSM) and with a minimum of one year practice prior to the Advanced Certified ScrumMaster (A-CSM) workshop. If you don’t currently have a CSM certification, please contact us for options.
-                    
-                    Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`
+                    title: "Course Learning Objectives",
+                    content: `The course objectives include:`,
+                    contentList: [
+                        `Help Scrum Teams deliver value to their organization`,
+                        `Understand the theory and principles behind Scrum such as Empiricism`,
+                        `Understand how each part of the Scrum framework ties back to the principles and theory`,
+                        `Understand uncertainty and complexity in product delivery`,
+                        `Understand the meaning and importance of the Scrum values`,
+                        `Learn what Done means and why it is crucial to transparency`,
+                        `Know how to use the Product Backlog to plan with agility`,
+                        `Understand the importance of self-managing teams and the role of Scrum Master in developing the self-managing abilities of the Scrum Team`,
+                        `Clarify the leadership role a Scrum Master play on the team`,
+                        `Learn the skills, traits and behaviour shifts required to be a Scrum Master`
+                    ]
+                },
+                {
+                    title: "Assessment Certification",
+                    content: `All participants completing the Professional Scrum Master course will receive 
+                    a password to attempt the Professional Scrum Master I (PSM I) assessment. 
+                    The industry-recognized PSM I certification requires a minimum passing score of 85%. 
+                    PSM class participants who attempt the PSM I assessment within 14 days of receiving their 
+                    free password and do not score at least 85% will be granted a 2nd attempt at no additional cost.`
                 }
             ],
             streams: [
                 {
-                    startDate: new Date("2023-06-11"),
-                    endDate: new Date("2023-06-12"),
-                    time: "9:00 - 17:00 London UTC Timezone",
-                    price: [
-                        {
-                        region: "Primary Market",
-                        regionDescription: primaryMarket,
-                        amount: 1000
-                        },
-                        {
-                        region: "Tertiary Market",
-                        regionDescription: tertiaryMarket,
-                        amount: 800
-                        },
-                        {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        }
-                    ], 
-                    filled: false
-                },
-                {
-                    startDate: new Date("2022-07-11"),
-                    endDate: new Date("2022-07-12"),
-                    time: "9:00 - 17:00 London UTC Timezone",
-                    price: [
-                        {
-                        region: "Primary Market",
-                        regionDescription: primaryMarket,
-                        amount: 1000
-                        },
-                        {
-                        region: "Tertiary Market",
-                        regionDescription: tertiaryMarket,
-                        amount: 800
-                        },
-                        {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        }
-                    ], 
-                    filled: false
-                },
-                {
-                    startDate: new Date("2021-06-11"),
-                    endDate: new Date("2021-06-12"),
-                    time: "9:00 - 17:00 London UTC Timezone",
-                    price: [
-                        {
-                        region: "Primary Market",
-                        regionDescription: primaryMarket,
-                        amount: 1000
-                        },
-                        {
-                        region: "Tertiary Market",
-                        regionDescription: tertiaryMarket,
-                        amount: 800
-                        },
-                        {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        }
-                    ], 
-                    filled: false
-                },
-                {
-                    startDate: new Date("2022-06-11"),
-                    endDate: new Date("2022-06-12"),
-                    time: "9:00 - 17:00 London UTC Timezone",
-                    price: [
-                        {
-                        region: "Primary Market",
-                        regionDescription: primaryMarket,
-                        amount: 1000
-                        },
-                        {
-                        region: "Tertiary Market",
-                        regionDescription: tertiaryMarket,
-                        amount: 800
-                        },
-                        {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        }
-                    ], 
-                    filled: false
-                },
-                {
-                    startDate: new Date("2022-05-11"),
-                    endDate: new Date("2022-05-12"),
-                    time: "9:00 - 17:00 London UTC Timezone",
+                    startDate: new Date("2023-06-24"),
+                    endDate: new Date("2023-06-25"),
+                    time: "9:00 - 17:00 London, UK & Lagos, Africa",
                     price: [
                         {
                         region: "Primary Market",
@@ -231,49 +153,23 @@ export const training:TrainingObject = {
             articles: [
                 {
                     title: "What will I learn?",
-                    content: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`,
-                    contentList: [
-                        "Flexibility",
-                        "Agility",
-                        "One more thing"
-                    ]
+                    content: `In this class, Leaders understand how agility adds value to their 
+                    organization and why their support in creating an agile culture is essential to success. 
+                    The class provides Leaders information that is required to support and enable teams by 
+                    providing guidance and removing impediments that are beyond the team’s ability to address.`
                 },
                 {
-                    title: "Who should attend?",
-                    content: `The Advanced Certified ScrumMaster workshop requires previous Scrum knowledge and experience.
-                    This is NOT a session for those who are new to Agile and Scrum.
-                    All attendees must have the Certified ScrumMaster certification (CSM) and with a minimum of one year practice prior to the Advanced Certified ScrumMaster (A-CSM) workshop. If you don’t currently have a CSM certification, please contact us for options.
-                    Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`
+                    title: "Assessment Certification",
+                    content: `All participants will receive a password to attempt the will receive a password to attempt the PAL I assessment.
+                    PAL participants who attempt the PAL I assessment within 14 days of receiving their free password and do not score at 
+                    least 85% will be granted a 2nd attempt at no additional cost.`
                 }
             ],
             streams: [
                 {
-                    startDate: new Date("2023-08-11"),
-                    endDate: new Date("2023-08-12"),
-                    time: "9:00 - 17:00 London UTC Timezone",
-                    price: [
-                        {
-                        region: "Primary Market",
-                        regionDescription: primaryMarket,
-                        amount: 1000
-                        },
-                        {
-                        region: "Tertiary Market",
-                        regionDescription: tertiaryMarket,
-                        amount: 800
-                        },
-                        {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        }
-                    ], 
-                    filled: false
-                },
-                {
-                    startDate: new Date("2023-06-11"),
-                    endDate: new Date("2023-06-12"),
-                    time: "9:00 - 17:00 London UTC Timezone",
+                    startDate: new Date("2022-07-15"),
+                    endDate: new Date("2022-07-16"),
+                    time: "9:00 - 17:00 London BST Timezone",
                     price: [
                         {
                         region: "Primary Market",
@@ -320,61 +216,13 @@ export const training:TrainingObject = {
                     content: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`
                 },
                 {
-                    title: "Who should attend?",
-                    content: `The Advanced Certified ScrumMaster workshop requires previous Scrum knowledge and experience.
-                    This is NOT a session for those who are new to Agile and Scrum.
-                    All attendees must have the Certified ScrumMaster certification (CSM) and with a minimum of one year practice prior to the Advanced Certified ScrumMaster (A-CSM) workshop. If you don’t currently have a CSM certification, please contact us for options.
-                    Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`
+                    title: "Assessment Certification",
+                    content: `All participants will receive a password to attempt the Professional Scrum Master I (PSM I) assessment. 
+                    PSM class participants who attempt the PSM I assessment within 14 days of receiving their free password and 
+                    do not score at least 85% will be granted a 2nd attempt at no additional cost.`
                 }
             ],
-            streams: [
-                {
-                    startDate: new Date("2023-07-11"),
-                    endDate: new Date("2023-07-13"),
-                    time: "9:00 - 17:00 London UTC Timezone",
-                    price: [
-                        {
-                        region: "Primary Market",
-                        regionDescription: primaryMarket,
-                        amount: 1000
-                        },
-                        {
-                        region: "Tertiary Market",
-                        regionDescription: tertiaryMarket,
-                        amount: 800
-                        },
-                        {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        }
-                    ], 
-                    filled: false
-                },
-                {
-                    startDate: new Date("2023-06-11"),
-                    endDate: new Date("2023-06-13"),
-                    time: "9:00 - 17:00 London UTC Timezone",
-                    price: [
-                        {
-                        region: "Primary Market",
-                        regionDescription: primaryMarket,
-                        amount: 1000
-                        },
-                        {
-                        region: "Tertiary Market",
-                        regionDescription: tertiaryMarket,
-                        amount: 800
-                        },
-                        {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        }
-                    ], 
-                    filled: false
-                }
-            ],
+            streams: [],
             isTraining: true
         }
     ]

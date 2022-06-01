@@ -14,7 +14,7 @@ const NavbarContainer: React.FC = () => {
             <Link to='/' className='link navbar__link navbar__home-link'>Home</Link>
             {/* <Link to='/training' className='link navbar__link'>What We Do</Link> */}
             <span onClick={()=>dispatch(showPopupMenuTraining())} className='popup-menu-item link navbar__link navbar__what-we-do'>
-                <span className="navbar__what-we-do__placeholder">What We Do</span>
+                <span className="navbar__what-we-do__placeholder">Services</span>
                 <PopupMenuTraining classname="popup-menu-training" />
             </span>
             <Link to='/about' className='link navbar__link'>About Us</Link>

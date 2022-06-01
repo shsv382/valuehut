@@ -17,7 +17,7 @@ const CartButtonContainer: React.FC = () => {
             <a href={`https://valuehut.foxycart.com/cart?cart=view`}>
                 <Cart />
                 <span className="cart-quantity" data-fc-id="minicart-quantity">0</span>
-                <span className="cart-total">$ <span data-fc-id="minicart-order-total">0</span></span>
+                <span className="cart-total">$&nbsp;<span data-fc-id="minicart-order-total">0</span></span>
             </a>
             {/* {
                 !hidden && <CartDropdown /> 
