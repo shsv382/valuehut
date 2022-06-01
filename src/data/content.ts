@@ -148,17 +148,7 @@ export const content = {
                     avatar: "avatar.jpeg",
                     about: `
                     Sam is a dynamic Agile practitioner, Coach and Professional Scrum Trainer with Scrum.org
-                    Sam's first encounter with Scrum and Agile was in 2007; He has accumulated a lot of experience supporting organisations in delivering value to their Customers and Stakeholders. 
-                    Previous clients include Barclays, HSBC, BP, Ministry of Justice, UBS, Channel4, BBC Worldwide and a number of startups from around the world.
-                    `
-                },
-                {
-                    name: "Samuel Adesoga",
-                    avatar: "avatar.jpeg",
-                    about: `
-                    Sam is a dynamic Agile practitioner, Coach and Professional Scrum Trainer with Scrum.org
-                    Sam's first encounter with Scrum and Agile was in 2007; He has accumulated a lot of experience supporting organisations in delivering value to their Customers and Stakeholders. 
-                    Previous clients include Barclays, HSBC, BP, Ministry of Justice, UBS, Channel4, BBC Worldwide and a number of startups from around the world.
+                    Sam's first encounter with Scrum and Agile was in 2007. Sam is interested in helping people the develop the Agility mindset that is required by business to remain competitive.
                     `
                 }
             ]
