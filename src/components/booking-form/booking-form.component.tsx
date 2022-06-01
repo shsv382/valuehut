@@ -12,6 +12,8 @@ import MenuItem from '@mui/material/MenuItem';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { nextTick } from 'process';
+import { captureRejectionSymbol } from 'events';
 
 interface BookingFormTypes {
     training: TrainingTypes,
@@ -20,19 +22,23 @@ interface BookingFormTypes {
 
 const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
     const [country, setCountry] = useState("United Kingdom");
-    const [bookPrice, setBookPrice] = useState(stream.price[0].amount.toString());
+    const [bookPrice, setBookPrice] = useState(stream.price[0]);
     const handleChange = (event: any) => {
         setCountry(event.target.value);
-        // for(let i=0; i<stream.price.length; i++) {
-
-        // }
-        if (primaryMarket.includes(event.target.value)) {
-            setBookPrice(stream.price[0].amount.toString())
-        } else if (tertiaryMarket.includes(event.target.value)) {
-            setBookPrice(stream.price[1].amount.toString())
-        } else {
-            setBookPrice(stream.price[2].amount.toString())
+        let priceNumber = 0;
+        for(priceNumber; priceNumber < stream.price.length - 1; priceNumber++) {
+            if (stream.price[priceNumber].regionDescription.includes(event.target.value)) {
+                break;
+            }
         }
+        // if (primaryMarket.includes(event.target.value)) {
+        //     setBookPrice(stream.price[0].toString())
+        // } else if (tertiaryMarket.includes(event.target.value)) {
+        //     setBookPrice(stream.price[1].toString())
+        // } else {
+        //     setBookPrice(stream.price[2].toString())
+        // }
+        setBookPrice(stream.price[priceNumber])
     };
     return (
         <div className="booking-form">
@@ -63,10 +69,11 @@ const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
                     encodeURI(`https://valuehut.foxycart.com/cart?name=${training.title}
                     &Start Date=${getDateInWords(stream.startDate)}
                     &Time=${stream.time}
-                    &price=${bookPrice}`)
+                    &price=${bookPrice.amount}${bookPrice.currency ? `${bookPrice.currency.name}` : ""}
+                    `)
                 } 
             >
-                BOOK FOR $ {bookPrice}
+                BOOK FOR { bookPrice.currency ? bookPrice.currency.symbol : "$" } {bookPrice.amount.toString()}
             </a>
         </div>
     )

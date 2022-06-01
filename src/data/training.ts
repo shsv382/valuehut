@@ -9,7 +9,13 @@ import { primaryMarket, tertiaryMarket } from "./countries"
 export interface PriceTypes {
     region: string,
     regionDescription: string | string[],
-    amount: number
+    amount: number,
+    currency?: CurrencyTypes
+}
+
+export interface CurrencyTypes {
+    name: string,
+    symbol?: string
 }
 
 export interface StreamTypes {
@@ -112,6 +118,15 @@ export const training:TrainingObject = {
                     endDate: new Date("2023-06-25"),
                     time: "9:00 - 17:00 London, UK & Lagos, Africa",
                     price: [
+                        {
+                        region: "United Kingdom",
+                        regionDescription: ["United Kingdom"],
+                        amount: 1000,
+                        // currency: {
+                        //     name: "gbp",
+                        //     symbol: "£"
+                        // }    
+                        },
                         {
                         region: "Primary Market",
                         regionDescription: primaryMarket,
