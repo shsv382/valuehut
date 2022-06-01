@@ -23,12 +23,15 @@ const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
     const [bookPrice, setBookPrice] = useState(stream.price[0].amount.toString());
     const handleChange = (event: any) => {
         setCountry(event.target.value);
+        // for(let i=0; i<stream.price.length; i++) {
+
+        // }
         if (primaryMarket.includes(event.target.value)) {
             setBookPrice(stream.price[0].amount.toString())
         } else if (tertiaryMarket.includes(event.target.value)) {
-            setBookPrice(stream.price[2].amount.toString())
-        } else {
             setBookPrice(stream.price[1].amount.toString())
+        } else {
+            setBookPrice(stream.price[2].amount.toString())
         }
     };
     return (
@@ -56,10 +59,12 @@ const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
             <a 
                 id="addToCart"
                 className="button button-primary button-primary-small"
-                href={`https://valuehut.foxycart.com/cart?name=${training.title}
-                &Start Date=${getDateInWords(stream.startDate)}
-                &End Date=${getDateInWords(stream.endDate)}
-                &price=${bookPrice}`} 
+                href={
+                    encodeURI(`https://valuehut.foxycart.com/cart?name=${training.title}
+                    &Start Date=${getDateInWords(stream.startDate)}
+                    &Time=${stream.time}
+                    &price=${bookPrice}`)
+                } 
             >
                 BOOK FOR $ {bookPrice}
             </a>

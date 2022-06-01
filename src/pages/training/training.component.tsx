@@ -31,8 +31,7 @@ const Training: React.FC<TrainingComponentTypes> = ({ training }) => {
             }
             {   articles && articles.map((article, i) => (
                     <TrainingArticle key={article.content[0] + i + article.content[0]}
-                        title={ article.title }
-                        content={ article.content }
+                        { ...article }
                     />
                 ))
             }

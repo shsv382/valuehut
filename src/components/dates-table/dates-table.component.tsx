@@ -23,8 +23,8 @@ interface DatesTableTypes {
 }
 
 export function getDateInWords(date: any): string  {
-    let newDate = date.setDate(date.getDate());
-    newDate = date.toString().split(" ").slice(1,4);
+    // let newDate = date.setDate(date.getDate());
+    let newDate = date.toString().split(" ").slice(1,4);
     return `${newDate[0]} ${newDate[1]}, ${newDate[2]}`
 }
 

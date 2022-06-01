@@ -23,6 +23,7 @@ export interface StreamTypes {
 export interface TrainingArticleTypes {
     title?: string,
     content: string,
+    contentList?: string[],
     imageURL?: string,
     textAlign?: string,
     imagePosition?: string
@@ -103,14 +104,14 @@ export const training:TrainingObject = {
                         amount: 1000
                         },
                         {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
                         region: "Tertiary Market",
                         regionDescription: tertiaryMarket,
                         amount: 800
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "All countries not listed as primary or tertiary",
+                        amount: 900    
                         }
                     ], 
                     filled: false
@@ -126,14 +127,14 @@ export const training:TrainingObject = {
                         amount: 1000
                         },
                         {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
                         region: "Tertiary Market",
                         regionDescription: tertiaryMarket,
                         amount: 800
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "All countries not listed as primary or tertiary",
+                        amount: 900    
                         }
                     ], 
                     filled: false
@@ -149,14 +150,14 @@ export const training:TrainingObject = {
                         amount: 1000
                         },
                         {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
                         region: "Tertiary Market",
                         regionDescription: tertiaryMarket,
                         amount: 800
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "All countries not listed as primary or tertiary",
+                        amount: 900    
                         }
                     ], 
                     filled: false
@@ -172,14 +173,14 @@ export const training:TrainingObject = {
                         amount: 1000
                         },
                         {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
                         region: "Tertiary Market",
                         regionDescription: tertiaryMarket,
                         amount: 800
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "All countries not listed as primary or tertiary",
+                        amount: 900    
                         }
                     ], 
                     filled: false
@@ -195,14 +196,14 @@ export const training:TrainingObject = {
                         amount: 1000
                         },
                         {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
                         region: "Tertiary Market",
                         regionDescription: tertiaryMarket,
                         amount: 800
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "All countries not listed as primary or tertiary",
+                        amount: 900    
                         }
                     ], 
                     filled: false
@@ -230,7 +231,12 @@ export const training:TrainingObject = {
             articles: [
                 {
                     title: "What will I learn?",
-                    content: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`
+                    content: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`,
+                    contentList: [
+                        "Flexibility",
+                        "Agility",
+                        "One more thing"
+                    ]
                 },
                 {
                     title: "Who should attend?",
@@ -252,14 +258,14 @@ export const training:TrainingObject = {
                         amount: 1000
                         },
                         {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
                         region: "Tertiary Market",
                         regionDescription: tertiaryMarket,
                         amount: 800
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "All countries not listed as primary or tertiary",
+                        amount: 900    
                         }
                     ], 
                     filled: false
@@ -275,14 +281,14 @@ export const training:TrainingObject = {
                         amount: 1000
                         },
                         {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
                         region: "Tertiary Market",
                         regionDescription: tertiaryMarket,
                         amount: 800
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "All countries not listed as primary or tertiary",
+                        amount: 900    
                         }
                     ], 
                     filled: false
@@ -333,14 +339,14 @@ export const training:TrainingObject = {
                         amount: 1000
                         },
                         {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
                         region: "Tertiary Market",
                         regionDescription: tertiaryMarket,
                         amount: 800
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "All countries not listed as primary or tertiary",
+                        amount: 900    
                         }
                     ], 
                     filled: false
@@ -356,14 +362,14 @@ export const training:TrainingObject = {
                         amount: 1000
                         },
                         {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
                         region: "Tertiary Market",
                         regionDescription: tertiaryMarket,
                         amount: 800
+                        },
+                        {
+                        region: "Secondary Market",
+                        regionDescription: "All countries not listed as primary or tertiary",
+                        amount: 900    
                         }
                     ], 
                     filled: false
