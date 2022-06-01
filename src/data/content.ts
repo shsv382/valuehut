@@ -123,11 +123,13 @@ export const content = {
                 "training": {
                     imageURL: "./mikael.jpg",
                     header: "Training",
-                    description: `Training provides information to everyone within a team or organisation 
-                    at the same time and the understanding is shared between everyone. Shared meaning in 
-                    an organisation helps adoption of agile somewhat easier. 
-                    We offer a number of Scrum.org Trainings and are able to create 
-                    bespoke training packages on Agile Practices.`
+                    description: `Our training courses have been carefully designed to provide individuals and teams with skills
+                    that help kickstart the journey to better ways of working. These classes are structured to be engaging, 
+                    interactive and laced with loads of real life case studies; including the experiences of our trainers.
+
+                    Our lead trainer is the first Professional Scrum Trainer in Nigeria and we offer a number of bespoke Agile classes
+                    that are packaged based on your organisational needs. You can book for any of our live or virtual public classes on our training page;
+                    and you can contact us for bespoke or private classes.`
                 },
                 "consultancy": {
                     imageURL: "./cameron.jpg",
