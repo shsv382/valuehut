@@ -23,6 +23,7 @@ export interface StreamTypes {
 export interface TrainingArticleTypes {
     title?: string,
     content: string,
+    contentList?: string[],
     imageURL?: string,
     textAlign?: string,
     imagePosition?: string
@@ -79,6 +80,22 @@ export const training:TrainingObject = {
                 {
                     title: "What Will I Learn?",
                     content: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`
+                },
+                {
+                    title: "Course Learning Objectives",
+                    content: `The course objectives include:`,
+                    contentList: [
+                        `Help Scrum Teams deliver value to their organization`,
+                        `Understand the theory and principles behind Scrum such as Empiricism`,
+                        `Understand how each part of the Scrum framework ties back to the principles and theory`,
+                        `Understand uncertainty and complexity in product delivery`,
+                        `Understand the meaning and importance of the Scrum values`,
+                        `Learn what Done means and why it is crucial to transparency`,
+                        `Know how to use the Product Backlog to plan with agility`,
+                        `Understand the importance of self-managing teams and the role of Scrum Master in developing the self-managing abilities of the Scrum Team`,
+                        `Clarify the leadership role a Scrum Master play on the team`,
+                        `Learn the skills, traits and behaviour shifts required to be a Scrum Master`
+                    ]
                 },
                 {
                     title: "Assessment Certification",
