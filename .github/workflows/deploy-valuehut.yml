@@ -34,7 +34,9 @@ jobs:
 
     - name: Pre Deploy
       run: npm run predeploy
-      
+      env:
+        CI: false
+
     - name: Deploy
       run: |
         git config --global user.name $user_name
