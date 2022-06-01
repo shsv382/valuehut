@@ -93,101 +93,9 @@ export const training:TrainingObject = {
             ],
             streams: [
                 {
-                    startDate: new Date("2023-06-11"),
-                    endDate: new Date("2023-06-12"),
-                    time: "9:00 - 17:00 London UTC Timezone",
-                    price: [
-                        {
-                        region: "Primary Market",
-                        regionDescription: primaryMarket,
-                        amount: 1000
-                        },
-                        {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
-                        region: "Tertiary Market",
-                        regionDescription: tertiaryMarket,
-                        amount: 800
-                        }
-                    ], 
-                    filled: false
-                },
-                {
-                    startDate: new Date("2022-07-11"),
-                    endDate: new Date("2022-07-12"),
-                    time: "9:00 - 17:00 London UTC Timezone",
-                    price: [
-                        {
-                        region: "Primary Market",
-                        regionDescription: primaryMarket,
-                        amount: 1000
-                        },
-                        {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
-                        region: "Tertiary Market",
-                        regionDescription: tertiaryMarket,
-                        amount: 800
-                        }
-                    ], 
-                    filled: false
-                },
-                {
-                    startDate: new Date("2021-06-11"),
-                    endDate: new Date("2021-06-12"),
-                    time: "9:00 - 17:00 London UTC Timezone",
-                    price: [
-                        {
-                        region: "Primary Market",
-                        regionDescription: primaryMarket,
-                        amount: 1000
-                        },
-                        {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
-                        region: "Tertiary Market",
-                        regionDescription: tertiaryMarket,
-                        amount: 800
-                        }
-                    ], 
-                    filled: false
-                },
-                {
-                    startDate: new Date("2022-06-11"),
-                    endDate: new Date("2022-06-12"),
-                    time: "9:00 - 17:00 London UTC Timezone",
-                    price: [
-                        {
-                        region: "Primary Market",
-                        regionDescription: primaryMarket,
-                        amount: 1000
-                        },
-                        {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
-                        region: "Tertiary Market",
-                        regionDescription: tertiaryMarket,
-                        amount: 800
-                        }
-                    ], 
-                    filled: false
-                },
-                {
-                    startDate: new Date("2022-05-11"),
-                    endDate: new Date("2022-05-12"),
-                    time: "9:00 - 17:00 London UTC Timezone",
+                    startDate: new Date("2023-06-24"),
+                    endDate: new Date("2023-06-25"),
+                    time: "9:00 - 17:00 London, UK & Lagos, Africa",
                     price: [
                         {
                         region: "Primary Market",
@@ -242,32 +150,9 @@ export const training:TrainingObject = {
             ],
             streams: [
                 {
-                    startDate: new Date("2023-08-11"),
-                    endDate: new Date("2023-08-12"),
-                    time: "9:00 - 17:00 London UTC Timezone",
-                    price: [
-                        {
-                        region: "Primary Market",
-                        regionDescription: primaryMarket,
-                        amount: 1000
-                        },
-                        {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
-                        region: "Tertiary Market",
-                        regionDescription: tertiaryMarket,
-                        amount: 800
-                        }
-                    ], 
-                    filled: false
-                },
-                {
-                    startDate: new Date("2023-06-11"),
-                    endDate: new Date("2023-06-12"),
-                    time: "9:00 - 17:00 London UTC Timezone",
+                    startDate: new Date("2022-07-15"),
+                    endDate: new Date("2022-07-16"),
+                    time: "9:00 - 17:00 London BST Timezone",
                     price: [
                         {
                         region: "Primary Market",
@@ -321,54 +206,7 @@ export const training:TrainingObject = {
                     Participants should be passionate in advancing as a ScrumMaster and an Agile coach, and therefore be willing to challenge their own thinking and approaches within this course.`
                 }
             ],
-            streams: [
-                {
-                    startDate: new Date("2023-07-11"),
-                    endDate: new Date("2023-07-13"),
-                    time: "9:00 - 17:00 London UTC Timezone",
-                    price: [
-                        {
-                        region: "Primary Market",
-                        regionDescription: primaryMarket,
-                        amount: 1000
-                        },
-                        {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
-                        region: "Tertiary Market",
-                        regionDescription: tertiaryMarket,
-                        amount: 800
-                        }
-                    ], 
-                    filled: false
-                },
-                {
-                    startDate: new Date("2023-06-11"),
-                    endDate: new Date("2023-06-13"),
-                    time: "9:00 - 17:00 London UTC Timezone",
-                    price: [
-                        {
-                        region: "Primary Market",
-                        regionDescription: primaryMarket,
-                        amount: 1000
-                        },
-                        {
-                        region: "Secondary Market",
-                        regionDescription: "All countries not listed as primary or tertiary",
-                        amount: 900    
-                        },
-                        {
-                        region: "Tertiary Market",
-                        regionDescription: tertiaryMarket,
-                        amount: 800
-                        }
-                    ], 
-                    filled: false
-                }
-            ],
+            streams: [],
             isTraining: true
         }
     ]
