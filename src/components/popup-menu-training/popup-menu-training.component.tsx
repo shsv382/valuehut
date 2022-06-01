@@ -13,7 +13,7 @@ const PopupMenuTraining: React.FC<PopupMenuTrainingTypes> = ({ classname }) => {
     const showPopupMenuTraining = useAppSelector(state => state.app.showPopupMenuTraining)
     return (
         <PopupMenu classname={ classname } hidden={showPopupMenuTraining}>
-            <PopupMenuItem label="What We Do" href="/services" />
+            <PopupMenuItem label="Services" href="/services" />
             <PopupMenuItem label="Consultancy" href="/services/consultancy" />
             <PopupMenuItem label="Coaching" href="/services/coaching" />
             <PopupMenuItem label="Training" href="/services/training" />
