@@ -5,6 +5,7 @@
 export interface ConsultancyArticleTypes {
     title?: string,
     content: string,
+    contentList?: string[],
     imageURL?: string,
     textAlign?: string,
     imagePosition?: string
@@ -30,11 +31,12 @@ export const consultancy: ConsultancyObject = {
         articles: [
             {
                 title: "Continuous Integration / Continous Delivery",
-                content: `that are faced include:
-                \n•	Resistance at different levels within the organisation.\n
-                \n•	Organisational structure & culture that is not optimised for Agility.\n
-                \n•	Disjointed perceptions of the current and the future state for the Organisation across the Organisation.\n
-                `
+                content: `that are faced include:`,
+                contentList: [
+                    `Resistance at different levels within the organisation.`,
+                    `Organisational structure & culture that is not optimised for Agility.`,
+                    `Disjointed perceptions of the current and the future state for the Organisation across the Organisation.`
+                ]
             }, 
             {
                 title: "Behaviour Driven Development",
@@ -42,12 +44,13 @@ export const consultancy: ConsultancyObject = {
             },
             {
                 title: "Agile Fundamentals",
-                content: `This training covers the fundamentals of working using any Agile Methodology and is particular targetted for team that are new to Agile. The training introduces some of the popular Agile Frameworks such as Scrum and Kanban. Attendees will have gained have sufficient knowledge to work in a team that has adopted any of the Agile frameworks that was covered as part of the training.
-                \n• Agile Principles
-                \n• Roles within an Agile Team (Agile BA, Developer & Tester)
-                \n• Estimation & Product Planning
-                \n• User Stories & Vertical Slicing of Stories.
-                `,
+                content: `This training covers the fundamentals of working using any Agile Methodology and is particular targetted for team that are new to Agile. The training introduces some of the popular Agile Frameworks such as Scrum and Kanban. Attendees will have gained have sufficient knowledge to work in a team that has adopted any of the Agile frameworks that was covered as part of the training.`,
+                contentList:[
+                    `Agile Principles`,
+                    `Roles within an Agile Team (Agile BA, Developer & Tester)`,
+                    `Estimation & Product Planning`,
+                    `User Stories & Vertical Slicing of Stories.`
+                ],
                 imageURL: "./cameron.jpg"
             }
         ]
