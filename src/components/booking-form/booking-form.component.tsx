@@ -70,6 +70,7 @@ const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
                     &Start Date=${getDateInWords(stream.startDate)}
                     &Time=${stream.time}
                     &price=${bookPrice.amount}${bookPrice.currency ? `${bookPrice.currency.name}` : ""}
+                    ${bookPrice.currency ? `&locale=${bookPrice.currency.locale}` : ""}
                     `)
                 } 
             >

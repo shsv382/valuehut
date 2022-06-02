@@ -15,7 +15,8 @@ export interface PriceTypes {
 
 export interface CurrencyTypes {
     name: string,
-    symbol?: string
+    symbol?: string,
+    locale?: string
 }
 
 export interface StreamTypes {
@@ -122,10 +123,11 @@ export const training:TrainingObject = {
                         region: "United Kingdom",
                         regionDescription: ["United Kingdom"],
                         amount: 1000,
-                        // currency: {
-                        //     name: "gbp",
-                        //     symbol: "£"
-                        // }    
+                        currency: {
+                            name: "gbp",
+                            symbol: "£",
+                            locale: "en_GB"
+                        }    
                         },
                         {
                         region: "Primary Market",
