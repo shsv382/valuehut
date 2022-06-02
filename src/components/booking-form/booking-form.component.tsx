@@ -71,6 +71,7 @@ const BookingForm: React.FC<BookingFormTypes> = ({ training, stream }) => {
                     &Time=${stream.time}
                     &price=${bookPrice.amount}${bookPrice.currency ? `${bookPrice.currency.name}` : ""}
                     ${bookPrice.currency ? `&locale=${bookPrice.currency.locale}` : ""}
+                    ${bookPrice.currency ? `&template_set=${bookPrice.currency.template}` : `&template_set=DEFAULT`}
                     `)
                 } 
             >
