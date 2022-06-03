@@ -48,14 +48,6 @@ export interface TrainingTypes {
     articles?: TrainingArticleTypes[],
     streams?: StreamTypes[], 
     isTraining?: boolean
-    
-    // Please Note!
-    /*
-        Dates should be created by JavaScript method in UTC format
-        new Date("2023-03-11T11:30:00+09:00")
-
-        Duration in hours
-    */
 }
 
 interface TrainingObject {
@@ -116,8 +108,8 @@ export const training:TrainingObject = {
             ],
             streams: [
                 {
-                    startDate: new Date("2023-06-24"),
-                    endDate: new Date("2023-06-25"),
+                    startDate: new Date("2022-06-24"),
+                    endDate: new Date("2022-06-25"),
                     time: "9:00 - 17:00 London, UK & Lagos, Africa",
                     price: [
                         {
