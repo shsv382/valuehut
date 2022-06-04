@@ -149,8 +149,8 @@ export const content = {
                     name: "Samuel Adesoga",
                     avatar: "avatar.jpeg",
                     about: `
-                    Sam is a dynamic Agile practitioner, Coach and Professional Scrum Trainer with Scrum.org
-                    Sam's first encounter with Scrum and Agile was in 2007. Sam is interested in helping people the develop the Agility mindset that is required by business to remain competitive.
+                    Sam is our Principal Coach and Lead Trainer at ValueHut; He is a dynamic Agile practitioner and Professional Scrum Trainer with Scrum.org
+                    Sam is interested in helping people to develop the Agile mindset that is required by business to remain competitive.
                     `
                 }
             ]
