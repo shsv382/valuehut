@@ -7,7 +7,7 @@ import { addItem } from '../../redux/cart/cart.actions';
 import { Link } from 'react-router-dom';
 
 import DatesTable from '../../components/dates-table/dates-table.component';
-import HeroBanner from '../../components/hero-banner/hero-banner.component';
+import TrainingBanner from '../../components/training-banner/training-banner.component';
 
 interface TrainingComponentTypes {
     training: TrainingTypes,
@@ -15,11 +15,12 @@ interface TrainingComponentTypes {
 }
 
 const Training: React.FC<TrainingComponentTypes> = ({ training }) => {
-    const { title, description, articles, streams, imageURL } = { ...training };
+    const { title, description, articles, streams, imageURL, logo } = { ...training };
     return (
         <div className='page training-page'>
-            <HeroBanner
+            <TrainingBanner
                 title={title}
+                logo={`/training/${logo}`}
                 imageURL={`/images/${imageURL}`}
             />
             <div className="training-page__placeholder"></div>
