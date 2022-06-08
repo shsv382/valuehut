@@ -9,8 +9,8 @@ const WidescreenBanner = ({slogan}) => {
                 {/* <img src="logo/logo-transparent.png" /> */}
                 <div className="widescreen__slogan">
                 {
-                    slogan.map(string => 
-                    (<span className="widescreen__slogan__string">{string}</span>)
+                    slogan.map((string, i) => 
+                    (<span className="widescreen__slogan__string" key={`banner-string-${i}`}>{string}</span>)
                 )}
                 </div>
             </BannerShadow>
