@@ -60,27 +60,15 @@ export const training:TrainingObject = {
             id: 2,
             title: "Professional Scrum Master",
             acronym: "PSM",
-            description: `The PSM is an interactive, activity-based course where 
-                        students gain insight into Professional Scrum and the 
-                        role of the Scrum Master. The class is structured through 
-                        a combination of discussion and exercises. This enables 
-                        students to develop a deep understanding of the 
-                        underlying principles of Scrum and the Agile mindset 
-                        while learning the practices applied by successful Scrum 
-                        Teams. PSM is recommended for organisation leaders 
-                        including Mid-Level Managers, Project Managers, Project 
-                        Management Office Managers, Senior Practitioners, 
-                        anyone working within a Product Team or anyone who 
-                        intends to become a Scrum Master. The class is delivered 
-                        over a two days (8hrs per day).`,
+            description: `Professional Scrum Master (PSM) is an interactive, activity-based course 
+            where students gain a thorough understanding of Professional Scrum and the role of the 
+            Scrum Master. Students develop a deep understanding of the underlying principles of Scrum 
+            and the Agile mindset while learning the practices applied by successful Scrum Teams through 
+            a combination of discussion and exercises in class.`,
             imageURL: "./energy.jpg",
             logo: "psm.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             articles: [
-                {
-                    title: "What Will I Learn?",
-                    content: `Through this online interactive mentoring and coaching program of 16 hours of learning, ending with a coaching session for continuous growth, you will be able to advance the HOW TO dimension of ScrumMastering and agile coaching, and grow skills that help improve your Scrum Team, organizations and yourself. You can join from anywhere online. However please note that there is pre-work prior and homework after each online mentoring and coaching session (read more in commitment session).`
-                },
                 {
                     title: "Course Learning Objectives",
                     content: `The course objectives include:`,
@@ -98,13 +86,39 @@ export const training:TrainingObject = {
                     ]
                 },
                 {
+                    title: "Who should attend?",
+                    content: ``,
+                    contentList: [
+                    `Practitioners that are interested in starting a career as a Scrum Master`,
+                    `Scrum Masters, Agile/Scrum Coaches and consultant looking to improve their use of Scrum`,
+                    `Anyone involved in product delivery using Scrum`
+                    ]
+                },
+                {
                     title: "Assessment Certification",
                     content: `All participants completing the Professional Scrum Master course will receive 
                     a password to attempt the Professional Scrum Master I (PSM I) assessment. 
                     The industry-recognized PSM I certification requires a minimum passing score of 85%. 
                     PSM class participants who attempt the PSM I assessment within 14 days of receiving their 
                     free password and do not score at least 85% will be granted a 2nd attempt at no additional cost.`
+                },
+                {
+                     title: "Additional Benefits",
+                     content: ``,
+                     contentList: [
+                     `Participants are invited to a 2hrs free coaching and support group call approximately 5days after the class. Details would be shared in the class.`,
+                     `All participants get an invite to the ValueHut support platform where they can get access to our trainers.`
+                     ]
+                },
+                {
+                     title: "More information",
+                     content: ``,
+                     contentList: [
+                     `Mode of delivery is Virtual`,
+                     `The price for the class is dependent on location.`
+                     ]
                 }
+                
             ],
             streams: [
                 {
@@ -182,32 +196,47 @@ export const training:TrainingObject = {
             id: 3,
             title: "Professional Agile Leadership",
             acronym: "PAL-E",
-            description: `Leaders at all levels play a vital role in the Agile 
-                        Transformational Journey of their organisation. PAL 
-                        is structured to help managers at all levels who 
-                        work with agile teams on developing the required 
-                        mindset for Agility to thrive and teach techniques for 
-                        building effective organisations. The PAL class is highly 
-                        recommended for C- Suite Executives, Middle-Level 
-                        Management, Agile Team Leaders, and Human Resource 
-                        Leaders. The class can be delivered over a two days (8hrs 
-                        per day) class or a four days (4hrs per day) class.`,
+            description: `Professional Agile Leadership is a 2 day workshop to equip leaders and managers 
+            of Agile teams along with their Product Owners and Scrum Masters to help their organizations change.
+            In this class, Leaders understand how agility adds value to their organization and why their 
+            support in creating an agile culture is essential to success. The class provides Leaders 
+            information that is required to support and enable teams by providing guidance and removing 
+            impediments that are beyond the team’s ability to address.`,
             imageURL: "./fauxels.jpg",
             logo: "pal-e.svg",
             iconBorder: "https://static.scrum.org/web/tokens/token-psm-color.svg",
             articles: [
                 {
-                    title: "What will I learn?",
-                    content: `In this class, Leaders understand how agility adds value to their 
-                    organization and why their support in creating an agile culture is essential to success. 
-                    The class provides Leaders information that is required to support and enable teams by 
-                    providing guidance and removing impediments that are beyond the team’s ability to address.`
+                    title: "Course Learning Objectives",
+                    content: `The course objectives include:`,
+                    contentList: [
+                        `Why Agile Matters`,
+                        `Challenges of an Agile Leader`,
+                        `Leaders Grow Agility Developing People`,
+                        `Measuring Agility`
+                    ]
+                },
+                {
+                    title: "Who should attend?",
+                    content: ``,
+                    contentList: [
+                    `The Professional Agile Leadership Essentials course is designed for managers and those in leadership roles.`,
+                    `Top level managers and Middle level Managers who want to grow their organization’s ability to respond to market opportunities, competitive pressures, or opportunities for innovation.`
+                    ]
                 },
                 {
                     title: "Assessment Certification",
                     content: `All participants will receive a password to attempt the will receive a password to attempt the PAL I assessment.
                     PAL participants who attempt the PAL I assessment within 14 days of receiving their free password and do not score at 
                     least 85% will be granted a 2nd attempt at no additional cost.`
+                },
+                {
+                     title: "More information",
+                     content: ``,
+                     contentList: [
+                     `Mode of delivery is Virtual`,
+                     `The price for the class is dependent on location.`
+                     ]
                 }
             ],
             streams: [
