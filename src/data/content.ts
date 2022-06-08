@@ -54,7 +54,7 @@ export const content = {
     pages: {
         home: {
             widescreenBanner: {
-                slogan: [`Bringin value`, `to your forefront`]
+                slogan: [`Bringing value`, `to your forefront`]
             },
             headerArticle: {
                 imageURL: "business.jpg",
@@ -68,9 +68,9 @@ export const content = {
                 imageURL: "rodolfo.jpg",
                 header: "What does our customer want?",
                 descriptionList: [
-                    `Helping entire organizations to focus on most valuable work. (Reduce waste, supporting to link team goal to organisational objectives, Focus on outcomes.)`,
-                    `Supporting organizations to make the workplace fun; people are happy at work doing the best work. (Working at a sustainable pace, Building self-managing & cross functional teams, Support people & teams to be accountable for their outcomes, Support people to build mastery by using OKR to set stretch goals)`,
-                    `Continuously delighting customers. (How do Teams measure & capture measures of Value Delivered, Continuously improve the Product/Service using Feedback received.)`
+                    `Helping entire organizations to focus on most valuable work.`,
+                    `Supporting organizations to make the workplace fun; people are happy at work doing the best work.`,
+                    `Delighting customer by continuously delivering valuable product or service.`
                 ]
             },
             whatWeDo: {
