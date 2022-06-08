@@ -54,7 +54,7 @@ export const content = {
     pages: {
         home: {
             widescreenBanner: {
-                slogan: [`Bringing value`, `to your forefront`]
+                slogan: [`Delivering Value`, `in a complex world`]
             },
             headerArticle: {
                 imageURL: "business.jpg",
