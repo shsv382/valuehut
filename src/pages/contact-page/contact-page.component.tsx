@@ -22,6 +22,7 @@ const ContactPage: React.FC = () => {
                             email={email}
                             phone={phone}
                             address={address}
+                            key={address}
                         />
                     ))
                 }

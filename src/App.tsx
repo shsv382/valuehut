@@ -10,6 +10,7 @@ import Header from './components/header/header.component';
 import Footer from './components/footer/footer.component';
 import BottomNav from './components/bottom-nav/bottom-nav.component';
 import ServicesPage from './pages/services-page/services-page.component';
+import ScrollToTopWrapper from './components/scroll-to-top-wrapper/scroll-to-top-wrapper.component';
 
 function App() {
   const Homepage = lazy(() => import('./pages/homepage/homepage.component'));
@@ -31,6 +32,7 @@ function App() {
       <Header />
       <ErrorBoundary>
         <Suspense fallback={<Spinner />}>
+          <ScrollToTopWrapper exclude="book-now">
           <Routes>
             <Route path='/' element={<Homepage />} />
             <Route path='/contact' element={<ContactPage />} />
@@ -78,6 +80,7 @@ function App() {
             
             <Route path='*' element={<ErrorBoundary hasError={true} />} />
           </Routes>
+          </ScrollToTopWrapper>
         </Suspense>
       </ErrorBoundary>
       <Footer {...contactData} />
