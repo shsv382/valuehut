@@ -2,11 +2,17 @@ import React from "react";
 import { BannerImage } from "./banner-image";
 import { BannerShadow } from "./banner-shadow";
 
-const WidescreenBanner = () => {
+const WidescreenBanner = ({slogan}) => {
     return (
         <BannerImage>
             <BannerShadow>
-                <img src="logo/logo-transparent.png" />
+                {/* <img src="logo/logo-transparent.png" /> */}
+                <div className="widescreen__slogan">
+                {
+                    slogan.map(string => 
+                    (<span className="widescreen__slogan__string">{string}</span>)
+                )}
+                </div>
             </BannerShadow>
         </BannerImage>
     )

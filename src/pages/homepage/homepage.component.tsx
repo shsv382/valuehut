@@ -11,22 +11,33 @@ import ServiceBox from '../../components/service-box/service-box.component';
 import PreviousClients from '../../components/previous-clients/previous-clients.component';
 
 const Homepage: React.FC = () => {
-    const { headerArticle, servicesArticle, whatCustomersWant, whatWeDo } = { ...useAppSelector((state) => (state.content.pages.home)) };
+    const { widescreenBanner, headerArticle, servicesArticle, whatCustomersWant, whatWeDo } = { ...useAppSelector((state) => (state.content.pages.home)) };
     const trainings = useAppSelector((state) => (state.services.training))
     const services = { ...useAppSelector((state) => (state.content.pages.whatWeDo.introdution)) };
+    const articleTextAlign = { 
+        textAlign: "left",
+    }
     return (
         <>
-        <WidescreenBanner />
+        <WidescreenBanner slogan={widescreenBanner.slogan} />
         <div className='page homepage'>
             <MainArticle 
                 imageURL={headerArticle.imageURL}
                 header={headerArticle.header}
                 description={headerArticle.description}
+                style={articleTextAlign}
                 />
             <MainArticle 
                 imageURL={whatCustomersWant.imageURL}
                 header={whatCustomersWant.header}
                 descriptionList={whatCustomersWant.descriptionList}
+                style={articleTextAlign}
+            />
+            <MainArticle 
+                imageURL={whatWeDo.imageURL}
+                header={whatWeDo.header}
+                description={whatWeDo.description}
+                style={articleTextAlign}
             />
             <HeaderWithButton
                 header={servicesArticle.header}
@@ -42,11 +53,6 @@ const Homepage: React.FC = () => {
                     })
                 }
             </TripleBox>
-            <MainArticle 
-                imageURL={whatWeDo.imageURL}
-                header={whatWeDo.header}
-                description={whatWeDo.description}
-            />
             <PreviousClients />
         </div>
         </>

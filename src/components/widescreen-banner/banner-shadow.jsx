@@ -9,6 +9,31 @@ export const BannerShadow = styled.div`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    & .widescreen__slogan {
+        font-size: 4.5em;
+        width: 70%;
+        @media screen and (max-width: 1023px) {
+            font-size: 3.3em;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 2.5em;
+        }
+        @media screen and (max-width: 599px) {
+            font-size: 2em;
+        }
+        @media screen and (max-width: 480px) {
+            width: 90%;
+        }
+        @media screen and (max-width: 374px) {
+            width: 95%;
+            font-size: 1.67em;
+        }
+        font-weight: 600;
+        color: white;
+        & .widescreen__slogan__string {
+            display: block
+        }
+    }
     & img {
         display: block;
         max-width: 300px;

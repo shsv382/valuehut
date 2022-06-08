@@ -18,7 +18,8 @@ const HeaderWithButton = ({ header, link, href, otherProps }: HeaderWithButtonPr
     }
     return (
         <div className="header-with-button">
-            <h2 className="header-with-button__header">{header}</h2>
+            <h1 className="header-with-button__header">{header}</h1>
+            <br className="xs-visible" />
             <button onClick={handleClick} className="button button-secondary button-secondary-large">{link}</button>
         </div>
     )

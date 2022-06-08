@@ -24,7 +24,12 @@ export interface PreviousClientsTypes {
     imageURL: string
 }
 
+interface widescreenBannerTypes {
+    slogan: string[]
+}
+
 interface HomepageTypes {
+    widescreenBanner: widescreenBannerTypes,
     headerArticle: any,
     servicesArticle: any,
     whatCustomersWant: any,
@@ -48,6 +53,9 @@ export interface PagesInterface {
 export const content = {
     pages: {
         home: {
+            widescreenBanner: {
+                slogan: [`Bringin value`, `to your forefront`]
+            },
             headerArticle: {
                 imageURL: "./business.jpg",
                 header: "ValueHut Limited",
@@ -133,7 +141,7 @@ export const content = {
                 },
                 "consultancy": {
                     imageURL: "./cameron.jpg",
-                    header: "Consultancy",
+                    header: "Consulting",
                     description: `In situations where the Organisation has made a decision 
                     on the Agile Framework that should be adopted by the Product Teams, a 
                     Scrum Master from ValueHut would help improve the understandinging of 

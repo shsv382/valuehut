@@ -24,7 +24,7 @@ const ServiceBox: React.FC<ServiceBoxTypes> = ({header, description, imageURL, u
         <Link   to={url} 
                 className="link service-box">
             <div className="link service-box__content" style={{backgroundImage: `url(/images/${imageURL})`}}>
-                <h2 className="service-box__header">{ header }</h2>
+                <h1 className="service-box__header">{ header }</h1>
             </div>
         </Link>
     )
