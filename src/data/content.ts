@@ -57,7 +57,7 @@ export const content = {
                 slogan: [`Bringin value`, `to your forefront`]
             },
             headerArticle: {
-                imageURL: "./business.jpg",
+                imageURL: "business.jpg",
                 header: "ValueHut Limited",
                 description: "ValueHut is an agile coaching and training consultancy that is helping Organisations focus on most valuable work by aligning strategy to execution across all units of the business; engaging with us leads to outcomes that ensure that our client can continue to delight their customer and employees are increasing happy working in these organisations."
             },
@@ -65,7 +65,7 @@ export const content = {
                 header: "Services"
             },
             whatCustomersWant: {
-                imageURL: "./rodolfo.jpg",
+                imageURL: "rodolfo.jpg",
                 header: "What does our customer want?",
                 descriptionList: [
                     `Helping entire organizations to focus on most valuable work. (Reduce waste, supporting to link team goal to organisational objectives, Focus on outcomes.)`,
@@ -74,7 +74,7 @@ export const content = {
                 ]
             },
             whatWeDo: {
-                imageURL: "./mentatdgt.jpg",
+                imageURL: "mentatdgt.jpg",
                 header: "What we do",
                 description: `Recent Research indicates that a lot of companies have 
                             embarked on some form of Agile Transformation in the 
@@ -117,7 +117,7 @@ export const content = {
         whatWeDo: {
             introdution: {
                 "coaching": {
-                    imageURL: "./mentatdgt.jpg",
+                    imageURL: "mentatdgt.jpg",
                     header: "Coaching",
                     description: `Recent Research indicates that a lot of companies have 
                                 embarked on some form of Agile Transformation in the 
@@ -129,7 +129,7 @@ export const content = {
                                 Principles.`
                 }, 
                 "training": {
-                    imageURL: "./mikael.jpg",
+                    imageURL: "mikael.jpg",
                     header: "Training",
                     description: `Our training courses have been carefully designed to provide individuals and teams with skills
                     that help kickstart the journey to better ways of working. These classes are structured to be engaging, 
@@ -140,7 +140,7 @@ export const content = {
                     and you can contact us for bespoke or private classes.`
                 },
                 "consultancy": {
-                    imageURL: "./cameron.jpg",
+                    imageURL: "cameron.jpg",
                     header: "Consulting",
                     description: `In situations where the Organisation has made a decision 
                     on the Agile Framework that should be adopted by the Product Teams, a 
