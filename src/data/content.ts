@@ -141,7 +141,7 @@ export const content = {
                 },
                 "consultancy": {
                     imageURL: "cameron.jpg",
-                    header: "Consultancy",
+                    header: "Consulting",
                     description: `In situations where the Organisation has made a decision 
                     on the Agile Framework that should be adopted by the Product Teams, a 
                     Scrum Master from ValueHut would help improve the understandinging of 
