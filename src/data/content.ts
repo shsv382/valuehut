@@ -66,7 +66,11 @@ export const content = {
             },
             whatCustomersWant: {
                 imageURL: "rodolfo.jpg",
+<<<<<<< HEAD
                 header: "Our mission",
+=======
+                header: "What does our customer want?",
+>>>>>>> 96ad17e (Fixed some styles)
                 descriptionList: [
                     `Helping entire organizations to focus on most valuable work.`,
                     `Supporting organizations to make the work a safer place where people are able to bring their authentic selves to solve complex problems.`,
