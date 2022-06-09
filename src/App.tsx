@@ -59,6 +59,9 @@ function App() {
               <Route path='consultancy' element={<ServicePage 
                                                 service={ consultancy }
                                               />} />
+              <Route path='consulting' element={<ServicePage 
+                                                service={ consultancy }
+                                              />} />
             </Route>
             <Route path='/about' element={<AboutPage />} />
             {
