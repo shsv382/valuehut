@@ -54,7 +54,7 @@ export const content = {
     pages: {
         home: {
             widescreenBanner: {
-                slogan: [`Bringin value`, `to your forefront`]
+                slogan: [`Exploring better`, `ways of working`]
             },
             headerArticle: {
                 imageURL: "business.jpg",
@@ -66,24 +66,21 @@ export const content = {
             },
             whatCustomersWant: {
                 imageURL: "rodolfo.jpg",
-                header: "What does our customer want?",
+                header: "Our mission",
                 descriptionList: [
-                    `Helping entire organizations to focus on most valuable work. (Reduce waste, supporting to link team goal to organisational objectives, Focus on outcomes.)`,
-                    `Supporting organizations to make the workplace fun; people are happy at work doing the best work. (Working at a sustainable pace, Building self-managing & cross functional teams, Support people & teams to be accountable for their outcomes, Support people to build mastery by using OKR to set stretch goals)`,
-                    `Continuously delighting customers. (How do Teams measure & capture measures of Value Delivered, Continuously improve the Product/Service using Feedback received.)`
+                    `Helping entire organizations to focus on most valuable work.`,
+                    `Supporting organizations to make the work a safer place where people are able to bring their authentic selves to solve complex problems.`,
+                    `Building a mindset that enables you to continue delight your customers by delivering valuable products.`
                 ]
             },
             whatWeDo: {
                 imageURL: "mentatdgt.jpg",
                 header: "What we do",
-                description: `Recent Research indicates that a lot of companies have 
-                            embarked on some form of Agile Transformation in the 
-                            last 10 years, however only a small proportion of these 
-                            companies have realised the value promises by Agile 
-                            Transformation. This realisation is not an issue with Agile 
-                            but to a large extent a lack of understanding of the Agile 
-                            Frameworks being adopted and the underlying Agile 
-                            Principles.`
+                description: `Embarking on a journey to build agility into the DNA of an 
+                organisation could be daunting one. We partner with you, leveraging our 
+                experiences with proven Agile Frameworks to co-create alternate ways of working
+                with clear outcomes aligned with enabling the organisation to continue to 
+                deliver valuable products.`
             },
             previousClients: [
                 {
@@ -141,7 +138,7 @@ export const content = {
                 },
                 "consultancy": {
                     imageURL: "cameron.jpg",
-                    header: "Consultancy",
+                    header: "Consulting",
                     description: `In situations where the Organisation has made a decision 
                     on the Agile Framework that should be adopted by the Product Teams, a 
                     Scrum Master from ValueHut would help improve the understandinging of 

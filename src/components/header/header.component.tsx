@@ -20,7 +20,7 @@ const Header: React.FC = () => {
             height: scrolled ? 80 : "", transition: "all 0.25s"
         }}>
             <div className="header-container" id="start">
-                <LogoContainer imageURL='/logo/logo-primary.png' />
+                <LogoContainer imageURL='/logo/logo-standalone.png' />
                 <NavbarContainer />
                 <CartButtonContainer />
             </div>
