@@ -25,7 +25,11 @@ const WhatWeDoPage: React.FC = () => {
                             className={`link services-navigation-item ${(service === s) && `services-navigation-item-checked`}`} 
                             onClick={() => {
                                 setAppearancable(false);
-                                setService(s);
+                                setTimeout(() => {
+                                    setAppearancable(true);
+                                    setService(s)
+                                }, 5)
+                                // setService(s)
                             }
                             }>
                             {s[0].toUpperCase() + s.slice(1).toLowerCase()}
@@ -33,7 +37,10 @@ const WhatWeDoPage: React.FC = () => {
                     )
                 }
             </nav>
-            <div className={`what-we-do-page__content ${appearancable ? "appearancable" : ""}`}>
+            <div className={
+                `what-we-do-page__content 
+                ${appearancable ? "appearancable" : ""}`
+            }>
                 <MainArticle 
                     imageURL={ introdution[service].imageURL }
                     header={ introdution[service].header }

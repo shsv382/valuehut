@@ -23,6 +23,12 @@
     position: relative;
 }
 
+.appearancable-reverse {
+    animation: appearance 0.35s ease-in;
+	animation-direction: reverse;
+    position: relative;
+}
+
 @keyframes fadeDown {
 	from {
 		height: 0;
