@@ -6,18 +6,12 @@ const ScrollToTopWrapper = ({exclude, children}) => {
     useLayoutEffect(() => {
         if (location.hash.indexOf(exclude) < 1) {
             try {
-                /**
-                 * Latest API
-                 */
                 window.scroll({
                   top: 0,
                   left: 0,
                   behavior: "smooth",
                 });
               } catch (_) {
-                /**
-                 * Fallback
-                 */
                 document.documentElement.scrollTo(0, 0);
               }
         }
