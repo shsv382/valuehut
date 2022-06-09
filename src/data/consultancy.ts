@@ -25,7 +25,7 @@ interface ConsultancyObject {
 
 export const consultancy: ConsultancyObject = {
     consultancy: {
-        title: "Agile Consultancy",
+        title: "Agile Consulting",
         description: `Efforts to embark on Agility at the team level especially when it doesn’t involve the whole organisation could be an uphill battle; we advise our clients that in other to deliver sustainable and long-lasting change, agility should be introduced using a “whole organisation” approach to agility. This approach however comes with it own sets of challenges which might be familiar to you.`,
         imageURL: "./mikael.jpg",
         articles: [
