@@ -31,11 +31,16 @@ export const consultancy: ConsultancyObject = {
         articles: [
             {
                 title: "Continuous Integration / Continous Delivery",
-                content: `that are faced include:`,
+                content: `A central theme to application delivery is the enabling teams to build better products faster. 
+                Continuous Integration and Continuous Delivery are practices that enabled the product teams collect feedback in near real time.
+                CI / CD is underpinned by making information Transparent and automating collection of metrics the product.
+                Our consultants have implemented and supported many organisations with their CI/CD Implementation. Our typical process would involve:`,
                 contentList: [
-                    `Resistance at different levels within the organisation.`,
-                    `Organisational structure & culture that is not optimised for Agility.`,
-                    `Disjointed perceptions of the current and the future state for the Organisation across the Organisation.`
+                    `An evaluation of the current state including tools / technology being used`,
+                    `Design a strategy for CI/CD including covering any gaps in automated checks`,
+                    `Tools selection for CI/CD`,
+                    `Coach Product team on Agile Testing Mindset and practices`,
+                    `Post Implementation support`
                 ]
             }, 
             {
