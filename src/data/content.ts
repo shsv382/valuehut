@@ -66,24 +66,21 @@ export const content = {
             },
             whatCustomersWant: {
                 imageURL: "rodolfo.jpg",
-                header: "What does our customer want?",
+                header: "Our mission",
                 descriptionList: [
                     `Helping entire organizations to focus on most valuable work.`,
-                    `Supporting organizations to make the workplace fun; people are happy at work doing the best work.`,
-                    `Delighting customer by continuously delivering valuable product or service.`
+                    `Supporting organizations to make the work a safer place where people are able to bring their authentic selves to solve complex problems.`,
+                    `Building a mindset that enables you to continue delight your customers by delivering valuable products.`
                 ]
             },
             whatWeDo: {
                 imageURL: "mentatdgt.jpg",
                 header: "What we do",
-                description: `Recent Research indicates that a lot of companies have 
-                            embarked on some form of Agile Transformation in the 
-                            last 10 years, however only a small proportion of these 
-                            companies have realised the value promises by Agile 
-                            Transformation. This realisation is not an issue with Agile 
-                            but to a large extent a lack of understanding of the Agile 
-                            Frameworks being adopted and the underlying Agile 
-                            Principles.`
+                description: `Embarking on a journey to build agility into the DNA of an 
+                organisation could be daunting one. We partner with you, leveraging our 
+                experiences with proven Agile Frameworks to co-create alternate ways of working
+                with clear outcomes aligned with enabling the organisation to continue to 
+                deliver valuable products.`
             },
             previousClients: [
                 {
